@@ -138,6 +138,8 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 .career-grid span { font-size: .68rem; letter-spacing: .15em; color: #888; }
 .career-grid h3 { font-size: 1.2rem; margin: 30px 0 8px; }
 .career-grid p { color: #bbb; font-size: .9rem; margin-bottom:18px; }
+.career-links { margin-top:auto; display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+.career-links .career-link { margin-top:0; }
 .career-link { margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; min-height:34px; padding:0 11px; border:1px solid #666; color:#fff; font-size:.68rem; font-weight:800; letter-spacing:.12em; transition:background-color .18s ease,color .18s ease,border-color .18s ease; }
 .career-link:hover { background:#fff; color:#111; border-color:#fff; }
 .career-link:focus-visible { outline:2px solid #fff; outline-offset:3px; }
@@ -190,6 +192,7 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .career-grid, .activity-grid { grid-template-columns: 1fr; }
   .career-grid article, .activity-grid article { min-height: auto; }
   .career-link { margin-top:6px; }
+  .career-links { margin-top:6px; }
   .link-list a { align-items:flex-end; }
   .link-list strong { text-align: right; }
   .footer { flex-direction: column; }
