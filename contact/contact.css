@@ -11,9 +11,18 @@
 .contact-process h2{font-size:clamp(2.5rem,5vw,5rem);line-height:1.04}
 .contact-process p{max-width:760px;color:#c9c9c9}
 .contact-note{font-size:.9rem}
+.contact-prepare-grid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(36px,6vw,80px);align-items:start}
+.contact-prepare h2{font-size:clamp(2.4rem,5vw,5rem);line-height:1.04}
+.contact-prepare-grid>div>p{max-width:560px;color:#4a4843}
+.contact-checklist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.contact-checklist li{display:grid;grid-template-columns:48px minmax(120px,.38fr) minmax(0,1fr);gap:16px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+.contact-checklist span{font-size:.72rem;color:var(--muted);letter-spacing:.12em;padding-top:3px}
+.contact-checklist strong{font-size:1rem}
+.contact-checklist p{margin:0;color:#4a4843;font-size:.94rem}
+.contact-prepare>.button{margin-top:30px}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
 .related-grid a{background:var(--bg);padding:26px;display:flex;flex-direction:column;gap:18px}
 .related-grid span{font-size:.78rem;color:var(--muted)}
 .related-grid strong{font-size:1.2rem}
 [aria-current="page"]{font-weight:800}
-@media(max-width:800px){.contact-type-grid,.related-grid{grid-template-columns:1fr}.contact-process-grid{grid-template-columns:1fr;gap:18px}}
+@media(max-width:800px){.contact-type-grid,.related-grid{grid-template-columns:1fr}.contact-process-grid,.contact-prepare-grid{grid-template-columns:1fr;gap:18px}.contact-checklist li{grid-template-columns:36px 1fr}.contact-checklist p{grid-column:2}}
