@@ -151,9 +151,32 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 
 .media-section { background: #e6e1d7; }
 .link-list { margin-top: 32px; border-top: 1px solid #bbb4a7; }
-.link-list a { display: flex; justify-content: space-between; gap: 20px; padding: 18px 0; border-bottom: 1px solid #bbb4a7; }
-.link-list a:hover strong { text-decoration: underline; text-underline-offset: 4px; }
-.link-list span { color: var(--muted); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+.media-link {
+  display: grid;
+  grid-template-columns: 48px minmax(88px, .55fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  min-height: 82px;
+  padding: 16px 0;
+  border-bottom: 1px solid #bbb4a7;
+}
+.media-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b7b0a2;
+  border-radius: 50%;
+  color: var(--ink);
+  transition: transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+.media-icon svg { width: 21px; height: 21px; display: block; }
+.media-type { color: var(--muted); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+.media-link strong { justify-self: end; text-align: right; }
+.media-link:hover .media-icon { transform: translateY(-1px); background: var(--ink); color: var(--light); border-color: var(--ink); }
+.media-link:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.media-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
 
 .contact-section { background: #1a1a1a; color: #fff; }
 .contact-inner { max-width: 920px; text-align: center; }
@@ -193,8 +216,11 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .career-grid article, .activity-grid article { min-height: auto; }
   .career-link { margin-top:6px; }
   .career-links { margin-top:6px; }
-  .link-list a { align-items:flex-end; }
-  .link-list strong { text-align: right; }
+  .media-link { grid-template-columns: 42px 1fr; gap: 4px 12px; min-height: 78px; }
+  .media-icon { grid-row: 1 / span 2; width: 38px; height: 38px; }
+  .media-icon svg { width: 19px; height: 19px; }
+  .media-type { align-self: end; }
+  .media-link strong { grid-column: 2; justify-self: start; align-self: start; text-align: left; }
   .footer { flex-direction: column; }
   .footer div { flex-direction: column; gap: 2px; }
 }
