@@ -1,0 +1,19 @@
+.contact-hero{padding:clamp(76px,9vw,124px) 0 clamp(62px,7vw,92px);max-width:980px}
+.contact-title{font-size:clamp(3.4rem,7.6vw,8rem);line-height:.92;letter-spacing:-.055em;margin:18px 0 26px}
+.contact-lead{max-width:760px;font-size:clamp(1.05rem,2vw,1.4rem);color:#45423d;margin-bottom:30px}
+.contact-types-section{background:#e6e1d7}
+.contact-type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#bbb4a7;border:1px solid #bbb4a7;margin-top:30px}
+.contact-type-grid article{background:var(--bg);padding:30px;min-height:230px}
+.contact-type-grid span{font-size:.72rem;color:var(--muted);letter-spacing:.13em}
+.contact-type-grid h2{font-size:1.65rem;margin:34px 0 12px}
+.contact-type-grid p{color:#4a4843}
+.contact-process-grid{display:grid;grid-template-columns:.35fr 1fr;gap:40px}
+.contact-process h2{font-size:clamp(2.5rem,5vw,5rem);line-height:1.04}
+.contact-process p{max-width:760px;color:#c9c9c9}
+.contact-note{font-size:.9rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.related-grid a{background:var(--bg);padding:26px;display:flex;flex-direction:column;gap:18px}
+.related-grid span{font-size:.78rem;color:var(--muted)}
+.related-grid strong{font-size:1.2rem}
+[aria-current="page"]{font-weight:800}
+@media(max-width:800px){.contact-type-grid,.related-grid{grid-template-columns:1fr}.contact-process-grid{grid-template-columns:1fr;gap:18px}}
