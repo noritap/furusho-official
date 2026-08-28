@@ -37,12 +37,13 @@ section[id] { scroll-margin-top: 92px; }
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
-.brand { display: flex; flex-direction: column; line-height: 1.1; }
+.brand { display: flex; flex-direction: column; line-height: 1.1; flex: 0 0 auto; }
 .brand-ja { font-weight: 800; letter-spacing: .08em; }
 .brand-en { font-size: .72rem; letter-spacing: .12em; color: var(--muted); margin-top: 4px; }
 .nav { display: flex; gap: 22px; align-items: center; font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; }
 .nav a { transition: opacity .18s ease, background-color .18s ease, color .18s ease; }
 .nav a:hover { opacity: .58; }
+.nav [aria-current="page"] { font-weight: 800; text-decoration: underline; text-underline-offset: 5px; }
 .nav-cta { padding: 9px 14px; border: 1px solid var(--ink); }
 .nav-cta:hover { opacity: 1 !important; background: var(--ink); color: var(--light); }
 
@@ -189,7 +190,18 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 .footer strong { color: var(--ink); }
 
 @media (max-width: 900px) {
-  .nav a:not(.nav-cta) { display: none; }
+  .site-header { gap: 18px; }
+  .nav {
+    max-width: 66vw;
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { flex: 0 0 auto; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 58px; }
   .hero-copy { max-width: none; }
   .hero-portrait { width: min(76vw, 430px); justify-self: center; margin: 4px auto 0; }
@@ -199,10 +211,12 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 }
 
 @media (max-width: 600px) {
-  section[id] { scroll-margin-top: 72px; }
+  section[id] { scroll-margin-top: 118px; }
   .section-shell { width: min(calc(100% - 28px), var(--max)); }
-  .site-header { padding: 14px; }
+  .site-header { padding: 12px 14px; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
   .brand-en { font-size: .62rem; }
+  .nav { order: 3; width: 100%; max-width: none; gap: 18px; padding: 5px 1px 3px; border-top: 1px solid var(--line); }
+  .nav-cta { padding: 6px 10px; }
   .hero { padding: 48px 0 42px; gap: 26px; }
   h1 { margin-bottom: 22px; }
   .hero-message { font-size: 1.72rem; }
