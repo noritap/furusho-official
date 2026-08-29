@@ -216,7 +216,7 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .site-header { padding: 12px 14px; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
   .brand-en { font-size: .62rem; }
   .nav { order: 3; width: 100%; max-width: none; gap: 18px; padding: 5px 1px 3px; border-top: 1px solid var(--line); }
-  .nav-cta { padding: 6px 10px; }
+  .nav-cta { position: sticky; right: 0; z-index: 2; padding: 6px 10px; background: rgba(243, 240, 233, .98); box-shadow: -12px 0 12px rgba(243, 240, 233, .98); }
   .hero { padding: 48px 0 42px; gap: 26px; }
   h1 { margin-bottom: 22px; }
   .hero-message { font-size: 1.72rem; }
