@@ -42,11 +42,13 @@
 .profile-principle .principle-grid{margin-top:18px}
 .principle-grid>div{padding-top:38px;max-width:650px}
 
-.profile-quote{background:#d8d1c5;color:#111;text-align:center;padding:clamp(86px,10vw,136px) 0}
-.profile-quote-inner{max-width:900px}
+.profile-quote{position:relative;overflow:hidden;background:#d8d1c5;color:#111;text-align:left;padding:clamp(96px,11vw,148px) 0;border-top:1px solid #c7bfb2;border-bottom:1px solid #c7bfb2}
+.profile-quote::before{content:"";position:absolute;top:0;right:0;bottom:0;width:min(44vw,720px);background-image:linear-gradient(90deg,#d8d1c5 0%,rgba(216,209,197,.62) 17%,rgba(17,17,17,.12) 48%,rgba(17,17,17,.24) 100%),url('../assets/images/furusho-profile-main.jpg');background-size:cover;background-position:56% 72%;filter:grayscale(1) contrast(1.16) brightness(.72);opacity:.94}
+.profile-quote::after{content:"TAP / RHYTHM / BODY";position:absolute;right:28px;bottom:22px;color:rgba(255,255,255,.72);font-size:.58rem;font-weight:800;letter-spacing:.2em;writing-mode:vertical-rl}
+.profile-quote-inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding-right:min(46vw,760px)}
 .profile-quote .section-label{color:#6b645b}
-.profile-quote blockquote{margin:22px 0 24px;font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.9rem,6.3vw,6rem);font-weight:500;line-height:1.04;letter-spacing:-.045em}
-.profile-quote p:last-child{max-width:680px;margin:0 auto;color:#555047;font-size:.98rem;line-height:1.9}
+.profile-quote blockquote{max-width:720px;margin:22px 0 24px;font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.9rem,6.1vw,5.8rem);font-weight:500;line-height:1.04;letter-spacing:-.045em}
+.profile-quote p:last-child{max-width:620px;margin:0;color:#555047;font-size:.98rem;line-height:1.9}
 
 .profile-now{background:#e7e1d6}
 .profile-now-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#c2baad;border:1px solid #c2baad;margin-top:42px}
@@ -76,6 +78,10 @@
   .story-grid,.principle-grid{grid-template-columns:1fr;gap:24px}
   .story-heading{position:static}
   .story-copy,.principle-grid>div{padding-top:0;max-width:none}
+  .profile-quote{padding:76px 0 300px}
+  .profile-quote::before{top:auto;left:0;width:100%;height:250px;background-image:linear-gradient(to bottom,#d8d1c5 0%,rgba(216,209,197,.18) 32%,rgba(17,17,17,.2) 100%),url('../assets/images/furusho-profile-main.jpg');background-position:50% 67%}
+  .profile-quote::after{right:16px;bottom:18px;writing-mode:horizontal-tb}
+  .profile-quote-inner{padding-right:0}
   .profile-now-grid{grid-template-columns:repeat(2,1fr)}
 }
 
@@ -96,7 +102,9 @@
   .metrics-grid p br{display:none}
   .story-grid h2,.principle-grid h2,.profile-now h2{font-size:2.5rem}
   .story-copy p,.principle-grid>div p{font-size:.96rem;line-height:1.9}
-  .profile-quote blockquote{font-size:2.9rem}
+  .profile-quote{padding:64px 0 248px}
+  .profile-quote::before{height:210px}
+  .profile-quote blockquote{font-size:2.75rem}
   .profile-now-grid{grid-template-columns:1fr}
   .profile-now-grid article{min-height:auto}
   .fact-list>div{grid-template-columns:1fr;gap:5px;padding:16px 0}
