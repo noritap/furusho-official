@@ -13,11 +13,13 @@
   <meta property="og:description" content="古庄里好の原点、30年以上の探求、1万本以上のレッスン、延べ3万人以上への指導、現在の活動。">
   <meta property="og:url" content="https://noritap.github.io/furusho-official/profile/">
   <meta property="og:image" content="https://noritap.github.io/furusho-official/assets/images/furusho-profile-main.jpg">
+  <meta property="og:image:alt" content="タップシューズを手にした古庄里好">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="profile.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">本文へスキップ</a>
   <header class="site-header">
     <a class="brand" href="../" aria-label="古庄里好 Official Website ホーム">
       <span class="brand-ja">古庄里好</span>
@@ -32,46 +34,36 @@
     </nav>
   </header>
 
-  <main>
-    <section class="profile-page-hero section-shell">
-      <div class="profile-page-intro">
-        <p class="eyebrow">PROFILE / NORITAKA FURUSHO</p>
-        <h1 class="profile-page-title">音を通して、<br>人と身体をつなぐ。</h1>
-        <p class="profile-page-lead">古庄里好（ふるしょう のりたか）。タップダンサー、インストラクター、振付家。東京都・池袋を拠点に、タップダンスを実演・指導・振付・教育・発信へと広げている。</p>
-      </div>
-      <figure class="profile-page-photo">
-        <img src="../assets/images/furusho-profile-main.jpg" alt="タップシューズを手にした古庄里好" width="1200" height="1600">
-      </figure>
-    </section>
+  <main id="main-content">
+    <section class="profile-page-hero">
+      <div class="profile-hero-inner section-shell">
+        <div class="profile-page-intro">
+          <p class="eyebrow">PROFILE / NORITAKA FURUSHO</p>
+          <h1 class="profile-page-title">音を通して、<br>人と身体をつなぐ。</h1>
+          <p class="profile-page-lead">古庄里好（ふるしょう のりたか）。タップダンサー、インストラクター、振付家。東京都・池袋を拠点に、タップダンスを実演・指導・振付・教育・発信へと広げている。</p>
+          <div class="profile-hero-actions">
+            <a class="button primary" href="../career/">主な実績を見る</a>
+            <a class="button secondary" href="../contact/">仕事の相談</a>
+          </div>
+          <dl class="profile-hero-meta" aria-label="プロフィール概要">
+            <div><dt>BASE</dt><dd>Tokyo / Ikebukuro</dd></div>
+            <div><dt>ROLE</dt><dd>Tap Dancer / Instructor / Choreographer</dd></div>
+          </dl>
+        </div>
 
-    <section class="profile-story dark-section section">
-      <div class="section-shell story-grid">
-        <div>
-          <p class="section-label">ORIGIN</p>
-          <h2>10歳。<br>サミー・デイヴィスJr.への憧れから。</h2>
-        </div>
-        <div class="story-copy">
-          <p>タップダンスを始めたのは10歳の頃。サミー・デイヴィスJr.のショーマンシップに憧れ、東京都練馬区・光が丘IMA内のNHK文化センターにあった佐々木隆子先生のタップダンス教室で学び始めた。</p>
-          <p>歌、演奏、ダンスを自在に行き来する表現に強く惹かれ、タップダンスを単なるステップではなく、音楽・身体・リズム・表現が一体になったものとして探求してきた。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-shell section profile-principle">
-      <p class="section-label">THREE DECADES+</p>
-      <div class="principle-grid">
-        <h2>自分から仲間へ。<br>仲間から、まだ会っていない人へ。</h2>
-        <div>
-          <p>長くタップダンスを続ける中で、活動の意味も変化してきた。かつて自身の歩みを「自分のための10年」「仲間との10年」、そしてその先を「まだ会っていない人たちへ」と捉えていた。</p>
-          <p>その考えは、現在のレッスン、作品づくり、動画発信、コミュニティづくりにもつながっている。自分が受け取ったものを、次の誰かへ返していくこと。タップダンスを通して、人と人がつながる環境を広げることを大切にしている。</p>
-        </div>
+        <figure class="profile-page-photo">
+          <img src="../assets/images/furusho-profile-main.jpg" alt="タップシューズを手にした古庄里好" width="1200" height="1600" fetchpriority="high" decoding="async">
+          <figcaption><span>NORITAKA FURUSHO</span><strong>TAP / RHYTHM / BODY</strong></figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="profile-metrics section" aria-labelledby="metrics-title">
-      <div class="section-shell">
-        <p class="section-label">EXPERIENCE & IMPACT</p>
-        <h2 id="metrics-title">積み重ねてきた、<br>時間と指導。</h2>
+    <section class="profile-metrics" aria-labelledby="metrics-title">
+      <div class="section-shell metrics-shell">
+        <div class="metrics-heading">
+          <p class="section-label">EXPERIENCE & IMPACT</p>
+          <h2 id="metrics-title">積み重ねてきた、<br>時間と指導。</h2>
+        </div>
         <div class="metrics-grid">
           <article>
             <strong>30+</strong>
@@ -93,8 +85,40 @@
       </div>
     </section>
 
+    <section class="profile-story dark-section section">
+      <div class="section-shell story-grid">
+        <div class="story-heading">
+          <p class="section-label">01 / ORIGIN</p>
+          <h2>10歳。<br>サミー・デイヴィスJr.への憧れから。</h2>
+        </div>
+        <div class="story-copy">
+          <p>タップダンスを始めたのは10歳の頃。サミー・デイヴィスJr.のショーマンシップに憧れ、東京都練馬区・光が丘IMA内のNHK文化センターにあった佐々木隆子先生のタップダンス教室で学び始めた。</p>
+          <p>歌、演奏、ダンスを自在に行き来する表現に強く惹かれ、タップダンスを単なるステップではなく、音楽・身体・リズム・表現が一体になったものとして探求してきた。</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section-shell section profile-principle">
-      <p class="section-label">APPROACH</p>
+      <p class="section-label">02 / THREE DECADES+</p>
+      <div class="principle-grid">
+        <h2>自分から仲間へ。<br>仲間から、まだ会っていない人へ。</h2>
+        <div>
+          <p>長くタップダンスを続ける中で、活動の意味も変化してきた。かつて自身の歩みを「自分のための10年」「仲間との10年」、そしてその先を「まだ会っていない人たちへ」と捉えていた。</p>
+          <p>その考えは、現在のレッスン、作品づくり、動画発信、コミュニティづくりにもつながっている。自分が受け取ったものを、次の誰かへ返していくこと。タップダンスを通して、人と人がつながる環境を広げることを大切にしている。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-quote section" aria-label="プロフィールメッセージ">
+      <div class="section-shell profile-quote-inner">
+        <p class="section-label">PHILOSOPHY</p>
+        <blockquote>タップダンスを、<br>技術だけで終わらせない。</blockquote>
+        <p>音を聴く。身体を知る。自分のリズムで表現する。学ぶ人それぞれが、自分の音を持てる環境をつくる。</p>
+      </div>
+    </section>
+
+    <section class="section-shell section profile-principle">
+      <p class="section-label">03 / APPROACH</p>
       <div class="principle-grid">
         <h2>技術だけでなく、<br>リズム・身体・表現を育てる。</h2>
         <div>
