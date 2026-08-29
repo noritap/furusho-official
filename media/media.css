@@ -16,3 +16,4 @@
 .media-more{margin-top:28px}
 [aria-current="page"]{font-weight:800}
 @media(max-width:760px){.media-page-hero{grid-template-columns:1fr}.media-page-photo{width:min(100%,430px);margin:auto}.media-page-links a{grid-template-columns:1fr auto}.media-page-links span{grid-column:1/-1}.media-video-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.media-page-hero{padding:50px 0 58px;gap:28px}.media-page-title{font-size:clamp(2.8rem,14vw,4rem);line-height:.95;margin-bottom:22px}.media-page-lead{font-size:1rem}}
