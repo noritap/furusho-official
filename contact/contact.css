@@ -26,3 +26,4 @@
 .related-grid strong{font-size:1.2rem}
 [aria-current="page"]{font-weight:800}
 @media(max-width:800px){.contact-type-grid,.related-grid{grid-template-columns:1fr}.contact-process-grid,.contact-prepare-grid{grid-template-columns:1fr;gap:18px}.contact-checklist li{grid-template-columns:36px 1fr}.contact-checklist p{grid-column:2}}
+@media(max-width:600px){.contact-hero{padding:50px 0 58px}.contact-title{font-size:clamp(2.8rem,14vw,4rem);line-height:.95;margin-bottom:22px}.contact-lead{font-size:1rem}}
