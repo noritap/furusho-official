@@ -141,7 +141,7 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 .career-grid p { color: #bbb; font-size: .9rem; margin-bottom:18px; }
 .career-links { margin-top:auto; display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
 .career-links .career-link { margin-top:0; }
-.career-link { margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; min-height:34px; padding:0 11px; border:1px solid #666; color:#fff; font-size:.68rem; font-weight:800; letter-spacing:.12em; transition:background-color .18s ease,color .18s ease,border-color .18s ease; }
+.career-link { margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; min-height:44px; padding:0 14px; border:1px solid #666; color:#fff; font-size:.68rem; font-weight:800; letter-spacing:.12em; transition:background-color .18s ease,color .18s ease,border-color .18s ease; }
 .career-link:hover { background:#fff; color:#111; border-color:#fff; }
 .career-link:focus-visible { outline:2px solid #fff; outline-offset:3px; }
 .activity-grid { background: var(--line); border-color: var(--line); }
@@ -201,7 +201,7 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
     -webkit-overflow-scrolling: touch;
   }
   .nav::-webkit-scrollbar { display: none; }
-  .nav a { flex: 0 0 auto; }
+  .nav a { flex: 0 0 auto; min-height:44px; display:inline-flex; align-items:center; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 58px; }
   .hero-copy { max-width: none; }
   .hero-portrait { width: min(76vw, 430px); justify-self: center; margin: 4px auto 0; }
