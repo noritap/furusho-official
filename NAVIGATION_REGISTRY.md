@@ -1,6 +1,6 @@
 # NAVIGATION_REGISTRY
 
-Version: 1.0
+Version: 1.1
 Status: ACTIVE
 Site: Furusho Official
 Canonical Base URL: https://noritap.github.io/furusho-official/
@@ -51,18 +51,29 @@ Primary CTA:
 
 Global Navigationを変更する場合:
 1. 本Registryを先に更新
-2. 全Scope Pageを同一NAV_VERSIONへ同期
-3. Navigation Auditを実行
-4. PASS後にmerge
+2. `tools/navigation_sync.py` で全Scope Pageを同一Contractへ同期
+3. `tools/navigation_audit.py --strict` を実行
+4. Navigation Contract Sync Checkで生成差分が0であることを確認
+5. PASS後にmerge
 
 ページ固有導線はGlobal Navigationを置き換えず、Local Navigationまたは本文CTAとして追加する。
 
 ## Current Baseline
 
-2026-08-30 auditで、`/projects/` と `/activities/` はProjectsを含むが、旧ページ群に未同期箇所があることを確認。Baseline remediation完了までは Drift Known 状態として扱う。
+2026-08-30 remediationで全Primary Pageを `FURUSHO-NAV-1` へ同期済み。
+Navigation sync後のstrict auditはPASS。
+以後、Navigation Driftは既知の許容差分ではなくCI failureとして扱う。
+
+## Automation
+
+- `tools/navigation_sync.py` = Canonical NavigationをPrimary HTMLへ生成・同期
+- `tools/navigation_audit.py --strict` = Required Navigationの欠落を検出しFAIL
+- `.github/workflows/navigation-sync.yml` = PR上で生成結果との差分を検査
+- `.github/workflows/navigation-audit.yml` = PR / mainでstrict auditを実行
 
 ## DONE CONDITION
 
 - Scope全ページがGlobal Navigation Contractを満たす
 - Navigation Auditがstrict modeでPASS
+- Navigation Sync Checkで未コミット差分が0
 - 新規Primary Page追加時にRegistryへScope登録される
