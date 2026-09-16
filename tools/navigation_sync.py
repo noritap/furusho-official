@@ -6,28 +6,27 @@ from pathlib import Path
 
 PAGES = {
     Path("index.html"): None,
-    Path("profile/index.html"): "Profile",
+    Path("profile/index.html"): None,
     Path("career/index.html"): "Career",
-    Path("activities/index.html"): "Activities",
+    Path("activities/index.html"): None,
     Path("projects/index.html"): "Projects",
-    Path("media/index.html"): "Media",
+    Path("media/index.html"): None,
     Path("contact/index.html"): "Contact",
 }
 
 ITEMS = [
-    ("Profile", "profile/"),
-    ("Career", "career/"),
-    ("Activities", "activities/"),
-    ("Projects", "projects/"),
-    ("Media", "media/"),
-    ("Contact", "contact/"),
+    ("About", "#about", "../#about"),
+    ("Work", "#work", "../#work"),
+    ("Projects", "projects/", "../projects/"),
+    ("Career", "career/", "../career/"),
+    ("Contact", "contact/", "../contact/"),
 ]
 
 
-def render_nav(prefix: str, current: str | None) -> str:
+def render_nav(is_home: bool, current: str | None) -> str:
     lines = ['    <nav class="nav" aria-label="メインナビゲーション">']
-    for label, href in ITEMS:
-        target = href if not prefix else prefix + href
+    for label, home_href, sub_href in ITEMS:
+        target = home_href if is_home else sub_href
         attrs = []
         if label == "Contact":
             attrs.append('class="nav-cta"')
@@ -44,8 +43,7 @@ def main() -> int:
     changed = 0
     for path, current in PAGES.items():
         text = path.read_text(encoding="utf-8")
-        prefix = "" if path == Path("index.html") else "../"
-        replacement = render_nav(prefix, current)
+        replacement = render_nav(path == Path("index.html"), current)
         updated, count = re.subn(
             r'    <nav\s+class="nav"[^>]*>.*?</nav>',
             replacement,
