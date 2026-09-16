@@ -4,8 +4,10 @@
 Conservative by design:
 - Never downloads or copies external images.
 - Registers YouTube thumbnails as external platform previews.
+- Resolves this site's absolute canonical image URLs back to repository-local assets.
 - Marks other remote/OG images REVIEW_REQUIRED.
 - Indexes local repository images without inferring ownership/rights.
+- Preserves generated_at when registry content is unchanged.
 
 Usage:
     python3 tools/collect_visual_assets.py
@@ -21,7 +23,7 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import parse_qs, unquote, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,6 +31,9 @@ DEFAULT_OUTPUT = ROOT / "assets" / "data" / "media-assets.json"
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".avif"}
 SKIP_DIRS = {".git", ".github", "__pycache__"}
 YOUTUBE_HOSTS = {"youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"}
+YOUTUBE_IMAGE_HOSTS = {"img.youtube.com", "i.ytimg.com"}
+SITE_HOST = "noritap.github.io"
+SITE_PATH_PREFIX = "/furusho-official/"
 MAX_FETCH_BYTES = 512_000
 
 
@@ -82,6 +87,14 @@ def youtube_id(url: str) -> str | None:
     return match.group(1) if match else None
 
 
+def youtube_image_id(url: str) -> str | None:
+    parsed = urlparse(url)
+    if normalize_host(url) not in YOUTUBE_IMAGE_HOSTS:
+        return None
+    match = re.search(r"/vi(?:_webp)?/([^/?#]+)/", parsed.path)
+    return match.group(1) if match else None
+
+
 def page_relative(page: Path) -> str:
     return page.relative_to(ROOT).as_posix()
 
@@ -94,14 +107,22 @@ def add_entry(entries: dict[str, dict], key: str, entry: dict, found_in: str) ->
         entries[key]["found_in"].append(found_in)
 
 
-def local_image_entry(src: str, page: Path) -> tuple[str, dict] | None:
-    parsed = urlparse(src)
-    if parsed.scheme in {"http", "https"} or src.startswith("//"):
+def repository_path_from_absolute(url: str) -> Path | None:
+    parsed = urlparse(url)
+    if normalize_host(url) != SITE_HOST or not parsed.path.startswith(SITE_PATH_PREFIX):
         return None
-    clean = parsed.path
-    if not clean:
+    relative = unquote(parsed.path[len(SITE_PATH_PREFIX):]).lstrip("/")
+    if not relative:
         return None
-    candidate = (page.parent / clean).resolve()
+    candidate = (ROOT / relative).resolve()
+    try:
+        candidate.relative_to(ROOT)
+    except ValueError:
+        return None
+    return candidate
+
+
+def repository_image_entry(candidate: Path) -> tuple[str, dict] | None:
     try:
         rel = candidate.relative_to(ROOT)
     except ValueError:
@@ -120,6 +141,16 @@ def local_image_entry(src: str, page: Path) -> tuple[str, dict] | None:
     }
 
 
+def local_image_entry(src: str, page: Path) -> tuple[str, dict] | None:
+    parsed = urlparse(src)
+    if parsed.scheme in {"http", "https"} or src.startswith("//"):
+        return None
+    clean = parsed.path
+    if not clean:
+        return None
+    return repository_image_entry((page.parent / clean).resolve())
+
+
 def remote_image_entry(url: str) -> tuple[str, dict]:
     return f"remote:{url}", {
         "type": "remote_image",
@@ -132,10 +163,10 @@ def remote_image_entry(url: str) -> tuple[str, dict]:
     }
 
 
-def youtube_entry(video_id: str, source_url: str) -> tuple[str, dict]:
+def youtube_entry(video_id: str, source_url: str | None = None) -> tuple[str, dict]:
     return f"youtube:{video_id}", {
         "type": "youtube_thumbnail",
-        "source_url": source_url,
+        "source_url": source_url or f"https://www.youtube.com/watch?v={video_id}",
         "image_url": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
         "local_path": None,
         "usage_status": "AUTO_EXTERNAL_PREVIEW",
@@ -144,8 +175,24 @@ def youtube_entry(video_id: str, source_url: str) -> tuple[str, dict]:
     }
 
 
+def classify_image(src: str, page: Path) -> tuple[str, dict] | None:
+    parsed = urlparse(src)
+    if parsed.scheme not in {"http", "https"} and not src.startswith("//"):
+        return local_image_entry(src, page)
+
+    video_id = youtube_image_id(src)
+    if video_id:
+        return youtube_entry(video_id)
+
+    same_site = repository_path_from_absolute(src)
+    if same_site:
+        return repository_image_entry(same_site)
+
+    return remote_image_entry(src)
+
+
 def fetch_og_image(url: str) -> str | None:
-    request = Request(url, headers={"User-Agent": "furusho-official-visual-asset-collector/1.0"})
+    request = Request(url, headers={"User-Agent": "furusho-official-visual-asset-collector/1.1"})
     with urlopen(request, timeout=8) as response:
         content_type = response.headers.get("Content-Type", "")
         if "text/html" not in content_type:
@@ -164,15 +211,10 @@ def collect(fetch_og: bool = False) -> dict:
         parser = parse_html(page.read_text(encoding="utf-8", errors="ignore"))
 
         for src in parser.images + parser.og_images:
-            parsed = urlparse(src)
-            if parsed.scheme in {"http", "https"}:
-                key, entry = remote_image_entry(src)
+            classified = classify_image(src, page)
+            if classified:
+                key, entry = classified
                 add_entry(entries, key, entry, rel_page)
-            else:
-                local = local_image_entry(src, page)
-                if local:
-                    key, entry = local
-                    add_entry(entries, key, entry, rel_page)
 
         for href in parser.links:
             vid = youtube_id(href)
@@ -193,17 +235,26 @@ def collect(fetch_og: bool = False) -> dict:
                 image = fetch_og_image(url)
             except Exception:
                 image = None
-            if image:
-                entries[f"og:{url}"] = {
-                    "type": "og_image_candidate",
-                    "source_url": url,
-                    "image_url": image,
-                    "local_path": None,
-                    "usage_status": "REVIEW_REQUIRED",
-                    "rights_status": "UNVERIFIED",
-                    "auto_publish": False,
-                    "found_in": sorted(pages),
-                }
+            if not image:
+                continue
+
+            classified = classify_image(image, ROOT / "index.html")
+            if classified and classified[1]["usage_status"] != "REVIEW_REQUIRED":
+                key, entry = classified
+                for found_in in sorted(pages):
+                    add_entry(entries, key, entry.copy(), found_in)
+                continue
+
+            entries[f"og:{url}"] = {
+                "type": "og_image_candidate",
+                "source_url": url,
+                "image_url": image,
+                "local_path": None,
+                "usage_status": "REVIEW_REQUIRED",
+                "rights_status": "UNVERIFIED",
+                "auto_publish": False,
+                "found_in": sorted(pages),
+            }
 
     ordered = [dict({"id": key}, **entries[key]) for key in sorted(entries)]
     counts: dict[str, int] = {}
@@ -217,12 +268,31 @@ def collect(fetch_og: bool = False) -> dict:
         "policy": {
             "external_images_downloaded": False,
             "youtube_thumbnails": "AUTO_EXTERNAL_PREVIEW",
+            "same_site_absolute_images": "RESOLVE_TO_REPOSITORY_ASSET",
             "remote_or_og_images": "REVIEW_REQUIRED",
             "repository_images": "RIGHTS_NOT_INFERRED",
         },
         "summary": {"total": len(ordered), "by_usage_status": counts},
         "assets": ordered,
     }
+
+
+def without_generated_at(data: dict) -> dict:
+    clone = dict(data)
+    clone.pop("generated_at", None)
+    return clone
+
+
+def stabilize_generated_at(data: dict, output: Path) -> dict:
+    if not output.exists():
+        return data
+    try:
+        previous = json.loads(output.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return data
+    if without_generated_at(previous) == without_generated_at(data):
+        data["generated_at"] = previous.get("generated_at", data["generated_at"])
+    return data
 
 
 def main() -> int:
@@ -232,14 +302,15 @@ def main() -> int:
     parser.add_argument("--stdout", action="store_true", help="Print JSON instead of writing the registry.")
     args = parser.parse_args()
 
+    output = args.output if args.output.is_absolute() else ROOT / args.output
     data = collect(fetch_og=args.fetch_og)
+    data = stabilize_generated_at(data, output)
     payload = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 
     if args.stdout:
         print(payload, end="")
         return 0
 
-    output = args.output if args.output.is_absolute() else ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(payload, encoding="utf-8")
     print(f"Wrote {data['summary']['total']} assets to {output.relative_to(ROOT)}")

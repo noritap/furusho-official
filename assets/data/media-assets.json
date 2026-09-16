@@ -1,18 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-16T02:57:14+00:00",
+  "generated_at": "2026-09-16T07:13:00+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
     "youtube_thumbnails": "AUTO_EXTERNAL_PREVIEW",
+    "same_site_absolute_images": "RESOLVE_TO_REPOSITORY_ASSET",
     "remote_or_og_images": "REVIEW_REQUIRED",
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 14,
+    "total": 8,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 1,
-      "REVIEW_REQUIRED": 8,
+      "REVIEW_REQUIRED": 2,
       "AUTO_EXTERNAL_PREVIEW": 5
     }
   },
@@ -26,86 +27,6 @@
       "usage_status": "EXISTING_PUBLIC_ASSET",
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
-      "found_in": [
-        "index.html",
-        "media/index.html",
-        "profile/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://i.ytimg.com/vi/15566qQHhlw/hqdefault.jpg",
-      "type": "remote_image",
-      "source_url": "https://i.ytimg.com/vi/15566qQHhlw/hqdefault.jpg",
-      "image_url": "https://i.ytimg.com/vi/15566qQHhlw/hqdefault.jpg",
-      "local_path": null,
-      "usage_status": "REVIEW_REQUIRED",
-      "rights_status": "UNVERIFIED",
-      "auto_publish": false,
-      "found_in": [
-        "profile/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://i.ytimg.com/vi/3HW_v_vA63w/hqdefault.jpg",
-      "type": "remote_image",
-      "source_url": "https://i.ytimg.com/vi/3HW_v_vA63w/hqdefault.jpg",
-      "image_url": "https://i.ytimg.com/vi/3HW_v_vA63w/hqdefault.jpg",
-      "local_path": null,
-      "usage_status": "REVIEW_REQUIRED",
-      "rights_status": "UNVERIFIED",
-      "auto_publish": false,
-      "found_in": [
-        "profile/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://i.ytimg.com/vi/KNPQqgpgqPQ/hqdefault.jpg",
-      "type": "remote_image",
-      "source_url": "https://i.ytimg.com/vi/KNPQqgpgqPQ/hqdefault.jpg",
-      "image_url": "https://i.ytimg.com/vi/KNPQqgpgqPQ/hqdefault.jpg",
-      "local_path": null,
-      "usage_status": "REVIEW_REQUIRED",
-      "rights_status": "UNVERIFIED",
-      "auto_publish": false,
-      "found_in": [
-        "profile/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://i.ytimg.com/vi/NXozUa1IzRM/hqdefault.jpg",
-      "type": "remote_image",
-      "source_url": "https://i.ytimg.com/vi/NXozUa1IzRM/hqdefault.jpg",
-      "image_url": "https://i.ytimg.com/vi/NXozUa1IzRM/hqdefault.jpg",
-      "local_path": null,
-      "usage_status": "REVIEW_REQUIRED",
-      "rights_status": "UNVERIFIED",
-      "auto_publish": false,
-      "found_in": [
-        "profile/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://i.ytimg.com/vi/op0b7AyaQn0/hqdefault.jpg",
-      "type": "remote_image",
-      "source_url": "https://i.ytimg.com/vi/op0b7AyaQn0/hqdefault.jpg",
-      "image_url": "https://i.ytimg.com/vi/op0b7AyaQn0/hqdefault.jpg",
-      "local_path": null,
-      "usage_status": "REVIEW_REQUIRED",
-      "rights_status": "UNVERIFIED",
-      "auto_publish": false,
-      "found_in": [
-        "profile/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://noritap.github.io/furusho-official/assets/images/furusho-profile-main.jpg",
-      "type": "remote_image",
-      "source_url": "https://noritap.github.io/furusho-official/assets/images/furusho-profile-main.jpg",
-      "image_url": "https://noritap.github.io/furusho-official/assets/images/furusho-profile-main.jpg",
-      "local_path": null,
-      "usage_status": "REVIEW_REQUIRED",
-      "rights_status": "UNVERIFIED",
-      "auto_publish": false,
       "found_in": [
         "activities/index.html",
         "career/index.html",
