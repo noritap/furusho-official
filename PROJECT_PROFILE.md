@@ -1,6 +1,6 @@
 # PROJECT_PROFILE
 
-Version: 1.0
+Version: 1.1
 Status: ACTIVE
 
 ## Project Identity
@@ -58,8 +58,18 @@ It does not become the source of truth for career evidence, verification status,
 
 ## Development State
 
-Current Phase: Phase 1 / Initial official homepage
-Current Goal: Publish a credible, mobile-first official homepage with verified profile highlights, selected career, current activities, media links, and inquiry CTA.
+Current Phase: Phase 2 / UX・Visual System consolidation
+
+Current Goal: Maintain a credible mobile-first official hub where visitors can identify 古庄里好, review selected work and projects through consistent visual cards, distinguish personal work from Rhythm Speaker studio use, and reach the correct inquiry path with minimal friction.
+
+Current implementation baseline:
+- HOME UX v2 purpose-based routing
+- Global Navigation contract FURUSHO-NAV-2
+- /profile, /career, /activities, /projects, /media, /contact pages published
+- shared visual card / image preview system
+- Visual Asset Registry and automated review generation
+- Navigation Audit / Navigation Contract Sync / Visual Asset Registry CI checks
+- GitHub Pages public delivery
 
 ## Validation
 
@@ -68,11 +78,14 @@ Current Goal: Publish a credible, mobile-first official homepage with verified p
 - Mobile layout must be first-class.
 - External links must be explicit and safe.
 - No internal-only information may appear in production copy.
+- Global Navigation must satisfy NAVIGATION_REGISTRY.md.
+- Visual assets must remain traceable through assets/data/media-assets.json.
+- REVIEW_REQUIRED assets must not be promoted into public use without explicit confirmation.
 
 ## Next Handoff
 
-1. Complete initial HOME.
-2. Add approved profile image asset.
-3. Add /profile, /career, /activities, /media, /contact pages.
-4. Add GitHub Pages deployment.
-5. Review the live site and iterate UI/UX, SEO, and conversion paths.
+1. Continue live visual QA across HOME and all primary subpages.
+2. Replace typography fallback cards with approved real assets when suitable source images become available.
+3. Improve Career / Projects / Media visual consistency without weakening publication safety.
+4. Review responsive spacing, card cropping, CTA hierarchy, and accessibility on real devices.
+5. Keep PROJECT_PROFILE.md, NAVIGATION_REGISTRY.md, Visual Asset Registry, and public implementation synchronized with main.
