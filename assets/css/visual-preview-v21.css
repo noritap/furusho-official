@@ -1,70 +1,105 @@
-/* UX/UI v2.1 — HOME visual preview layer
-   This stylesheet now scopes legacy pseudo-thumbnails to HOME only.
-   Career and Media pages use explicit image-card markup and must not receive duplicate previews. */
+/* HOME visual preview layer v5
+   Career cards now carry explicit image / fallback markup.
+   No visual meaning depends on nth-child order. */
 
 .career-grid article {
   overflow: hidden;
 }
 
-.career-grid article:nth-child(-n+5)::before {
-  content: "";
+.home-career-card {
+  padding: 0 !important;
+  min-height: 330px !important;
+}
+
+.home-career-preview {
+  position: relative;
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  margin-bottom: 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid rgba(255,255,255,.14);
-  filter: saturate(.9) contrast(1.04);
+  overflow: hidden;
+  background: #1b1b1b;
+  border-bottom: 1px solid #333;
+}
+
+.home-career-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(.92) contrast(1.03);
   transition: transform .2s ease, filter .2s ease;
 }
 
-.career-grid article:nth-child(1)::before {
-  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/op0b7AyaQn0/hqdefault.jpg");
-}
-.career-grid article:nth-child(2)::before {
-  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/NXozUa1IzRM/hqdefault.jpg");
-}
-.career-grid article:nth-child(3)::before {
-  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/KNPQqgpgqPQ/hqdefault.jpg");
-}
-.career-grid article:nth-child(4)::before {
-  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/3HW_v_vA63w/hqdefault.jpg");
-}
-.career-grid article:nth-child(5)::before {
-  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/15566qQHhlw/hqdefault.jpg");
+.home-career-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,.02) 60%);
+  pointer-events: none;
 }
 
-.career-grid article:nth-child(-n+5):hover::before {
-  transform: scale(1.015);
-  filter: saturate(1) contrast(1.06) brightness(1.04);
+.home-career-preview-label {
+  position: absolute;
+  z-index: 1;
+  left: 16px;
+  bottom: 14px;
+  color: #fff !important;
+  font-size: .62rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .14em !important;
 }
 
-.career-grid article:nth-child(-n+5) {
-  min-height: 330px;
-}
-.career-grid article:nth-child(-n+5) h3 {
-  margin-top: 8px;
+.home-career-card:hover .home-career-preview img {
+  transform: scale(1.025);
+  filter: saturate(1) contrast(1.05) brightness(1.04);
 }
 
-/* HOME fallback treatment for works without an approved preview image. */
-.career-grid article:nth-child(n+6) {
-  background-image: radial-gradient(circle at 82% 18%, rgba(255,255,255,.06), transparent 34%);
+.home-career-card > span,
+.home-career-card > h3,
+.home-career-card > p,
+.home-career-card > .career-link,
+.home-career-card > .career-links {
+  margin-left: 24px;
+  margin-right: 24px;
 }
+
+.home-career-card > span { margin-top: 20px; }
+.home-career-card > h3 { margin-top: 12px; }
+.home-career-card > .career-link,
+.home-career-card > .career-links { margin-bottom: 24px; }
+
+.home-career-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255,255,255,.11), transparent 34%),
+    linear-gradient(135deg, #171717, #292929);
+}
+
+.home-career-type::after { display: none; }
+.home-career-type strong { font-size: clamp(2.1rem, 4vw, 3.8rem); letter-spacing: -.05em; line-height: .9; }
+.home-career-type small { font-size: .62rem; letter-spacing: .16em; color: #aaa; font-weight: 800; }
 
 @media (max-width: 720px) {
-  .career-grid article:nth-child(-n+5) {
-    min-height: auto;
+  .home-career-card { min-height: auto !important; }
+  .home-career-card > span,
+  .home-career-card > h3,
+  .home-career-card > p,
+  .home-career-card > .career-link,
+  .home-career-card > .career-links {
+    margin-left: 20px;
+    margin-right: 20px;
   }
-
-  .career-grid article:nth-child(-n+5)::before {
-    margin-bottom: 16px;
-  }
+  .home-career-card > .career-link,
+  .home-career-card > .career-links { margin-bottom: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .career-grid article::before {
+  .home-career-preview img {
     transition: none !important;
     transform: none !important;
   }
