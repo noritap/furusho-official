@@ -1,0 +1,111 @@
+/* UX/UI v2.1 — visual preview layer
+   Real media is shown only where a verified public video URL already exists.
+   Other cards keep their typographic treatment until an approved image asset is available. */
+
+.career-grid article,
+.career-page-grid article,
+.media-video-grid a {
+  overflow: hidden;
+}
+
+.career-grid article:nth-child(-n+5)::before,
+.career-page-grid article:nth-child(-n+5)::before,
+.media-video-grid a:nth-child(-n+5)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(255,255,255,.14);
+  filter: saturate(.9) contrast(1.04);
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.career-grid article:nth-child(1)::before,
+.career-page-grid article:nth-child(1)::before,
+.media-video-grid a:nth-child(1)::before {
+  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/op0b7AyaQn0/hqdefault.jpg");
+}
+.career-grid article:nth-child(2)::before,
+.career-page-grid article:nth-child(2)::before,
+.media-video-grid a:nth-child(2)::before {
+  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/NXozUa1IzRM/hqdefault.jpg");
+}
+.career-grid article:nth-child(3)::before,
+.career-page-grid article:nth-child(3)::before,
+.media-video-grid a:nth-child(3)::before {
+  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/KNPQqgpgqPQ/hqdefault.jpg");
+}
+.career-grid article:nth-child(4)::before,
+.career-page-grid article:nth-child(4)::before,
+.media-video-grid a:nth-child(4)::before {
+  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/3HW_v_vA63w/hqdefault.jpg");
+}
+.career-grid article:nth-child(5)::before,
+.career-page-grid article:nth-child(5)::before,
+.media-video-grid a:nth-child(5)::before {
+  background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url("https://img.youtube.com/vi/15566qQHhlw/hqdefault.jpg");
+}
+
+.career-grid article:nth-child(-n+5):hover::before,
+.career-page-grid article:nth-child(-n+5):hover::before,
+.media-video-grid a:nth-child(-n+5):hover::before {
+  transform: scale(1.015);
+  filter: saturate(1) contrast(1.06) brightness(1.04);
+}
+
+/* HOME: let video-backed works read as richer media cards without changing source copy. */
+.career-grid article:nth-child(-n+5) {
+  min-height: 330px;
+}
+.career-grid article:nth-child(-n+5) h3 {
+  margin-top: 8px;
+}
+
+/* Career page: preserve the 3-column editorial grid while adding visual evidence. */
+.career-page-grid article:nth-child(-n+5) {
+  min-height: 390px;
+}
+.career-page-grid article:nth-child(-n+5) h3 {
+  margin-top: 8px;
+}
+
+/* Media page: video cards become poster-like previews. */
+.media-video-grid a:nth-child(-n+5) {
+  min-height: 320px;
+}
+.media-video-grid a:nth-child(-n+5) strong {
+  margin-top: 8px;
+}
+
+/* Typographic fallback for works without an approved preview image. */
+.career-grid article:nth-child(n+6),
+.career-page-grid article:nth-child(n+6) {
+  background-image: radial-gradient(circle at 82% 18%, rgba(255,255,255,.06), transparent 34%);
+}
+
+@media (max-width: 720px) {
+  .career-grid article:nth-child(-n+5),
+  .career-page-grid article:nth-child(-n+5),
+  .media-video-grid a:nth-child(-n+5) {
+    min-height: auto;
+  }
+
+  .career-grid article:nth-child(-n+5)::before,
+  .career-page-grid article:nth-child(-n+5)::before,
+  .media-video-grid a:nth-child(-n+5)::before {
+    margin-bottom: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career-grid article::before,
+  .career-page-grid article::before,
+  .media-video-grid a::before {
+    transition: none !important;
+    transform: none !important;
+  }
+}
