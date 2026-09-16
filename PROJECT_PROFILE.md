@@ -1,6 +1,6 @@
 # PROJECT_PROFILE
 
-Version: 1.1
+Version: 1.2
 Status: ACTIVE
 
 ## Project Identity
@@ -67,8 +67,12 @@ Current implementation baseline:
 - Global Navigation contract FURUSHO-NAV-2
 - /profile, /career, /activities, /projects, /media, /contact pages published
 - shared visual card / image preview system
+- HOME Selected Career explicit media-card system with approved YouTube previews and local archive imagery
+- NF TAP brand mark integrated into header, favicon / touch icon, and web app manifest
+- focal-point image framing for portrait assets used in landscape cards
 - Visual Asset Registry and automated review generation
 - Navigation Audit / Navigation Contract Sync / Visual Asset Registry CI checks
+- sitemap and OGP baseline for primary public pages
 - GitHub Pages public delivery
 
 ## Validation
@@ -81,11 +85,13 @@ Current implementation baseline:
 - Global Navigation must satisfy NAVIGATION_REGISTRY.md.
 - Visual assets must remain traceable through assets/data/media-assets.json.
 - REVIEW_REQUIRED assets must not be promoted into public use without explicit confirmation.
+- Visual meaning must not depend on DOM position such as nth-child ordering when an explicit card class can represent it.
+- Person-focused images placed in landscape cards must use an intentional focal point rather than default center cropping.
 
 ## Next Handoff
 
 1. Continue live visual QA across HOME and all primary subpages.
 2. Replace typography fallback cards with approved real assets when suitable source images become available.
-3. Improve Career / Projects / Media visual consistency without weakening publication safety.
+3. Improve Projects / Media visual richness without weakening publication safety.
 4. Review responsive spacing, card cropping, CTA hierarchy, and accessibility on real devices.
 5. Keep PROJECT_PROFILE.md, NAVIGATION_REGISTRY.md, Visual Asset Registry, and public implementation synchronized with main.
