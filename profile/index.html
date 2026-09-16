@@ -26,7 +26,8 @@
     .current-project-card b{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.5rem,2.4vw,2.35rem);font-weight:500}
     .current-project-card small{font-size:.66rem;letter-spacing:.16em;color:#c8c0b4;font-weight:800}
     .current-project-card i{font-size:.7rem;font-style:normal;letter-spacing:.12em;margin-top:8px}
-    .current-project-card:hover img{transform:scale(1.025);filter:saturate(.78) contrast(1.08) brightness(.76)}
+    .current-project-visual-type{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(4rem,10vw,8rem);letter-spacing:-.06em;color:#777;background:linear-gradient(135deg,#171717,#2d2d2d);transition:transform .3s ease,color .3s ease}
+    .current-project-card:hover .current-project-visual-type{transform:scale(1.025);color:#929292}
     @media(max-width:650px){.current-project-visuals{display:flex;overflow-x:auto;gap:10px;margin-right:-14px;padding-right:14px;scroll-snap-type:x mandatory;scrollbar-width:none}.current-project-visuals::-webkit-scrollbar{display:none}.current-project-card{flex:0 0 82vw;min-height:260px;scroll-snap-align:start}}
   </style>
 </head>
@@ -145,11 +146,11 @@
         </div>
         <div class="current-project-visuals" aria-label="現在の主な活動">
           <a class="current-project-card" href="https://noritap.github.io/rhythmspeaker/" target="_blank" rel="noopener noreferrer" aria-label="WEB連動型タップダンス教室 Rhythm Speakerを見る">
-            <img src="https://p1-598f4ae0.imageflux.jp/c!/w=1200,h=630,a=2,ir=auto/5a264227c8f22c4ecd0010c5/ogp/15f156b233266ca1861f.png" alt="Rhythm Speaker 公式サイトのビジュアル" width="1200" height="630" loading="lazy" decoding="async">
+            <span class="current-project-visual-type" aria-hidden="true">RS</span>
             <span><small>TEACH / STUDIO</small><b>Rhythm Speaker</b><i>VIEW SITE →</i></span>
           </a>
           <a class="current-project-card" href="https://noritap.github.io/tapdance-cardgame/" target="_blank" rel="noopener noreferrer" aria-label="Tap Dance Card Gameを見る">
-            <img src="https://noritap.github.io/tapdance-cardgame/images/tapdance.jpg" alt="Tap Dance Card Game のメインビジュアル" width="1200" height="800" loading="lazy" decoding="async">
+            <span class="current-project-visual-type" aria-hidden="true">TAP</span>
             <span><small>CONNECT / PROJECT</small><b>Tap Dance Card Game</b><i>VIEW PROJECT →</i></span>
           </a>
         </div>
