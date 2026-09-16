@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-16T07:31:57+00:00",
+  "generated_at": "2026-09-16T07:55:08+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -10,10 +10,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 6,
+    "total": 7,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 1,
-      "AUTO_EXTERNAL_PREVIEW": 5
+      "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
   "assets": [
@@ -95,6 +95,21 @@
       "found_in": [
         "career/index.html",
         "index.html",
+        "media/index.html",
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "youtube:RCHe13BrkUo",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=RCHe13BrkUo",
+      "image_url": "https://img.youtube.com/vi/RCHe13BrkUo/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "career/index.html",
         "media/index.html",
         "profile/index.html"
       ]
