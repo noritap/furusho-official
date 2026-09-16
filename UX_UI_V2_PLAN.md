@@ -1,7 +1,7 @@
 # FURUSHO OFFICIAL UX/UI v2 PLAN
 
-Version: 1.0
-Status: IMPLEMENTATION BASELINE
+Version: 1.1
+Status: IMPLEMENTED
 Updated: 2026-09-16
 
 ## Goal
@@ -17,7 +17,7 @@ Updated: 2026-09-16
 
 ## v2 information architecture
 
-HOME の優先順位を以下に変更する。
+HOME の優先順位：
 
 1. WHO — 古庄里好は誰か
 2. ROUTE — 何を探しているか
@@ -41,20 +41,31 @@ HOME の優先順位を以下に変更する。
 
 料金・対応地域・契約条件・納期など未確定事項はHOMEで補完しない。
 
-## UI principles
+## Implemented UI changes
 
-- Editorial / professional / restrained visual language
-- Off-white + blackを継続し、accentはCTAと状態表示だけに限定
-- Hero直下にroute chooserを置く
-- 主要CTAは動詞で表記する
-- Mobileは常時アクセス可能なbottom action barを設置する
-- HTMLはJavaScriptなしでも完全利用可能にする
-- 既存の実績、画像、SEO metadata、external linksを保持する
+- primary navigationを About / Work / Projects / Career / Contact へ簡略化
+- Hero直下に START HERE routingを追加
+- Work With Meを追加し、古庄個人への依頼領域を明示
+- Rhythm SpeakerへのStudio導線を別ルートとして明示
+- Mobileではheader navigationをContact中心に簡略化
+- Mobile bottom action barを追加
+- tap targetを原則44px以上へ拡張
+- skip link / focus-visible / reduced-motion supportを追加
+- 既存Career / Media / profile image / metadataを保持
+- JavaScriptなしで利用可能なStatic HTML構成を維持
 
 ## Success criteria
 
 - 初見で古庄本人への依頼領域が理解できる
 - Rhythm Speakerへの問い合わせ誤送信を減らす
 - HomeからContactまで1–2 actionで到達できる
-- 主要リンクのtap targetを44px以上確保する
-- Mobileで横スクロールナビへの依存を減らす
+- Mobileで横スクロールナビへの依存をなくす
+- PUBLIC-safe wordingだけで依頼カテゴリを表示する
+
+## Implementation files
+
+- `index.html`
+- `assets/css/style.css`
+
+Public implementation Source of Truth:
+- GitHub `main` of `noritap/furusho-official`
