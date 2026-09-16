@@ -88,7 +88,8 @@
 .career-media-card > span,
 .career-media-card > h3,
 .career-media-card > p,
-.career-media-card > .career-link {
+.career-media-card > .career-link,
+.career-media-card > .career-links {
   margin-left: 26px;
   margin-right: 26px;
 }
@@ -99,6 +100,13 @@
   margin-top: 18px;
 }
 .career-media-card > .career-link {
+  margin-bottom: 26px;
+}
+.career-media-card > .career-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   margin-bottom: 26px;
 }
 .career-capability-grid {
@@ -133,9 +141,11 @@
   .career-media-card > span,
   .career-media-card > h3,
   .career-media-card > p,
-  .career-media-card > .career-link {
+  .career-media-card > .career-link,
+  .career-media-card > .career-links {
     margin-left: 20px;
     margin-right: 20px;
   }
-  .career-media-card > .career-link { margin-bottom: 20px; }
+  .career-media-card > .career-link,
+  .career-media-card > .career-links { margin-bottom: 20px; }
 }
