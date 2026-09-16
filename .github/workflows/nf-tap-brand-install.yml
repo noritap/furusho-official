@@ -1,0 +1,40 @@
+name: NF TAP Brand Install
+
+on:
+  push:
+    branches:
+      - feat/nf-tap-brand-icons
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nf-tap-brand-install
+  cancel-in-progress: true
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/nf-tap-brand-icons
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install NF TAP brand assets into primary pages
+        run: python3 tools/install_nf_tap_brand.py
+      - name: Verify navigation contract
+        run: python3 tools/navigation_audit.py --strict
+      - name: Commit generated brand integration
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No brand integration changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html profile/index.html career/index.html activities/index.html projects/index.html media/index.html contact/index.html assets/css/style.css
+          git commit -m "feat: integrate NF TAP favicon and header mark"
+          git push origin HEAD:feat/nf-tap-brand-icons
