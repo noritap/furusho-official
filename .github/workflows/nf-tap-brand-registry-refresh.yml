@@ -1,0 +1,40 @@
+name: NF TAP Brand Registry Refresh
+
+on:
+  push:
+    branches:
+      - feat/nf-tap-brand-icons
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nf-tap-brand-registry-refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/nf-tap-brand-icons
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh visual assets
+        run: |
+          python3 tools/collect_visual_assets.py
+          python3 tools/render_visual_asset_review.py
+      - name: Commit generated registry
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No registry changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/media-assets.json .github/visual-asset-review.md
+          git commit -m "chore: register NF TAP visual asset"
+          git push origin HEAD:feat/nf-tap-brand-icons
