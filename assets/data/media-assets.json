@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-16T02:31:00+00:00",
+  "generated_at": "2026-09-16T02:57:14+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -9,11 +9,11 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 7,
+    "total": 14,
     "by_usage_status": {
-      "AUTO_EXTERNAL_PREVIEW": 5,
       "EXISTING_PUBLIC_ASSET": 1,
-      "REVIEW_REQUIRED": 1
+      "REVIEW_REQUIRED": 8,
+      "AUTO_EXTERNAL_PREVIEW": 5
     }
   },
   "assets": [
@@ -28,8 +28,73 @@
       "auto_publish": true,
       "found_in": [
         "index.html",
-        "profile/index.html",
-        "media/index.html"
+        "media/index.html",
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://i.ytimg.com/vi/15566qQHhlw/hqdefault.jpg",
+      "type": "remote_image",
+      "source_url": "https://i.ytimg.com/vi/15566qQHhlw/hqdefault.jpg",
+      "image_url": "https://i.ytimg.com/vi/15566qQHhlw/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://i.ytimg.com/vi/3HW_v_vA63w/hqdefault.jpg",
+      "type": "remote_image",
+      "source_url": "https://i.ytimg.com/vi/3HW_v_vA63w/hqdefault.jpg",
+      "image_url": "https://i.ytimg.com/vi/3HW_v_vA63w/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://i.ytimg.com/vi/KNPQqgpgqPQ/hqdefault.jpg",
+      "type": "remote_image",
+      "source_url": "https://i.ytimg.com/vi/KNPQqgpgqPQ/hqdefault.jpg",
+      "image_url": "https://i.ytimg.com/vi/KNPQqgpgqPQ/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://i.ytimg.com/vi/NXozUa1IzRM/hqdefault.jpg",
+      "type": "remote_image",
+      "source_url": "https://i.ytimg.com/vi/NXozUa1IzRM/hqdefault.jpg",
+      "image_url": "https://i.ytimg.com/vi/NXozUa1IzRM/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://i.ytimg.com/vi/op0b7AyaQn0/hqdefault.jpg",
+      "type": "remote_image",
+      "source_url": "https://i.ytimg.com/vi/op0b7AyaQn0/hqdefault.jpg",
+      "image_url": "https://i.ytimg.com/vi/op0b7AyaQn0/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
       ]
     },
     {
@@ -42,10 +107,38 @@
       "rights_status": "UNVERIFIED",
       "auto_publish": false,
       "found_in": [
-        "index.html",
-        "profile/index.html",
+        "activities/index.html",
         "career/index.html",
-        "media/index.html"
+        "contact/index.html",
+        "index.html",
+        "media/index.html",
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://noritap.github.io/tapdance-cardgame/images/tapdance.jpg",
+      "type": "remote_image",
+      "source_url": "https://noritap.github.io/tapdance-cardgame/images/tapdance.jpg",
+      "image_url": "https://noritap.github.io/tapdance-cardgame/images/tapdance.jpg",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://p1-598f4ae0.imageflux.jp/c!/w=1200,h=630,a=2,ir=auto/5a264227c8f22c4ecd0010c5/ogp/15f156b233266ca1861f.png",
+      "type": "remote_image",
+      "source_url": "https://p1-598f4ae0.imageflux.jp/c!/w=1200,h=630,a=2,ir=auto/5a264227c8f22c4ecd0010c5/ogp/15f156b233266ca1861f.png",
+      "image_url": "https://p1-598f4ae0.imageflux.jp/c!/w=1200,h=630,a=2,ir=auto/5a264227c8f22c4ecd0010c5/ogp/15f156b233266ca1861f.png",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
       ]
     },
     {
@@ -57,7 +150,12 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": ["index.html", "career/index.html", "media/index.html"]
+      "found_in": [
+        "career/index.html",
+        "index.html",
+        "media/index.html",
+        "profile/index.html"
+      ]
     },
     {
       "id": "youtube:3HW_v_vA63w",
@@ -68,7 +166,12 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": ["index.html", "career/index.html", "media/index.html"]
+      "found_in": [
+        "career/index.html",
+        "index.html",
+        "media/index.html",
+        "profile/index.html"
+      ]
     },
     {
       "id": "youtube:KNPQqgpgqPQ",
@@ -79,7 +182,12 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": ["index.html", "career/index.html", "media/index.html"]
+      "found_in": [
+        "career/index.html",
+        "index.html",
+        "media/index.html",
+        "profile/index.html"
+      ]
     },
     {
       "id": "youtube:NXozUa1IzRM",
@@ -90,7 +198,12 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": ["index.html", "career/index.html", "media/index.html"]
+      "found_in": [
+        "career/index.html",
+        "index.html",
+        "media/index.html",
+        "profile/index.html"
+      ]
     },
     {
       "id": "youtube:op0b7AyaQn0",
@@ -101,7 +214,12 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": ["index.html", "career/index.html", "media/index.html"]
+      "found_in": [
+        "career/index.html",
+        "index.html",
+        "media/index.html",
+        "profile/index.html"
+      ]
     }
   ]
 }
