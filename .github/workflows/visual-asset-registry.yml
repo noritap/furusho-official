@@ -1,0 +1,53 @@
+name: Visual Asset Registry Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "tools/collect_visual_assets.py"
+  workflow_dispatch:
+    inputs:
+      fetch_og:
+        description: "Also inspect external pages for og:image candidates"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: visual-asset-registry-main
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regenerate visual asset registry
+        shell: bash
+        run: |
+          if [[ "${{ inputs.fetch_og }}" == "true" ]]; then
+            python3 tools/collect_visual_assets.py --fetch-og
+          else
+            python3 tools/collect_visual_assets.py
+          fi
+      - name: Commit registry update when changed
+        shell: bash
+        run: |
+          if git diff --quiet -- assets/data/media-assets.json; then
+            echo "Visual asset registry is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data/media-assets.json
+          git commit -m "chore: refresh visual asset registry"
+          git push origin HEAD:main
