@@ -7,6 +7,7 @@ Conservative by design:
 - Resolves this site's absolute canonical image URLs back to repository-local assets.
 - Marks other remote/OG images REVIEW_REQUIRED.
 - Indexes local repository images without inferring ownership/rights.
+- Preserves generated_at when registry content is unchanged.
 
 Usage:
     python3 tools/collect_visual_assets.py
@@ -276,6 +277,24 @@ def collect(fetch_og: bool = False) -> dict:
     }
 
 
+def without_generated_at(data: dict) -> dict:
+    clone = dict(data)
+    clone.pop("generated_at", None)
+    return clone
+
+
+def stabilize_generated_at(data: dict, output: Path) -> dict:
+    if not output.exists():
+        return data
+    try:
+        previous = json.loads(output.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return data
+    if without_generated_at(previous) == without_generated_at(data):
+        data["generated_at"] = previous.get("generated_at", data["generated_at"])
+    return data
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--fetch-og", action="store_true", help="Fetch external pages and register og:image candidates.")
@@ -283,14 +302,15 @@ def main() -> int:
     parser.add_argument("--stdout", action="store_true", help="Print JSON instead of writing the registry.")
     args = parser.parse_args()
 
+    output = args.output if args.output.is_absolute() else ROOT / args.output
     data = collect(fetch_og=args.fetch_og)
+    data = stabilize_generated_at(data, output)
     payload = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 
     if args.stdout:
         print(payload, end="")
         return 0
 
-    output = args.output if args.output.is_absolute() else ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(payload, encoding="utf-8")
     print(f"Wrote {data['summary']['total']} assets to {output.relative_to(ROOT)}")
