@@ -1,0 +1,38 @@
+/* Reusable subpage visual system v3 */
+.visual-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.visual-card{min-width:0;border:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.visual-card:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.07)}
+.visual-card:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.visual-card-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1b1b1b;display:flex;align-items:flex-end;padding:20px;color:#fff}
+.visual-card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease,filter .25s ease}
+.visual-card:hover .visual-card-media img{transform:scale(1.025)}
+.visual-card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.05) 64%);pointer-events:none}
+.visual-card-media.visual-type{align-items:center;justify-content:center;padding:0;background:linear-gradient(135deg,#151515,#353535)}
+.visual-card-media.visual-type::after{display:none}
+.visual-type-mark{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.5rem,7vw,5.5rem);line-height:.9;letter-spacing:-.06em;text-align:center;opacity:.94}
+.visual-type-mark small{display:block;font-family:inherit;font-size:.16em;letter-spacing:.18em;margin-top:12px;opacity:.7}
+.visual-card-badge{position:relative;z-index:1;font-size:.65rem;letter-spacing:.15em;font-weight:800;color:#fff}
+.visual-card-body{padding:22px;display:flex;flex-direction:column;flex:1;min-height:180px}
+.visual-card-kicker{font-size:.66rem;letter-spacing:.15em;color:var(--muted);font-weight:800;text-transform:uppercase}
+.visual-card h2,.visual-card h3{font-size:clamp(1.25rem,2.3vw,1.7rem);line-height:1.3;margin:18px 0 10px}
+.visual-card p{color:#4b4842;font-size:.92rem;margin-bottom:22px}
+.visual-card-cta{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;font-size:.76rem;letter-spacing:.1em;font-weight:800}
+.visual-card:hover .visual-card-cta{text-decoration:underline;text-underline-offset:4px}
+.dark-section .visual-card{background:var(--dark);border-color:#3a3a3a;color:#fff}
+.dark-section .visual-card-body p{color:#bbb}
+.dark-section .visual-card-kicker{color:#888}
+.dark-section .visual-card:focus-visible{outline-color:#fff}
+.visual-card-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.visual-card-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.service-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
+.service-choice{background:var(--bg);padding:24px;display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;min-height:190px}
+.service-choice-index{width:46px;height:46px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;letter-spacing:.08em}
+.service-choice h2,.service-choice h3{font-size:1.25rem;margin:0 0 8px}
+.service-choice p{font-size:.9rem;color:#4b4842;margin:0}
+.service-choice a{display:inline-flex;min-height:44px;align-items:center;margin-top:14px;font-weight:800;font-size:.78rem}
+.related-visual-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.related-visual-row a{border:1px solid var(--line);padding:22px;min-height:140px;display:flex;flex-direction:column;background:var(--bg)}
+.related-visual-row span{font-size:.68rem;letter-spacing:.12em;color:var(--muted);font-weight:800}
+.related-visual-row strong{font-size:1.2rem;margin-top:auto}
+@media(max-width:900px){.visual-card-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-card-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.visual-card-grid,.visual-card-grid.three,.visual-card-grid.four{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin-right:-20px;padding-right:20px;scrollbar-width:none}.visual-card-grid::-webkit-scrollbar{display:none}.visual-card{flex:0 0 min(84vw,390px);scroll-snap-align:start}.service-choice-grid{grid-template-columns:1fr}.related-visual-row{grid-template-columns:1fr}.visual-card-body{min-height:170px}}
