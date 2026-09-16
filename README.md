@@ -48,13 +48,44 @@ Preview without writing:
 python3 tools/collect_visual_assets.py --stdout
 ```
 
-### Automatic sync
+The collector normalizes duplicate visual references:
 
-`.github/workflows/visual-asset-registry.yml` automatically regenerates the registry when HTML or the collector changes on `main`.
+- YouTube video links and `i.ytimg.com` / `img.youtube.com` thumbnail URLs resolve to one YouTube asset entry.
+- Absolute `noritap.github.io/furusho-official/...` image URLs resolve back to the matching repository-local asset when possible.
+- `generated_at` changes only when the actual registry content changes.
 
-If the generated registry changed, GitHub Actions commits only `assets/data/media-assets.json` back to `main`.
+### Human review view
 
-External OGP discovery is intentionally not part of every automatic run. It can be launched from **Actions → Visual Asset Registry Sync → Run workflow** with `fetch_og` enabled.
+`tools/render_visual_asset_review.py` converts the JSON registry into a human-readable review file:
+
+```text
+.github/visual-asset-review.md
+```
+
+Run both generators locally with:
+
+```bash
+python3 tools/collect_visual_assets.py
+python3 tools/render_visual_asset_review.py
+```
+
+The review file groups assets into:
+
+- `REVIEW_REQUIRED`
+- `MISSING_LOCAL_FILE`
+- `AUTO_EXTERNAL_PREVIEW`
+- `EXISTING_PUBLIC_ASSET`
+
+This makes rights/context decisions visible without reading raw JSON.
+
+### Automatic sync and validation
+
+`.github/workflows/visual-asset-registry.yml` keeps both generated files synchronized.
+
+- On pull requests, GitHub Actions regenerates the registry and review and fails if committed generated files are stale.
+- On `main`, the workflow regenerates both files and commits only those generated files when their actual content changed.
+- External OGP discovery is intentionally not part of every automatic run.
+- Broader OGP discovery can be launched from **Actions → Visual Asset Registry Sync → Run workflow** with `fetch_og` enabled.
 
 This keeps ordinary updates low-risk while still allowing broader candidate discovery when needed.
 
@@ -88,12 +119,14 @@ The registry is discovery/routing metadata, not a copyright or licensing authori
 │   │   └── media-assets.json
 │   └── images/
 ├── .github/
+│   ├── visual-asset-review.md
 │   └── workflows/
 │       └── visual-asset-registry.yml
 └── tools/
     ├── navigation_audit.py
     ├── navigation_sync.py
-    └── collect_visual_assets.py
+    ├── collect_visual_assets.py
+    └── render_visual_asset_review.py
 ```
 
 ## Current UX direction
