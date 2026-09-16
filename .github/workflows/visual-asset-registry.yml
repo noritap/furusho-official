@@ -6,6 +6,16 @@ on:
     paths:
       - "**/*.html"
       - "tools/collect_visual_assets.py"
+      - "tools/render_visual_asset_review.py"
+      - ".github/workflows/visual-asset-registry.yml"
+  pull_request:
+    paths:
+      - "**/*.html"
+      - "assets/data/media-assets.json"
+      - ".github/visual-asset-review.md"
+      - "tools/collect_visual_assets.py"
+      - "tools/render_visual_asset_review.py"
+      - ".github/workflows/visual-asset-registry.yml"
   workflow_dispatch:
     inputs:
       fetch_og:
@@ -18,7 +28,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: visual-asset-registry-main
+  group: visual-asset-registry-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -26,28 +36,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Regenerate visual asset registry
         shell: bash
         run: |
-          if [[ "${{ inputs.fetch_og }}" == "true" ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.fetch_og }}" == "true" ]]; then
             python3 tools/collect_visual_assets.py --fetch-og
           else
             python3 tools/collect_visual_assets.py
           fi
-      - name: Commit registry update when changed
+      - name: Render visual asset review
+        run: python3 tools/render_visual_asset_review.py
+      - name: Verify generated files in pull requests
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- assets/data/media-assets.json .github/visual-asset-review.md
+      - name: Commit generated files on main when changed
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
-          if git diff --quiet -- assets/data/media-assets.json; then
-            echo "Visual asset registry is already current."
+          if git diff --quiet -- assets/data/media-assets.json .github/visual-asset-review.md; then
+            echo "Visual asset registry and review are already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/media-assets.json
+          git add assets/data/media-assets.json .github/visual-asset-review.md
           git commit -m "chore: refresh visual asset registry"
           git push origin HEAD:main
