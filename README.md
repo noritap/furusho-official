@@ -48,6 +48,16 @@ Preview without writing:
 python3 tools/collect_visual_assets.py --stdout
 ```
 
+### Automatic sync
+
+`.github/workflows/visual-asset-registry.yml` automatically regenerates the registry when HTML or the collector changes on `main`.
+
+If the generated registry changed, GitHub Actions commits only `assets/data/media-assets.json` back to `main`.
+
+External OGP discovery is intentionally not part of every automatic run. It can be launched from **Actions → Visual Asset Registry Sync → Run workflow** with `fetch_og` enabled.
+
+This keeps ordinary updates low-risk while still allowing broader candidate discovery when needed.
+
 ### Safety policy
 
 The collector does **not** download or copy external images.
@@ -77,6 +87,9 @@ The registry is discovery/routing metadata, not a copyright or licensing authori
 │   ├── data/
 │   │   └── media-assets.json
 │   └── images/
+├── .github/
+│   └── workflows/
+│       └── visual-asset-registry.yml
 └── tools/
     ├── navigation_audit.py
     ├── navigation_sync.py
