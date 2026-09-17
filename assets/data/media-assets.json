@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T16:23:19+00:00",
+  "generated_at": "2026-09-17T16:29:12+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -11,10 +11,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 10,
+    "total": 11,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 2,
-      "OWNER_AUTHORIZED_CROSS_SITE": 2,
+      "OWNER_AUTHORIZED_CROSS_SITE": 3,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
@@ -28,15 +28,7 @@
       "usage_status": "EXISTING_PUBLIC_ASSET",
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
-      "found_in": [
-        "activities/index.html",
-        "career/index.html",
-        "contact/index.html",
-        "index.html",
-        "media/index.html",
-        "profile/index.html",
-        "projects/index.html"
-      ]
+      "found_in": ["activities/index.html", "career/index.html", "contact/index.html", "index.html", "media/index.html", "profile/index.html", "projects/index.html"]
     },
     {
       "id": "local:assets/images/furusho-profile-main.jpg",
@@ -47,14 +39,19 @@
       "usage_status": "EXISTING_PUBLIC_ASSET",
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
-      "found_in": [
-        "activities/index.html",
-        "career/index.html",
-        "contact/index.html",
-        "index.html",
-        "media/index.html",
-        "projects/index.html"
-      ]
+      "found_in": ["activities/index.html", "career/index.html", "contact/index.html", "index.html", "media/index.html", "projects/index.html"]
+    },
+    {
+      "id": "remote:https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg",
+      "type": "remote_image",
+      "source_url": "https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg",
+      "image_url": "https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg",
+      "local_path": null,
+      "usage_status": "OWNER_AUTHORIZED_CROSS_SITE",
+      "rights_status": "OWNER_AUTHORIZED_REUSE",
+      "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
+      "auto_publish": true,
+      "found_in": ["projects/index.html"]
     },
     {
       "id": "remote:https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
@@ -66,10 +63,7 @@
       "rights_status": "OWNER_AUTHORIZED_REUSE",
       "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
       "auto_publish": true,
-      "found_in": [
-        "index.html",
-        "profile/index.html"
-      ]
+      "found_in": ["index.html", "profile/index.html"]
     },
     {
       "id": "remote:https://noritap.github.io/rhythmspeaker/tap-dance-instructor-furusho-noritaka.jpg",
@@ -81,9 +75,7 @@
       "rights_status": "OWNER_AUTHORIZED_REUSE",
       "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
       "auto_publish": true,
-      "found_in": [
-        "profile/index.html"
-      ]
+      "found_in": ["profile/index.html"]
     },
     {
       "id": "youtube:15566qQHhlw",
@@ -94,11 +86,7 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": [
-        "career/index.html",
-        "media/index.html",
-        "profile/index.html"
-      ]
+      "found_in": ["career/index.html", "media/index.html", "profile/index.html"]
     },
     {
       "id": "youtube:3HW_v_vA63w",
@@ -109,12 +97,7 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": [
-        "career/index.html",
-        "index.html",
-        "media/index.html",
-        "profile/index.html"
-      ]
+      "found_in": ["career/index.html", "index.html", "media/index.html", "profile/index.html"]
     },
     {
       "id": "youtube:KNPQqgpgqPQ",
@@ -125,12 +108,7 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": [
-        "career/index.html",
-        "index.html",
-        "media/index.html",
-        "profile/index.html"
-      ]
+      "found_in": ["career/index.html", "index.html", "media/index.html", "profile/index.html"]
     },
     {
       "id": "youtube:NXozUa1IzRM",
@@ -141,11 +119,7 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": [
-        "career/index.html",
-        "media/index.html",
-        "profile/index.html"
-      ]
+      "found_in": ["career/index.html", "media/index.html", "profile/index.html"]
     },
     {
       "id": "youtube:RCHe13BrkUo",
@@ -156,11 +130,7 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": [
-        "career/index.html",
-        "media/index.html",
-        "profile/index.html"
-      ]
+      "found_in": ["career/index.html", "media/index.html", "profile/index.html"]
     },
     {
       "id": "youtube:op0b7AyaQn0",
@@ -171,12 +141,7 @@
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
-      "found_in": [
-        "career/index.html",
-        "index.html",
-        "media/index.html",
-        "profile/index.html"
-      ]
+      "found_in": ["career/index.html", "index.html", "media/index.html", "profile/index.html"]
     }
   ]
 }
