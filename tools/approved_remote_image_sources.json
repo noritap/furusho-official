@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "host": "noritap.github.io",
+      "path_prefix": "/rhythmspeaker/",
+      "usage_status": "OWNER_AUTHORIZED_CROSS_SITE",
+      "rights_status": "OWNER_AUTHORIZED_REUSE",
+      "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md"
+    }
+  ]
+}
