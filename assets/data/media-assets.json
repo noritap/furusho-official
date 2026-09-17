@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T15:25:48+00:00",
+  "generated_at": "2026-09-17T16:07:04+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -11,10 +11,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 9,
+    "total": 10,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 2,
-      "OWNER_AUTHORIZED_CROSS_SITE": 1,
+      "OWNER_AUTHORIZED_CROSS_SITE": 2,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
@@ -53,7 +53,6 @@
         "contact/index.html",
         "index.html",
         "media/index.html",
-        "profile/index.html",
         "projects/index.html"
       ]
     },
@@ -62,6 +61,20 @@
       "type": "remote_image",
       "source_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
       "image_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
+      "local_path": null,
+      "usage_status": "OWNER_AUTHORIZED_CROSS_SITE",
+      "rights_status": "OWNER_AUTHORIZED_REUSE",
+      "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
+      "auto_publish": true,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://noritap.github.io/rhythmspeaker/tap-dance-instructor-furusho-noritaka.jpg",
+      "type": "remote_image",
+      "source_url": "https://noritap.github.io/rhythmspeaker/tap-dance-instructor-furusho-noritaka.jpg",
+      "image_url": "https://noritap.github.io/rhythmspeaker/tap-dance-instructor-furusho-noritaka.jpg",
       "local_path": null,
       "usage_status": "OWNER_AUTHORIZED_CROSS_SITE",
       "rights_status": "OWNER_AUTHORIZED_REUSE",
