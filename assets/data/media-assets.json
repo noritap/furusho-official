@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T16:29:12+00:00",
+  "generated_at": "2026-09-17T16:35:30+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -81,6 +81,7 @@
       "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
       "auto_publish": true,
       "found_in": [
+        "activities/index.html",
         "index.html",
         "profile/index.html"
       ]
