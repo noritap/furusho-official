@@ -1,6 +1,6 @@
 # PROJECT_PROFILE
 
-Version: 1.4
+Version: 1.5
 Status: ACTIVE
 
 ## Project Identity
@@ -110,6 +110,8 @@ Current implementation baseline:
 - Navigation Audit / Navigation Contract Sync / Visual Asset Registry CI checks
 - sitemap and OGP baseline for primary public pages
 - GitHub Pages public delivery
+- Projects v3 page-local CSS extracted into `projects/projects.css`
+- retired `visual-preview-v21.css` compatibility layer and import fully removed from canonical shared CSS
 
 ## Page Role Contract
 
@@ -170,14 +172,15 @@ Routing:
 
 ## Technical Debt / Consolidation
 
-- `assets/css/style.css` still imports the retired compatibility file `visual-preview-v21.css`; its legacy selectors are already removed, so the remaining import/file pair should be removed as one controlled cleanup unit.
-- v3 should consolidate obsolete preview-era styling into deliberate canonical shared CSS rather than stacking new permanent preview override files.
-- Shared subpage styling should be visually verified before obsolete selectors are removed.
+- Preview-era `visual-preview-v21.css` has been retired and removed; do not recreate this override-layer pattern.
+- `assets/css/style.css` still contains historical shared selectors from pre-v3 layouts. Remove only selectors proven unused across the current public HTML, in small verified units.
+- v3 should converge toward deliberate canonical shared CSS plus explicit page-level stylesheets, rather than accumulating override layers.
+- Shared subpage styling must be visually verified before obsolete selectors are removed.
 - Avoid reintroducing page-local style blocks when a page-specific stylesheet already exists.
 
 ## Next Handoff
 
-1. Remove the retired `visual-preview-v21.css` import/file pair as one controlled CSS cleanup unit and verify no visual regression.
+1. Audit `assets/css/style.css` against current public HTML and remove one proven-unused selector family per controlled cleanup unit.
 2. Run total Visual QA across HOME and primary subpages: desktop / mobile / keyboard / focus / links / no-JS / accessibility / asset registry.
 3. Continue Profile de-duplication only where it improves distinction from Career and Activities; preserve verified facts and evidence.
 4. Replace typography fallback imagery only when approved real assets become available.
