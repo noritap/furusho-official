@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T09:37:18+00:00",
+  "generated_at": "2026-09-17T15:15:09+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -10,9 +10,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 8,
+    "total": 9,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 2,
+      "REVIEW_REQUIRED": 1,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
@@ -53,6 +54,19 @@
         "media/index.html",
         "profile/index.html",
         "projects/index.html"
+      ]
+    },
+    {
+      "id": "remote:https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
+      "type": "remote_image",
+      "source_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
+      "image_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
+      "local_path": null,
+      "usage_status": "REVIEW_REQUIRED",
+      "rights_status": "UNVERIFIED",
+      "auto_publish": false,
+      "found_in": [
+        "profile/index.html"
       ]
     },
     {
