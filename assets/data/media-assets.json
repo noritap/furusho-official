@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T15:15:09+00:00",
+  "generated_at": "2026-09-17T15:25:48+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
     "youtube_thumbnails": "AUTO_EXTERNAL_PREVIEW",
     "same_site_absolute_images": "RESOLVE_TO_REPOSITORY_ASSET",
+    "approved_remote_images": "OWNER_AUTHORIZED_CROSS_SITE",
     "remote_or_og_images": "REVIEW_REQUIRED",
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
@@ -13,7 +14,7 @@
     "total": 9,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 2,
-      "REVIEW_REQUIRED": 1,
+      "OWNER_AUTHORIZED_CROSS_SITE": 1,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
@@ -62,9 +63,10 @@
       "source_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
       "image_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
       "local_path": null,
-      "usage_status": "REVIEW_REQUIRED",
-      "rights_status": "UNVERIFIED",
-      "auto_publish": false,
+      "usage_status": "OWNER_AUTHORIZED_CROSS_SITE",
+      "rights_status": "OWNER_AUTHORIZED_REUSE",
+      "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
+      "auto_publish": true,
       "found_in": [
         "profile/index.html"
       ]
