@@ -2,11 +2,16 @@
 .contact-title{font-size:clamp(3.4rem,7.6vw,8rem);line-height:.92;letter-spacing:-.055em;margin:18px 0 26px}
 .contact-lead{max-width:760px;font-size:clamp(1.05rem,2vw,1.4rem);color:#45423d;margin-bottom:30px}
 .contact-types-section{background:#e6e1d7}
-.contact-type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#bbb4a7;border:1px solid #bbb4a7;margin-top:30px}
-.contact-type-grid article{background:var(--bg);padding:30px;min-height:230px}
-.contact-type-grid span{font-size:.72rem;color:var(--muted);letter-spacing:.13em}
-.contact-type-grid h2{font-size:1.65rem;margin:34px 0 12px}
-.contact-type-grid p{color:#4a4843}
+.contact-types-heading{display:grid;grid-template-columns:minmax(130px,.28fr) minmax(300px,.72fr) minmax(260px,.6fr);gap:clamp(24px,4vw,58px);align-items:end;margin-bottom:38px}
+.contact-types-heading h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.2rem,4.2vw,4.2rem);font-weight:500;line-height:1.08;letter-spacing:-.04em;margin:0}
+.contact-types-heading>p:last-child{max-width:520px;margin:0;color:#514d46}
+.contact-request-list{border-top:1px solid #aaa397}
+.contact-request-list article{display:grid;grid-template-columns:minmax(150px,.34fr) minmax(0,1fr) minmax(120px,.24fr);gap:clamp(18px,4vw,52px);align-items:center;padding:clamp(24px,3.5vw,42px) 0;border-bottom:1px solid #aaa397}
+.contact-request-list article>span{font-size:.66rem;font-weight:800;letter-spacing:.15em;color:#817a70}
+.contact-request-list h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.7rem,3vw,2.8rem);font-weight:500;line-height:1.15;margin:0 0 8px}
+.contact-request-list p{max-width:660px;margin:0;color:#4a4843}
+.contact-request-list a{justify-self:end;display:inline-flex;align-items:center;min-height:44px;font-size:.78rem;font-weight:800;letter-spacing:.05em;border-bottom:1px solid #8e877c}
+.contact-request-list a:hover{border-color:var(--ink)}
 .contact-process-grid{display:grid;grid-template-columns:.35fr 1fr;gap:40px}
 .contact-process h2{font-size:clamp(2.5rem,5vw,5rem);line-height:1.04}
 .contact-process p{max-width:760px;color:#c9c9c9}
@@ -20,10 +25,6 @@
 .contact-checklist strong{font-size:1rem}
 .contact-checklist p{margin:0;color:#4a4843;font-size:.94rem}
 .contact-prepare>.button{margin-top:30px}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
-.related-grid a{background:var(--bg);padding:26px;display:flex;flex-direction:column;gap:18px}
-.related-grid span{font-size:.78rem;color:var(--muted)}
-.related-grid strong{font-size:1.2rem}
 [aria-current="page"]{font-weight:800}
-@media(max-width:800px){.contact-type-grid,.related-grid{grid-template-columns:1fr}.contact-process-grid,.contact-prepare-grid{grid-template-columns:1fr;gap:18px}.contact-checklist li{grid-template-columns:36px 1fr}.contact-checklist p{grid-column:2}}
+@media(max-width:800px){.contact-types-heading{grid-template-columns:1fr;gap:16px}.contact-request-list article{grid-template-columns:1fr;gap:10px}.contact-request-list a{justify-self:start;margin-top:6px}.contact-process-grid,.contact-prepare-grid{grid-template-columns:1fr;gap:18px}.contact-checklist li{grid-template-columns:36px 1fr}.contact-checklist p{grid-column:2}}
 @media(max-width:600px){.contact-hero{padding:50px 0 58px}.contact-title{font-size:clamp(2.8rem,14vw,4rem);line-height:.95;margin-bottom:22px}.contact-lead{font-size:1rem}}
