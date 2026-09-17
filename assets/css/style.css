@@ -20,7 +20,7 @@ body {
   line-height: 1.7;
 }
 a { color: inherit; text-decoration: none; }
-a:focus-visible, .button:focus-visible, .route-card:focus-visible, .work-card a:focus-visible, .mobile-action-bar a:focus-visible {
+a:focus-visible, .button:focus-visible, .route-card:focus-visible, .mobile-action-bar a:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
@@ -199,27 +199,6 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 .compact-intro > div:last-child { padding-top: 16px; }
 .text-link { display: inline-flex; min-height: 44px; align-items: center; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
 
-.work-section { background: #fff; }
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  margin-top: 40px;
-}
-.work-card {
-  min-height: 300px;
-  padding: 26px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-}
-.work-index { font-size: .7rem; letter-spacing: .15em; color: var(--accent); font-weight: 800; }
-.work-card h3 { margin: 34px 0 14px; font-size: 1.3rem; line-height: 1.4; }
-.work-card p { color: #4b4842; font-size: .92rem; }
-.work-card a { margin-top: auto; min-height: 44px; display: inline-flex; align-items: center; font-weight: 800; font-size: .82rem; }
-.work-card a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .boundary-note {
   display: flex;
   align-items: center;
@@ -258,7 +237,6 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .section-intro > div:last-child, .split-heading > div:last-child { max-width: none; padding-top: 0; }
   .route-grid { grid-template-columns: 1fr; }
   .route-card { min-height: 170px; }
-  .work-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -284,10 +262,6 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .route-card { min-height: 156px; padding: 20px; }
   .route-number { margin-bottom: 22px; }
   .section { padding: 66px 0; }
-  .work-grid { grid-template-columns: 1fr; }
-  .work-card { min-height: auto; }
-  .work-card { padding: 22px; }
-  .work-card h3 { margin-top: 24px; }
   .boundary-note { align-items: stretch; flex-direction: column; }
   .footer { flex-direction: column; padding-bottom: 30px; }
   .footer div { flex-direction: column; gap: 2px; }
