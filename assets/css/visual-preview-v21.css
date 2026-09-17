@@ -1,5 +1,0 @@
-/* Retired compatibility layer.
-   The HOME v3 Editorial Authority implementation no longer uses the legacy
-   .home-career-card / .home-career-preview / .home-career-type selectors.
-   This file remains temporarily import-safe while shared CSS consolidation
-   removes the historical import from assets/css/style.css. */
