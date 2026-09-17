@@ -10,7 +10,8 @@
 .contact-request-list article>span{font-size:.66rem;font-weight:800;letter-spacing:.15em;color:#817a70}
 .contact-request-list h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.7rem,3vw,2.8rem);font-weight:500;line-height:1.15;margin:0 0 8px}
 .contact-request-list p{max-width:660px;margin:0;color:#4a4843}
-.contact-request-list a{justify-self:end;display:inline-flex;align-items:center;min-height:44px;font-size:.78rem;font-weight:800;letter-spacing:.05em;border-bottom:1px solid #8e877c}
+.contact-request-list a{justify-self:end;display:inline-flex;align-items:center;min-height:44px;font-size:0;font-weight:800;letter-spacing:.05em;border-bottom:1px solid #8e877c}
+.contact-request-list a::after{content:"相談する →";font-size:.78rem}
 .contact-request-list a:hover{border-color:var(--ink)}
 .contact-process-grid{display:grid;grid-template-columns:.35fr 1fr;gap:40px}
 .contact-process h2{font-size:clamp(2.5rem,5vw,5rem);line-height:1.04}
