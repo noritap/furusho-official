@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T09:31:50+00:00",
+  "generated_at": "2026-09-17T09:35:25+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -10,9 +10,9 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 9,
+    "total": 8,
     "by_usage_status": {
-      "EXISTING_PUBLIC_ASSET": 3,
+      "EXISTING_PUBLIC_ASSET": 2,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
@@ -34,19 +34,6 @@
         "media/index.html",
         "profile/index.html",
         "projects/index.html"
-      ]
-    },
-    {
-      "id": "local:assets/images/career/chicago-human-rhythm-project.jpg",
-      "type": "repository_image",
-      "source_url": null,
-      "image_url": "assets/images/career/chicago-human-rhythm-project.jpg",
-      "local_path": "assets/images/career/chicago-human-rhythm-project.jpg",
-      "usage_status": "EXISTING_PUBLIC_ASSET",
-      "rights_status": "RIGHTS_NOT_INFERRED",
-      "auto_publish": true,
-      "found_in": [
-        "career/index.html"
       ]
     },
     {
