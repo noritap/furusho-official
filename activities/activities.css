@@ -2,6 +2,7 @@
 .activities-title{font-size:clamp(3.2rem,7.2vw,7.4rem);line-height:.94;letter-spacing:-.055em;margin:18px 0 28px}
 .activities-lead{max-width:760px;font-size:clamp(1.05rem,2vw,1.4rem);color:#45423d}
 .activities-section{background:#e6e1d7}
+.activities-heading{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,82px);align-items:end;margin-bottom:38px}.activities-heading h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.2rem,4.2vw,4.2rem);font-weight:500;line-height:1.08;letter-spacing:-.04em;margin:14px 0 0}.activities-heading>p{max-width:660px;margin:0;color:#514d46}.activities-heading .text-link{min-height:auto}
 .activities-list{display:grid;gap:1px;background:#bbb4a7;border:1px solid #bbb4a7}
 .activities-list article{display:grid;grid-template-columns:minmax(140px,.35fr) minmax(0,1fr);gap:36px;background:var(--bg);padding:clamp(28px,4vw,52px)}
 .activity-kicker{font-size:.72rem;letter-spacing:.15em;color:var(--muted);font-weight:700}
@@ -11,4 +12,4 @@
 .activities-principle h2{font-size:clamp(2.4rem,5vw,5rem);line-height:1.04}
 .activities-principle p:last-child{max-width:760px;color:#c7c7c7}
 [aria-current="page"]{font-weight:800}
-@media(max-width:760px){.activities-list article,.activities-principle-grid{grid-template-columns:1fr;gap:16px}.activities-title{font-size:clamp(2.9rem,14vw,5rem)}}
+@media(max-width:760px){.activities-heading,.activities-list article,.activities-principle-grid{grid-template-columns:1fr;gap:16px}.activities-heading{margin-bottom:28px}.activities-title{font-size:clamp(2.9rem,14vw,5rem)}}
