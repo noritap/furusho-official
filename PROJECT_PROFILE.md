@@ -1,6 +1,6 @@
 # PROJECT_PROFILE
 
-Version: 1.3
+Version: 1.4
 Status: ACTIVE
 
 ## Project Identity
@@ -100,6 +100,7 @@ Current implementation baseline:
 - Career v3 editorial hierarchy and featured stories published
 - Media v3 editorial index published
 - Projects v3 editorial directory published
+- Activities v3 editorial role clarification published: Activities explains what Furusho is actively moving now; Projects remains the public destination/service directory
 - Contact synchronized to Email + LINE routing
 - Work with Furusho separated from Rhythm Speaker operational routes
 - Selected Works initial top three: 映画「座頭市」 / CITIZEN デュラテクトCM / DREAMS COME TRUE「連れてって 連れてって」
@@ -109,6 +110,18 @@ Current implementation baseline:
 - Navigation Audit / Navigation Contract Sync / Visual Asset Registry CI checks
 - sitemap and OGP baseline for primary public pages
 - GitHub Pages public delivery
+
+## Page Role Contract
+
+- HOME: first-visit orientation, authority, direct-work routing, selected evidence, project overview, Contact entry
+- Profile: identity, background, approach, facts, and personal context
+- Career: verified professional evidence and selected career stories
+- Activities: what 古庄里好 is actively moving now and why those activities exist
+- Projects: public destination / service directory organized by user intent
+- Media: official channels and selected video evidence
+- Contact: correct inquiry route, with formal work directed primarily to Email and LINE available where appropriate
+
+Activities and Projects must not become duplicate directories. Activities explains role/context; Projects helps the visitor reach destinations.
 
 ## Navigation Contract
 
@@ -157,16 +170,15 @@ Routing:
 
 ## Technical Debt / Consolidation
 
-- `assets/css/style.css` still imports the additive `visual-preview-v21.css` layer.
+- `assets/css/style.css` still imports the retired compatibility file `visual-preview-v21.css`; its legacy selectors are already removed, so the remaining import/file pair should be removed as one controlled cleanup unit.
 - v3 should consolidate obsolete preview-era styling into deliberate canonical shared CSS rather than stacking new permanent preview override files.
-- Projects currently contains page-local style rules that should be moved into a maintainable canonical stylesheet during cleanup.
 - Shared subpage styling should be visually verified before obsolete selectors are removed.
+- Avoid reintroducing page-local style blocks when a page-specific stylesheet already exists.
 
 ## Next Handoff
 
-1. Complete Activities v3 editorial clarification, especially TAP DANCE PLANET and current activity hierarchy.
-2. Consolidate shared CSS and remove obsolete preview-era layering without visual regression.
-3. Move Projects page-local styling into a canonical stylesheet during CSS cleanup.
-4. Run total Visual QA across HOME and primary subpages: desktop / mobile / keyboard / focus / links / no-JS / accessibility / asset registry.
-5. Replace typography fallback imagery only when approved real assets become available.
-6. Keep PROJECT_PROFILE.md, NAVIGATION_REGISTRY.md, Visual Asset Registry, and public implementation synchronized with main.
+1. Remove the retired `visual-preview-v21.css` import/file pair as one controlled CSS cleanup unit and verify no visual regression.
+2. Run total Visual QA across HOME and primary subpages: desktop / mobile / keyboard / focus / links / no-JS / accessibility / asset registry.
+3. Continue Profile de-duplication only where it improves distinction from Career and Activities; preserve verified facts and evidence.
+4. Replace typography fallback imagery only when approved real assets become available.
+5. Keep PROJECT_PROFILE.md, NAVIGATION_REGISTRY.md, Visual Asset Registry, and public implementation synchronized with main.
