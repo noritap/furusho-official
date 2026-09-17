@@ -8,11 +8,11 @@
 .projects-v3 .projects-section-head{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr);gap:clamp(28px,5vw,76px);align-items:end}
 .projects-v3 .projects-section-head h2{margin:10px 0 0;font-family:"Yu Mincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;font-size:clamp(2.7rem,5vw,5rem);font-weight:500;letter-spacing:-.045em;line-height:.98}
 .projects-v3 .projects-section-head>p{max-width:640px;margin:0;color:#4d4943}
-.projects-v3 .projects-context-visual{margin:42px 0 0;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,.5fr);min-height:360px;border-top:1px solid var(--p-line);border-bottom:1px solid var(--p-line);background:var(--p-paper)}
-.projects-v3 .projects-context-visual img{width:100%;height:100%;min-height:360px;display:block;object-fit:cover;object-position:center;filter:saturate(.82) contrast(1.04)}
-.projects-v3 .projects-context-visual figcaption{display:flex;flex-direction:column;justify-content:flex-end;gap:9px;padding:clamp(24px,4vw,48px);border-left:1px solid var(--p-line)}
+.projects-v3 .projects-context-visual{margin:42px 0 0;border-top:1px solid var(--p-line);border-bottom:1px solid var(--p-line);background:transparent}
+.projects-v3 .projects-context-visual img{display:none}
+.projects-v3 .projects-context-visual figcaption{display:grid;grid-template-columns:minmax(140px,.28fr) minmax(0,1fr);gap:clamp(24px,4vw,54px);align-items:end;padding:26px 0}
 .projects-v3 .projects-context-visual figcaption span{color:var(--p-accent);font-size:.66rem;font-weight:800;letter-spacing:.18em}
-.projects-v3 .projects-context-visual figcaption strong{max-width:280px;font-family:"Yu Mincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;font-size:clamp(1.45rem,2.7vw,2.5rem);font-weight:500;line-height:1.2}
+.projects-v3 .projects-context-visual figcaption strong{max-width:640px;font-family:"Yu Mincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;font-size:clamp(1.35rem,2.4vw,2.2rem);font-weight:500;line-height:1.2}
 .projects-v3 .projects-context-visual+.project-list{margin-top:0;border-top:0}
 .projects-v3 .project-list{margin-top:42px;border-top:1px solid var(--p-line)}
 .projects-v3 .project-row{min-height:132px;display:grid;grid-template-columns:68px minmax(230px,.8fr) minmax(0,1.2fr) auto;gap:24px;align-items:center;padding:18px 0;border-bottom:1px solid var(--p-line)}
@@ -30,4 +30,4 @@
 .projects-v3 .projects-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .projects-v3 .projects-actions .button{border-color:currentColor}
 @media(max-width:900px){.projects-v3 .projects-section-head,.projects-v3 .projects-why-grid{grid-template-columns:1fr}.projects-v3 .project-row{grid-template-columns:52px minmax(200px,.9fr) minmax(0,1.1fr)}.projects-v3 .project-row .route{grid-column:2/-1}}
-@media(max-width:620px){.projects-v3 .projects-hero{padding:54px 0 48px}.projects-v3 .projects-hero h1{font-size:clamp(3rem,15vw,4.8rem)}.projects-v3 .projects-section{padding:66px 0}.projects-v3 .projects-context-visual{grid-template-columns:1fr;min-height:0;margin-top:34px}.projects-v3 .projects-context-visual img{min-height:0;aspect-ratio:4/3}.projects-v3 .projects-context-visual figcaption{padding:20px 0 22px;border-left:0;border-top:1px solid var(--p-line);background:var(--p-paper2)}.projects-v3 .project-row{grid-template-columns:42px 1fr;gap:10px 12px;padding:24px 0}.projects-v3 .project-row p,.projects-v3 .project-row .route{grid-column:2}.projects-v3 .projects-actions{display:grid}.projects-v3 .projects-actions .button{width:100%}}
+@media(max-width:620px){.projects-v3 .projects-hero{padding:54px 0 48px}.projects-v3 .projects-hero h1{font-size:clamp(3rem,15vw,4.8rem)}.projects-v3 .projects-section{padding:66px 0}.projects-v3 .projects-context-visual{margin-top:34px}.projects-v3 .projects-context-visual figcaption{grid-template-columns:1fr;gap:8px;padding:20px 0 22px}.projects-v3 .project-row{grid-template-columns:42px 1fr;gap:10px 12px;padding:24px 0}.projects-v3 .project-row p,.projects-v3 .project-row .route{grid-column:2}.projects-v3 .projects-actions{display:grid}.projects-v3 .projects-actions .button{width:100%}}
