@@ -234,18 +234,6 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 .about-section { border-top: 1px solid var(--line); }
 .dark-section { background: var(--dark); color: var(--light); }
 .dark-section .section-label { color: #999; }
-.activity-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  margin-top: 38px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-.activity-grid article { background: var(--bg); padding: 26px; min-height: 225px; }
-.number { font-size: .72rem; color: var(--muted); }
-.activity-grid h3 { font-size: 1.28rem; margin: 28px 0 12px; }
-.activity-grid p:last-child { color: #4a4843; font-size: .94rem; }
 
 .contact-section { background: #1a1a1a; color: #fff; }
 .contact-inner { max-width: 920px; text-align: center; }
@@ -270,7 +258,7 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .section-intro > div:last-child, .split-heading > div:last-child { max-width: none; padding-top: 0; }
   .route-grid { grid-template-columns: 1fr; }
   .route-card { min-height: 170px; }
-  .work-grid, .activity-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -296,8 +284,8 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .route-card { min-height: 156px; padding: 20px; }
   .route-number { margin-bottom: 22px; }
   .section { padding: 66px 0; }
-  .work-grid, .activity-grid { grid-template-columns: 1fr; }
-  .work-card, .activity-grid article { min-height: auto; }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-card { min-height: auto; }
   .work-card { padding: 22px; }
   .work-card h3 { margin-top: 24px; }
   .boundary-note { align-items: stretch; flex-direction: column; }
