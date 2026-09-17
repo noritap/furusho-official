@@ -199,17 +199,6 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
 .compact-intro > div:last-child { padding-top: 16px; }
 .text-link { display: inline-flex; min-height: 44px; align-items: center; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
 
-.boundary-note {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
-}
-.boundary-note > div { display: flex; flex-direction: column; gap: 4px; }
-.boundary-label { font-size: .65rem; letter-spacing: .15em; color: var(--muted); font-weight: 800; }
-
 .about-section { border-top: 1px solid var(--line); }
 .dark-section { background: var(--dark); color: var(--light); }
 .dark-section .section-label { color: #999; }
@@ -262,7 +251,6 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .route-card { min-height: 156px; padding: 20px; }
   .route-number { margin-bottom: 22px; }
   .section { padding: 66px 0; }
-  .boundary-note { align-items: stretch; flex-direction: column; }
   .footer { flex-direction: column; padding-bottom: 30px; }
   .footer div { flex-direction: column; gap: 2px; }
   .mobile-action-bar {
