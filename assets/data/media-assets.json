@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T09:35:25+00:00",
+  "generated_at": "2026-09-17T09:37:18+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -145,8 +145,7 @@
         "career/index.html",
         "index.html",
         "media/index.html",
-        "profile/index.html",
-        "projects/index.html"
+        "profile/index.html"
       ]
     }
   ]
