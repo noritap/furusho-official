@@ -24,15 +24,9 @@
 .dark-section .visual-card:focus-visible{outline-color:#fff}
 .visual-card-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .visual-card-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
-.service-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:32px}
-.service-choice{background:var(--bg);padding:24px;display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;min-height:190px}
-.service-choice-index{width:46px;height:46px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;letter-spacing:.08em}
-.service-choice h2,.service-choice h3{font-size:1.25rem;margin:0 0 8px}
-.service-choice p{font-size:.9rem;color:#4b4842;margin:0}
-.service-choice a{display:inline-flex;min-height:44px;align-items:center;margin-top:14px;font-weight:800;font-size:.78rem}
 .related-visual-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
 .related-visual-row a{border:1px solid var(--line);padding:22px;min-height:140px;display:flex;flex-direction:column;background:var(--bg)}
 .related-visual-row span{font-size:.68rem;letter-spacing:.12em;color:var(--muted);font-weight:800}
 .related-visual-row strong{font-size:1.2rem;margin-top:auto}
 @media(max-width:900px){.visual-card-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-card-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){.visual-card-grid,.visual-card-grid.three,.visual-card-grid.four{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin-right:-20px;padding-right:20px;scrollbar-width:none}.visual-card-grid::-webkit-scrollbar{display:none}.visual-card{flex:0 0 min(84vw,390px);scroll-snap-align:start}.service-choice-grid{grid-template-columns:1fr}.related-visual-row{grid-template-columns:1fr}.visual-card-body{min-height:170px}}
+@media(max-width:700px){.visual-card-grid,.visual-card-grid.three,.visual-card-grid.four{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin-right:-20px;padding-right:20px;scrollbar-width:none}.visual-card-grid::-webkit-scrollbar{display:none}.visual-card{flex:0 0 min(84vw,390px);scroll-snap-align:start}.related-visual-row{grid-template-columns:1fr}.visual-card-body{min-height:170px}}
