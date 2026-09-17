@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-16T10:23:49+00:00",
+  "generated_at": "2026-09-17T09:31:50+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -46,8 +46,7 @@
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
       "found_in": [
-        "career/index.html",
-        "index.html"
+        "career/index.html"
       ]
     },
     {
@@ -80,7 +79,6 @@
       "auto_publish": true,
       "found_in": [
         "career/index.html",
-        "index.html",
         "media/index.html",
         "profile/index.html"
       ]
@@ -128,7 +126,6 @@
       "auto_publish": true,
       "found_in": [
         "career/index.html",
-        "index.html",
         "media/index.html",
         "profile/index.html"
       ]
@@ -144,7 +141,6 @@
       "auto_publish": true,
       "found_in": [
         "career/index.html",
-        "index.html",
         "media/index.html",
         "profile/index.html"
       ]
