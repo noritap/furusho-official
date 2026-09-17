@@ -1,1 +1,27 @@
-placeholder
+.projects-v3{--p-paper:#f5f2eb;--p-paper2:#ece7dd;--p-ink:#121212;--p-muted:#6d6860;--p-line:#cfc8bb;--p-accent:#9f4a36;--p-dark:#171717;background:var(--p-paper);color:var(--p-ink)}
+.projects-v3 .projects-label{margin:0;color:var(--p-muted);font-size:.66rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.projects-v3 .projects-hero{padding:clamp(72px,8vw,118px) 0 clamp(62px,7vw,90px)}
+.projects-v3 .projects-hero h1{max-width:1000px;margin:16px 0 28px;font-family:"Yu Mincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;font-size:clamp(3.8rem,8.5vw,8rem);font-weight:500;letter-spacing:-.055em;line-height:.92}
+.projects-v3 .projects-lead{max-width:760px;margin:0;color:#48443e;font-size:1.05rem}
+.projects-v3 .projects-section{padding:clamp(72px,8vw,110px) 0;border-top:1px solid var(--p-line)}
+.projects-v3 .projects-section.alt{background:var(--p-paper2)}
+.projects-v3 .projects-section-head{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr);gap:clamp(28px,5vw,76px);align-items:end}
+.projects-v3 .projects-section-head h2{margin:10px 0 0;font-family:"Yu Mincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;font-size:clamp(2.7rem,5vw,5rem);font-weight:500;letter-spacing:-.045em;line-height:.98}
+.projects-v3 .projects-section-head>p{max-width:640px;margin:0;color:#4d4943}
+.projects-v3 .project-list{margin-top:42px;border-top:1px solid var(--p-line)}
+.projects-v3 .project-row{min-height:132px;display:grid;grid-template-columns:68px minmax(230px,.8fr) minmax(0,1.2fr) auto;gap:24px;align-items:center;padding:18px 0;border-bottom:1px solid var(--p-line)}
+.projects-v3 .project-row .index{color:var(--p-accent);font-size:.68rem;font-weight:800;letter-spacing:.16em}
+.projects-v3 .project-row strong{font-size:clamp(1.25rem,2vw,1.7rem)}
+.projects-v3 .project-row p{margin:0;color:#554f48;font-size:.94rem}
+.projects-v3 .project-row .route{font-size:.76rem;font-weight:800;letter-spacing:.04em;white-space:nowrap}
+.projects-v3 a.project-row:hover strong,.projects-v3 a.project-row:focus-visible strong{text-decoration:underline;text-underline-offset:5px}
+.projects-v3 .project-row.static .route{color:var(--p-muted)}
+.projects-v3 .projects-why{padding:clamp(86px,10vw,142px) 0;background:var(--p-dark);color:#fff}
+.projects-v3 .projects-why .projects-label{color:#999}
+.projects-v3 .projects-why-grid{display:grid;grid-template-columns:minmax(200px,.55fr) minmax(0,1.45fr);gap:clamp(30px,6vw,90px)}
+.projects-v3 .projects-why h2{margin:0 0 24px;font-family:"Yu Mincho","Hiragino Mincho ProN","Hiragino Mincho Pro",serif;font-size:clamp(2.8rem,6vw,6rem);font-weight:500;line-height:1.02;letter-spacing:-.05em}
+.projects-v3 .projects-why p{max-width:720px;color:#c8c8c8}
+.projects-v3 .projects-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.projects-v3 .projects-actions .button{border-color:currentColor}
+@media(max-width:900px){.projects-v3 .projects-section-head,.projects-v3 .projects-why-grid{grid-template-columns:1fr}.projects-v3 .project-row{grid-template-columns:52px minmax(200px,.9fr) minmax(0,1.1fr)}.projects-v3 .project-row .route{grid-column:2/-1}}
+@media(max-width:620px){.projects-v3 .projects-hero{padding:54px 0 48px}.projects-v3 .projects-hero h1{font-size:clamp(3rem,15vw,4.8rem)}.projects-v3 .projects-section{padding:66px 0}.projects-v3 .project-row{grid-template-columns:42px 1fr;gap:10px 12px;padding:24px 0}.projects-v3 .project-row p,.projects-v3 .project-row .route{grid-column:2}.projects-v3 .projects-actions{display:grid}.projects-v3 .projects-actions .button{width:100%}}
