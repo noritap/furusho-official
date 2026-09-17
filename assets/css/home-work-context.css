@@ -1,46 +1,59 @@
 /* HOME — Work with Furusho contextual photography */
 .home-v3 .v3-work-context {
+  position: relative;
   margin: 44px 0 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(220px, .55fr);
-  min-height: 360px;
+  min-height: clamp(320px, 36vw, 460px);
+  overflow: hidden;
   border-top: 1px solid var(--v3-line);
   border-bottom: 1px solid var(--v3-line);
-  background: var(--v3-paper-2);
+  background: #d7d0c4;
 }
 
 .home-v3 .v3-work-context img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 360px;
   display: block;
   object-fit: cover;
   object-position: 50% 45%;
-  filter: saturate(.82) contrast(1.04);
+  filter: saturate(.76) contrast(1.05) brightness(.84);
+}
+
+.home-v3 .v3-work-context::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(18,18,18,.72) 0%, rgba(18,18,18,.28) 48%, rgba(18,18,18,.04) 78%);
+  pointer-events: none;
 }
 
 .home-v3 .v3-work-context figcaption {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 8px;
-  padding: clamp(24px, 4vw, 48px);
-  border-left: 1px solid var(--v3-line);
+  position: absolute;
+  z-index: 1;
+  left: clamp(22px, 4vw, 48px);
+  bottom: clamp(22px, 4vw, 44px);
+  max-width: 560px;
+  color: #fff;
 }
 
 .home-v3 .v3-work-context figcaption span {
-  color: var(--v3-accent);
+  display: block;
+  margin-bottom: 10px;
+  color: #ddd3c6;
   font-size: .66rem;
   font-weight: 800;
   letter-spacing: .18em;
 }
 
 .home-v3 .v3-work-context figcaption strong {
-  max-width: 260px;
+  display: block;
+  max-width: 520px;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
-  font-size: clamp(1.45rem, 2.7vw, 2.5rem);
+  font-size: clamp(1.8rem, 3.6vw, 3.8rem);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -.035em;
 }
 
 .home-v3 .v3-work-context + .v3-work-list {
@@ -50,20 +63,21 @@
 
 @media (max-width: 720px) {
   .home-v3 .v3-work-context {
-    grid-template-columns: 1fr;
-    min-height: 0;
+    min-height: 340px;
     margin-top: 34px;
   }
 
   .home-v3 .v3-work-context img {
-    min-height: 0;
-    aspect-ratio: 4 / 3;
+    object-position: 58% 45%;
+  }
+
+  .home-v3 .v3-work-context::after {
+    background: linear-gradient(to top, rgba(18,18,18,.82) 0%, rgba(18,18,18,.12) 72%);
   }
 
   .home-v3 .v3-work-context figcaption {
-    padding: 20px 0 22px;
-    border-left: 0;
-    border-top: 1px solid var(--v3-line);
-    background: #fff;
+    right: 20px;
+    left: 20px;
+    bottom: 22px;
   }
 }
