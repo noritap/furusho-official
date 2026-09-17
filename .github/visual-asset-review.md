@@ -6,7 +6,7 @@ Generated: `2026-09-17T16:35:30+00:00`
 
 ## Summary
 
-- Total assets: **11**
+- Total assets: **10**
 - Review required: **0**
 - Missing local file: **0**
 - Auto external preview: **6**
@@ -41,7 +41,6 @@ Generated: `2026-09-17T16:35:30+00:00`
 
 | Type | Asset | Source | Found in | Auto publish | Rights |
 |---|---|---|---|---:|---|
-| remote_image | [preview](https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg) | [source](https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg) | `projects/index.html` | YES | OWNER_AUTHORIZED_REUSE |
 | remote_image | [preview](https://noritap.github.io/rhythmspeaker/instructor-action.jpg) | [source](https://noritap.github.io/rhythmspeaker/instructor-action.jpg) | `activities/index.html`<br>`index.html`<br>`profile/index.html` | YES | OWNER_AUTHORIZED_REUSE |
 | remote_image | [preview](https://noritap.github.io/rhythmspeaker/tap-dance-instructor-furusho-noritaka.jpg) | [source](https://noritap.github.io/rhythmspeaker/tap-dance-instructor-furusho-noritaka.jpg) | `profile/index.html` | YES | OWNER_AUTHORIZED_REUSE |
 

@@ -11,10 +11,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 11,
+    "total": 10,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 2,
-      "OWNER_AUTHORIZED_CROSS_SITE": 3,
+      "OWNER_AUTHORIZED_CROSS_SITE": 2,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
@@ -53,20 +53,6 @@
         "contact/index.html",
         "index.html",
         "media/index.html",
-        "projects/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg",
-      "type": "remote_image",
-      "source_url": "https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg",
-      "image_url": "https://noritap.github.io/rhythmspeaker/assets/home-hero-studio-v4.jpg",
-      "local_path": null,
-      "usage_status": "OWNER_AUTHORIZED_CROSS_SITE",
-      "rights_status": "OWNER_AUTHORIZED_REUSE",
-      "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
-      "auto_publish": true,
-      "found_in": [
         "projects/index.html"
       ]
     },
