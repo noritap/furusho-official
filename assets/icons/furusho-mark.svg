@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Furusho mark">
+  <rect width="64" height="64" fill="#111111"/>
+  <path fill="#F3F0E9" d="M17 13h32v7H25v10h20v7H25v14h-8V13z"/>
+  <rect x="43" y="45" width="6" height="6" fill="#B74932"/>
+</svg>
