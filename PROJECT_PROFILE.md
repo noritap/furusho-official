@@ -141,6 +141,38 @@ Primary CTA → Contact
 
 Do not change the global navigation architecture without evidence of a navigation problem.
 
+## Public Work Taxonomy Contract
+
+Canonical public baseline for Furusho personal commissions:
+1. タップダンスレッスン／ワークショップ
+2. インストラクター関連の依頼
+3. スタジオ運営コンサルティング
+4. 音楽制作
+
+Additional accepted professional inquiry routes are defined by the current FURUSHO_PROFILE_OS Contact source and may include:
+- 出演
+- 振付
+- 学校教育
+- 企業研修
+- 取材 / 提携
+
+Rule:
+- HOME Work uses the four canonical public service labels as the compact baseline.
+- Contact may expose additional current inquiry routes when supported by the canonical Contact source.
+- Career / Profile / Activities may mention additional professional work when supported by evidence/current sources.
+- Do not force every page into an identical list when the page role differs; do not let labels contradict or omit a valid Contact route.
+- Rhythm Speaker operational services remain outside Furusho personal commission taxonomy.
+
+## Language / UX Contract
+
+- Catch / headline: short, memorable, editorial; it may be playful when authority is not reduced.
+- Service / work label: concrete terminology a commissioning visitor can understand without interpretation.
+- Evidence / career copy: factual, restrained, and free of internal governance vocabulary.
+- Contact copy: reassuring and professional; explain only what reduces uncertainty or prevents a wrong route.
+- CTA: describe the visitor's intent/action, not implementation mechanics.
+- Prefer hierarchy, spacing, imagery, grouping, and interaction over explanatory prose when those devices communicate the same meaning.
+- Do not shorten copy that carries necessary scope, evidence, safety, or routing information.
+
 ## Contact Contract
 
 Public personal contact:
@@ -180,8 +212,8 @@ Routing:
 
 ## Next Handoff
 
-1. Audit `assets/css/style.css` against current public HTML and remove one proven-unused selector family per controlled cleanup unit.
-2. Run total Visual QA across HOME and primary subpages: desktop / mobile / keyboard / focus / links / no-JS / accessibility / asset registry.
-3. Continue Profile de-duplication only where it improves distinction from Career and Activities; preserve verified facts and evidence.
-4. Replace typography fallback imagery only when approved real assets become available.
+1. Keep HOME / Contact / Career / Profile / Activities aligned with the Public Work Taxonomy Contract and current FURUSHO_PROFILE_OS contact source.
+2. Continue site-wide `read less, understand faster` UX review without removing necessary evidence, scope, safety, or routing information.
+3. Run total Visual QA across HOME and primary subpages: desktop / mobile / keyboard / focus / links / no-JS / accessibility / asset registry.
+4. Audit `assets/css/style.css` only in small verified cleanup units after UX-critical work.
 5. Keep PROJECT_PROFILE.md, NAVIGATION_REGISTRY.md, Visual Asset Registry, and public implementation synchronized with main.
