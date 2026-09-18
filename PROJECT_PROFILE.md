@@ -104,7 +104,7 @@ Current implementation baseline:
 - Contact synchronized to Email + LINE routing
 - Work with Furusho separated from Rhythm Speaker operational routes
 - Selected Works initial top three: 映画「座頭市」 / CITIZEN デュラテクトCM / DREAMS COME TRUE「連れてって 連れてって」
-- NF TAP brand mark integrated into header, favicon / touch icon, and web app manifest
+- NORITAP identity mark integrated into header, favicon, and web app manifest; `noritap` is a canonical activity name in FURUSHO_PROFILE_OS
 - real portrait asset `assets/images/furusho-profile-main.jpg` used as the primary identity image
 - Visual Asset Registry and automated review generation
 - Navigation Audit / Navigation Contract Sync / Visual Asset Registry CI checks
