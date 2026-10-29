@@ -1,0 +1,11 @@
+/* Approved real photography: restrained editorial integration. */
+.home-v3 .v3-about-editorial-photo{margin:0 0 28px;max-width:460px}
+.home-v3 .v3-about-editorial-photo img{display:block;width:100%;height:auto;max-height:510px;object-fit:cover;object-position:50% 30%}
+.home-v3 .v3-about-editorial-photo figcaption,.career-photo-story figcaption{font-size:.65rem;letter-spacing:.16em;color:#777168;padding-top:10px}
+.career-photo-story{background:#ece7dd;padding:clamp(32px,6vw,76px) 0}
+.career-photo-story-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(24px,7vw,100px)}
+.career-photo-story figure{margin:0;max-width:560px}
+.career-photo-story img{display:block;width:100%;height:clamp(320px,44vw,580px);object-fit:cover;object-position:50% 26%}
+.career-photo-story h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2rem,4vw,4.3rem);font-weight:500;line-height:1.14;margin:12px 0 20px}
+.career-photo-story p:not(.career-label){line-height:1.9;max-width:480px;color:#514d48}
+@media(max-width:760px){.career-photo-story-grid{grid-template-columns:1fr}.career-photo-story img{height:auto;max-height:460px}.home-v3 .v3-about-editorial-photo{max-width:380px}}
