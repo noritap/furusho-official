@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T22:47:36+00:00",
+  "generated_at": "2026-10-29T19:31:00+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -11,10 +11,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 10,
+    "total": 14,
     "by_usage_status": {
-      "EXISTING_PUBLIC_ASSET": 2,
-      "OWNER_AUTHORIZED_CROSS_SITE": 2,
+      "EXISTING_PUBLIC_ASSET": 7,
+      "OWNER_AUTHORIZED_CROSS_SITE": 1,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
   },
@@ -39,6 +39,72 @@
       ]
     },
     {
+      "id": "local:assets/images/editorial/about-portrait.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/about-portrait.jpg",
+      "local_path": "assets/images/editorial/about-portrait.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "index.html",
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "local:assets/images/editorial/career-stage-frankfurt.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/career-stage-frankfurt.jpg",
+      "local_path": "assets/images/editorial/career-stage-frankfurt.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "career/index.html"
+      ]
+    },
+    {
+      "id": "local:assets/images/editorial/performance-studio.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/performance-studio.jpg",
+      "local_path": "assets/images/editorial/performance-studio.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "local:assets/images/editorial/studio-body-practice.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/studio-body-practice.jpg",
+      "local_path": "assets/images/editorial/studio-body-practice.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "activities/index.html"
+      ]
+    },
+    {
+      "id": "local:assets/images/editorial/teaching-class.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/teaching-class.jpg",
+      "local_path": "assets/images/editorial/teaching-class.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "index.html"
+      ]
+    },
+    {
       "id": "local:assets/images/furusho-profile-main.jpg",
       "type": "repository_image",
       "source_url": null,
@@ -54,22 +120,6 @@
         "index.html",
         "media/index.html",
         "projects/index.html"
-      ]
-    },
-    {
-      "id": "remote:https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
-      "type": "remote_image",
-      "source_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
-      "image_url": "https://noritap.github.io/rhythmspeaker/instructor-action.jpg",
-      "local_path": null,
-      "usage_status": "OWNER_AUTHORIZED_CROSS_SITE",
-      "rights_status": "OWNER_AUTHORIZED_REUSE",
-      "authorization": "docs/PHOTO_REUSE_AUTHORIZATION_NOTE.md",
-      "auto_publish": true,
-      "found_in": [
-        "activities/index.html",
-        "index.html",
-        "profile/index.html"
       ]
     },
     {
