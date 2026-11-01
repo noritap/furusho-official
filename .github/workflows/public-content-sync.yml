@@ -1,0 +1,41 @@
+name: Public Content Sync
+on:
+  push:
+    branches:
+      - main
+      - feature/furusho-v4-public-content-20261101
+    paths:
+      - "assets/data/public-content.json"
+      - "tools/build_public_content.mjs"
+      - "**/*.html"
+      - ".github/workflows/public-content-sync.yml"
+  pull_request:
+    paths:
+      - "assets/data/public-content.json"
+      - "tools/build_public_content.mjs"
+      - "**/*.html"
+      - ".github/workflows/public-content-sync.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate generated public pages
+        run: node tools/build_public_content.mjs --check
+      - name: Validate v4 routes and factual boundaries
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const d=JSON.parse(fs.readFileSync('assets/data/public-content.json','utf8'));
+          const home=fs.readFileSync('index.html','utf8'),projects=fs.readFileSync('projects/index.html','utf8');
+          if(!home.includes('id="current-work"'))throw Error('CURRENT WORK missing');
+          if(!home.includes('https://noritap.github.io/rhythmspeaker/'))throw Error('Studio route missing');
+          if(projects.includes('やっていること、<br>ぜんぶ。'))throw Error('Old directory copy remains');
+          if(!d.projects.some(x=>x.id==='rs-broadcast'))throw Error('Broadcast route missing');
+          if(!d.projects.some(x=>x.id==='rs-music'))throw Error('Music route missing');
+          if(d.works.filter(x=>x.featured).length!==3)throw Error('Featured work count');
+          NODE
