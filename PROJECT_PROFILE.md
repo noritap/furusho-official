@@ -1,6 +1,6 @@
 # PROJECT_PROFILE
 
-Version: 1.5
+Version: 1.6
 Status: ACTIVE
 
 ## Project Identity
@@ -67,7 +67,7 @@ Rhythm Speaker のレッスン、スタジオ利用、予約など運営問い�
 
 ## Development State
 
-Current Phase: Phase 3 / FURUSHO OFFICIAL v3 — Editorial Authority
+Current Phase: Phase 4 / FURUSHO OFFICIAL v4 — Public Content SSOT & Editorial Gateway
 
 Current Goal: Build a credible editorial authority site where a first-time visitor can quickly understand who 古庄里好 is, what work can be commissioned directly, what belongs to Rhythm Speaker, review selected evidence, and reach the correct inquiry path with minimal friction.
 
@@ -217,3 +217,15 @@ Routing:
 3. Run total Visual QA across HOME and primary subpages: desktop / mobile / keyboard / focus / links / no-JS / accessibility / asset registry.
 4. Audit `assets/css/style.css` only in small verified cleanup units after UX-critical work.
 5. Keep PROJECT_PROFILE.md, NAVIGATION_REGISTRY.md, Visual Asset Registry, and public implementation synchronized with main.
+
+## v4 Published Data Contract
+
+- `assets/data/public-content.json` is the PUBLIC website content SSOT for selected works, compact personal work categories, public destinations, and currently featured initiatives.
+- Private identity/career evidence and publication approvals remain in `noritap/FURUSHO_PROFILE_OS`; this public JSON is not the evidence repository.
+- Other business products/operations remain governed by their dedicated repositories. Published project references are pointers, not copied records.
+- `node tools/build_public_content.mjs --write` generates four sets of static HTML sections from the approved data.
+- `node tools/build_public_content.mjs --check` must pass in the PR and Pages deployment. No JavaScript is required by visitors to see generated content.
+- `assets/data/media-assets.json` remains the visual asset registry and must be regenerated via existing tools if HTML image usage changes.
+- HOMEPAGE: identity → purpose → selected proof → personal commissions → values → current work → projects → about/contact, while preserving stable anchors and FURUSHO-NAV-2.
+- Projects is a discovery/route directory, not a second copy of business operations; the `VISION` category is explicitly distinct from public services.
+- New evidence requires private source validation before being added to public JSON; generated content must not invent performance, pricing, availability, ownership, or release status.
