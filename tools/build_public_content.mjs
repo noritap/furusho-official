@@ -30,11 +30,12 @@ const transform = function transform(file,s,data){
    replace("HOME_PROJECTS",/        <div class="v3-project-list">[\s\S]*?<\/div>(?=\s*<\/div>\s*<\/section>)/,`        <div class="v3-project-list">\n${projectRows}\n        </div>`);
    const updateRows=data.updates.map(x=>`          <article class="v4-current-item"><p class="v3-label">${esc(x.category)}</p><h3>${esc(x.title)}</h3><p>${esc(x.summary)}</p><a href="${attr(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.link_label)} →</a></article>`).join("\n");
    const current=`    <section class="v3-section v4-current" id="current-work" aria-labelledby="current-work-heading"><div class="section-shell"><div class="v3-section-head"><div><p class="v3-label">CURRENT WORK</p><h2 id="current-work-heading">いま取り組んでいること。</h2></div><p>指導の現場から、タップダンスの楽しみ方を広げる制作活動まで。</p></div><div class="v4-current-grid">\n${updateRows}\n</div><p class="v4-current-detail"><a class="v3-dark-link" href="activities/">活動について詳しく見る →</a></p></div></section>`;
+   if(!s.includes("<!-- BEGIN GENERATED:HOME_CURRENT_WORK -->")) s=s.replace('    <section class="v3-section" id="projects-preview">','<!-- BEGIN GENERATED:HOME_CURRENT_WORK -->\n    <section class="v4-current"></section>\n<!-- END GENERATED:HOME_CURRENT_WORK -->\n\n    <section class="v3-section" id="projects-preview">');
    replace("HOME_CURRENT_WORK",/    <section class="v4-current"[\s\S]*?<\/section>/,current);
    // On the initial implementation no CURRENT section exists; insert before Projects.
    // The replace above handles subsequent runs with markers. 
    s=s.replace('href="https://rhythmspeaker.stores.jp/" target="_blank" rel="noopener noreferrer">Rhythm Speaker →','href="https://noritap.github.io/rhythmspeaker/" target="_blank" rel="noopener noreferrer">Rhythm Speaker公式サイト →');
-   s=s.replace('<link rel="stylesheet" href="assets/css/editorial-photo-library.css">','<link rel="stylesheet" href="assets/css/editorial-photo-library.css">\n  <link rel="stylesheet" href="assets/css/v4-public.css">');
+   if(!s.includes('assets/css/v4-public.css'))s=s.replace('<link rel="stylesheet" href="assets/css/editorial-photo-library.css">','<link rel="stylesheet" href="assets/css/editorial-photo-library.css">\n  <link rel="stylesheet" href="assets/css/v4-public.css">');
    s=s.replace("Performance / Choreography</h2>","主な出演・振付作品。</h2>");
    s=s.replace('>Careerを詳しく見る →</a>','>出演・振付歴を見る →</a>');
    return s;
@@ -50,7 +51,7 @@ const transform = function transform(file,s,data){
  }
  if(file==="media/index.html"){
    const rows=data.works.map(w=>`      <a href="${href(w)}" target="_blank" rel="noopener noreferrer"><span>${esc(w.kind)} / ${esc(w.role)}</span><strong>${esc(w.media_title||w.title)}</strong><em>関連映像を見る →</em></a>`).join("\n");
-   replace("MEDIA_SELECTED_WORKS",/    <div class="media-video-grid">[\s\S]*?<\/div>(?=<p class="media-more">)/,`    <div class="media-video-grid">\n${rows}\n    </div>`);
+   replace("MEDIA_SELECTED_WORKS",/<div class="media-video-grid">[\s\S]*?<\/div>(?=<p class="media-more">)/,`    <div class="media-video-grid">\n${rows}\n    </div>`);
    s=s.replace('href="https://rhythmspeaker.stores.jp/" target="_blank" rel="noopener noreferrer"><span>03 / STUDIO','href="https://noritap.github.io/rhythmspeaker/" target="_blank" rel="noopener noreferrer"><span>03 / STUDIO');
    return s;
  }
