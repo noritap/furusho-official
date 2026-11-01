@@ -1,0 +1,182 @@
+{
+  "version": "4.0.0",
+  "works": [
+    {
+      "id": "zatoichi",
+      "title": "映画「座頭市」",
+      "media_title": "映画「座頭市」",
+      "kind": "FILM",
+      "year": "2003",
+      "role": "出演",
+      "video": "op0b7AyaQn0",
+      "featured": true
+    },
+    {
+      "id": "citizen-duratect",
+      "title": "CITIZEN デュラテクト",
+      "media_title": "CITIZEN デュラテクト",
+      "kind": "CM",
+      "year": "2012",
+      "role": "振付・出演",
+      "video": "KNPQqgpgqPQ",
+      "featured": true
+    },
+    {
+      "id": "dreams-come-true",
+      "title": "DREAMS COME TRUE",
+      "detail": "「連れてって 連れてって」",
+      "media_title": "DREAMS COME TRUE「連れてって 連れてって」",
+      "kind": "MUSIC",
+      "year": "2008",
+      "role": "振付・出演",
+      "video": "3HW_v_vA63w",
+      "featured": true
+    },
+    {
+      "id": "tap-last-show",
+      "title": "映画「TAP THE LAST SHOW」",
+      "media_title": "映画「TAP THE LAST SHOW」",
+      "kind": "FILM",
+      "year": "2017",
+      "role": "出演",
+      "video": "NXozUa1IzRM"
+    },
+    {
+      "id": "sukima-switch",
+      "title": "スキマスイッチ「虹のレシピ」",
+      "media_title": "スキマスイッチ「虹のレシピ」",
+      "kind": "MUSIC",
+      "year": "2009",
+      "role": "振付・出演",
+      "video": "15566qQHhlw"
+    },
+    {
+      "id": "yanawaraba",
+      "title": "やなわらばー「いちごいちえ」",
+      "media_title": "やなわらばー「いちごいちえ」",
+      "kind": "MUSIC",
+      "year": "2007",
+      "role": "振付・出演",
+      "video": "RCHe13BrkUo"
+    }
+  ],
+  "services": [
+    {
+      "id": "lesson",
+      "title": "タップダンスレッスン・ワークショップ",
+      "summary": "個人・団体向けのレッスン、体験、外部ワークショップのご相談。",
+      "related": "teaching"
+    },
+    {
+      "id": "instructor",
+      "title": "インストラクター関連の依頼",
+      "summary": "指導内容や講師・インストラクターに関するご相談。"
+    },
+    {
+      "id": "consulting",
+      "title": "スタジオ運営コンサルティング",
+      "summary": "スタジオ運営の課題整理や、続けられる仕組みづくりのご相談。"
+    },
+    {
+      "id": "music",
+      "title": "音楽制作",
+      "summary": "楽曲・音源制作に関するご相談。"
+    }
+  ],
+  "projects": [
+    {
+      "id": "rhythm-speaker",
+      "title": "Rhythm Speaker",
+      "summary": "池袋のWEB連動型タップダンス教室。レッスン・体験・スタジオ利用はこちら。",
+      "group": "learn",
+      "url": "https://noritap.github.io/rhythmspeaker/",
+      "label": "教室公式サイト",
+      "featured": true,
+      "status": "public"
+    },
+    {
+      "id": "tap-card-game",
+      "title": "Tap Dance Card Game",
+      "summary": "タップダンスのステップや文化を、遊びの形式で学ぶためのプロジェクト。",
+      "group": "learn",
+      "url": "https://noritap.github.io/tapdance-cardgame/",
+      "label": "カードゲームを見る",
+      "featured": true,
+      "status": "project"
+    },
+    {
+      "id": "rs-broadcast",
+      "title": "RS BROADCAST NETWORK",
+      "summary": "番組・人物・技術からタップダンス文化を探索する映像メディア。",
+      "group": "watch",
+      "url": "https://noritap.github.io/rhythmspeaker/broadcast/",
+      "label": "番組を探す",
+      "featured": true,
+      "status": "public"
+    },
+    {
+      "id": "rs-show",
+      "title": "Rhythm Speaker Show",
+      "summary": "出演作品や成長を記録し、発表・共有する番組プロジェクト。",
+      "group": "watch",
+      "url": "https://noritap.github.io/rhythmspeaker/rss/",
+      "label": "作品・番組を見る",
+      "status": "public"
+    },
+    {
+      "id": "rs-music",
+      "title": "RHYTHM SPEAKER MUSIC",
+      "summary": "音楽作品とタップダンスのためのサウンドを届ける音楽活動。",
+      "group": "watch",
+      "url": "https://noritap.github.io/rhythmspeaker/music/",
+      "label": "音楽を聴く",
+      "status": "public"
+    },
+    {
+      "id": "tap-planet",
+      "title": "TAP DANCE PLANET",
+      "summary": "教育・メディア・コミュニティを通じ、タップダンス文化を次世代につなぐ構想。",
+      "group": "vision",
+      "url": "../activities/",
+      "home_url": "activities/",
+      "label": "構想と活動を見る",
+      "status": "concept"
+    },
+    {
+      "id": "rs-wallet",
+      "title": "RS Wallet｜TIPS",
+      "summary": "Rhythm Speaker利用者向けの残高・履歴確認ツール。",
+      "group": "tools",
+      "url": "https://tips-app-seven.vercel.app/",
+      "label": "利用者向けツール",
+      "status": "public"
+    },
+    {
+      "id": "rs-shop",
+      "title": "Rhythm Speaker STORES",
+      "summary": "Rhythm Speakerの商品・サービスを扱うオンラインショップ。",
+      "group": "tools",
+      "url": "https://rhythmspeaker.stores.jp/",
+      "label": "ショップを見る",
+      "status": "public"
+    }
+  ],
+  "updates": [
+    {
+      "id": "education",
+      "category": "EDUCATION",
+      "title": "レッスンと学びの場づくり",
+      "summary": "池袋「リズムスピーカー」を拠点に、指導と継続して学べる環境づくりに取り組んでいます。",
+      "url": "https://noritap.github.io/rhythmspeaker/",
+      "link_label": "教室について見る"
+    },
+    {
+      "id": "creation",
+      "category": "CREATION",
+      "title": "タップの面白さを、ゲームでも。",
+      "summary": "タップダンスカードゲームを通じ、ステップや文化に触れる機会を広げています。",
+      "url": "https://noritap.github.io/tapdance-cardgame/",
+      "link_label": "制作プロジェクトを見る"
+    }
+  ]
+}

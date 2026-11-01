@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify public content before deployment
+        run: node tools/build_public_content.mjs --check
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
@@ -35,3 +38,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Live Pages smoke test
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://noritap.github.io/furusho-official"
+          ok=0
+          for attempt in 1 2 3 4 5 6; do
+            if curl -fsSL "$base/" -o /tmp/furusho-home.html &&
+               curl -fsSL "$base/projects/" -o /tmp/furusho-projects.html &&
+               grep -q 'id="current-work"' /tmp/furusho-home.html &&
+               grep -q 'RS BROADCAST NETWORK' /tmp/furusho-projects.html &&
+               grep -q 'RHYTHM SPEAKER MUSIC' /tmp/furusho-projects.html; then
+              ok=1
+              break
+            fi
+            sleep 8
+          done
+          test "$ok" = "1" || { echo "Published Pages do not yet expose v4 content"; exit 1; }
+          curl -fsSL "$base/assets/css/v4-public.css" -o /tmp/furusho-v4.css
+          echo "Public HOME, Projects and v4 stylesheet: OK"
