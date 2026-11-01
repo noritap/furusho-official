@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify public content before deployment
+        run: node tools/build_public_content.mjs --check
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
