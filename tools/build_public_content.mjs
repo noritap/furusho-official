@@ -44,8 +44,11 @@ const transform = function transform(file,s,data){
    const f=(w,cls)=>`          <a class="${cls}" href="${href(w)}" target="_blank" rel="noopener noreferrer"><figure><img src="${image(w)}" alt="${attr(w.title)}の関連映像サムネイル" width="480" height="360" loading="lazy" decoding="async"></figure><div class="career-feature-copy"><span>${esc(w.kind)} · ${esc(w.year)}</span><div><h3>${esc(w.title)}</h3><p>${esc(w.detail?w.detail+" / ":"")}${esc(w.role)}</p></div></div></a>`;
    replace("CAREER_FEATURED_WORKS",/        <div class="career-feature-grid">[\s\S]*?<\/div>(?=\s*<\/div>\s*<\/section>)/,`        <div class="career-feature-grid">\n${f(featured[0],"career-feature-main")}\n          <div class="career-feature-side-stack">\n${featured.slice(1).map(w=>f(w,"career-feature-side")).join("\n")}\n          </div>\n        </div>`);
    const others=data.works.filter(w=>!w.featured).map(w=>`        <a class="career-credit-row" href="${href(w)}" target="_blank" rel="noopener noreferrer"><span class="year">${esc(w.year)}</span><strong>${esc(w.title)}</strong><span>${esc(w.role)}</span><span class="arrow">関連映像 →</span></a>`).join("\n");
-   // Preserve the two existing non-video credits as historically documented.
-   const archival=`        <div class="career-credit-row"><span class="year">2016</span><strong>RIP SLYME 日本武道館「TOKYO STOMP」</strong><span>出演</span><span class="arrow">LIVE</span></div>\n        <div class="career-credit-row archive-row"><span class="year">2004</span><strong>Chicago Human Rhythm Project「Rhythm World」</strong><span>招聘・出演</span><span class="arrow"><a href="https://www.facebook.com/photo.php?fbid=1236768718491027&amp;set=pb.100064737308832.-2207520000&amp;type=3" target="_blank" rel="noopener noreferrer">ARCHIVE 01</a> / <a href="https://www.facebook.com/photo/?fbid=1236768715157694&amp;set=pb.100064737308832.-2207520000" target="_blank" rel="noopener noreferrer">02</a></span></div>`;
+   const archival=data.career_archives.map(w=>{
+     const links=(w.archive_urls||[]).map((url,i)=>`<a href="${attr(url)}" target="_blank" rel="noopener noreferrer">${String(i+1).padStart(2,"0")}</a>`).join(" / ");
+     const archiveLabel=links ? `<span class="arrow">${links.replace(">01</a>",">ARCHIVE 01</a>")}</span>` : `<span class="arrow">${esc(w.label)}</span>`;
+     return `        <div class="career-credit-row${links?" archive-row":""}"><span class="year">${esc(w.year)}</span><strong>${esc(w.title)}</strong><span>${esc(w.role)}</span>${archiveLabel}</div>`;
+   }).join("\\n");
    replace("CAREER_MORE_WORKS",/      <div class="career-credit-list">[\s\S]*?<\/div>(?=\s*<\/section>)/,`      <div class="career-credit-list">\n${others}\n${archival}\n      </div>`);
    return s;
  }
@@ -74,11 +77,18 @@ const transform = function transform(file,s,data){
  }
  throw Error("Unexpected file: "+file);
 };
-const expected = ['works', 'services', 'projects', 'updates'];
+const expected = ['works', 'career_archives', 'services', 'projects', 'updates'];
 for (const name of expected) {
   if (!Array.isArray(data[name])) throw new Error('Missing collection: ' + name);
   const ids = data[name].map(x => x.id);
   if (new Set(ids).size !== ids.length) throw new Error('Duplicate id: ' + name);
+}
+const evidenceSource = '01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv';
+const allowedStatuses = new Set(['profile_confirmed', 'additional_official_source_required']);
+for (const w of [...data.works, ...data.career_archives]) {
+  if (w.evidence_ref !== evidenceSource) throw new Error('Missing canonical evidence reference: ' + w.id);
+  if (!allowedStatuses.has(w.verification_status)) throw new Error('Invalid verification status: ' + w.id);
+  if (w.featured && w.verification_status !== 'profile_confirmed') throw new Error('Unverified featured work: ' + w.id);
 }
 if (data.works.filter(x => x.featured).length !== 3) throw new Error('Exactly 3 featured works required');
 for (const p of data.projects) {
