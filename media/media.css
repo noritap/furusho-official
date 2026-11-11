@@ -19,3 +19,8 @@
 [aria-current="page"]{font-weight:800}
 @media(max-width:760px){.media-page-hero{grid-template-columns:1fr}.media-page-photo{width:min(100%,430px);margin:auto}.media-page-links a{grid-template-columns:1fr auto}.media-page-links span{grid-column:1/-1}.media-video-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.media-page-hero{padding:50px 0 58px;gap:28px}.media-page-title{font-size:clamp(2.8rem,14vw,4rem);line-height:.95;margin-bottom:22px}.media-page-lead{font-size:1rem}.media-page-links a{padding:22px 0}.media-page-links a:hover{padding-left:0;padding-right:0}}
+
+/* Video tiles have dark surfaces even when their parent section is light. */
+.media-video-grid a{color:#f5f2eb}
+.media-video-grid span{color:#c8c4bd}
+.media-video-grid em{color:#f5f2eb}
