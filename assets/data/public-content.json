@@ -9,7 +9,9 @@
       "year": "2003",
       "role": "出演",
       "video": "op0b7AyaQn0",
-      "featured": true
+      "featured": true,
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "profile_confirmed"
     },
     {
       "id": "citizen-duratect",
@@ -19,7 +21,9 @@
       "year": "2012",
       "role": "振付・出演",
       "video": "KNPQqgpgqPQ",
-      "featured": true
+      "featured": true,
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "profile_confirmed"
     },
     {
       "id": "dreams-come-true",
@@ -30,7 +34,9 @@
       "year": "2008",
       "role": "振付・出演",
       "video": "3HW_v_vA63w",
-      "featured": true
+      "featured": true,
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "profile_confirmed"
     },
     {
       "id": "tap-last-show",
@@ -39,7 +45,9 @@
       "kind": "FILM",
       "year": "2017",
       "role": "出演",
-      "video": "NXozUa1IzRM"
+      "video": "NXozUa1IzRM",
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "profile_confirmed"
     },
     {
       "id": "sukima-switch",
@@ -48,7 +56,9 @@
       "kind": "MUSIC",
       "year": "2009",
       "role": "振付・出演",
-      "video": "15566qQHhlw"
+      "video": "15566qQHhlw",
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "profile_confirmed"
     },
     {
       "id": "yanawaraba",
@@ -57,7 +67,9 @@
       "kind": "MUSIC",
       "year": "2007",
       "role": "振付・出演",
-      "video": "RCHe13BrkUo"
+      "video": "RCHe13BrkUo",
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "profile_confirmed"
     }
   ],
   "services": [
@@ -177,6 +189,29 @@
       "summary": "タップダンスカードゲームを通じ、ステップや文化に触れる機会を広げています。",
       "url": "https://noritap.github.io/tapdance-cardgame/",
       "link_label": "制作プロジェクトを見る"
+    }
+  ],
+  "career_archives": [
+    {
+      "id": "rip-slyme-tokyo-stomp",
+      "title": "RIP SLYME 日本武道館「TOKYO STOMP」",
+      "year": "2016",
+      "role": "出演",
+      "label": "LIVE",
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "profile_confirmed"
+    },
+    {
+      "id": "chicago-rhythm-world",
+      "title": "Chicago Human Rhythm Project「Rhythm World」",
+      "year": "2004",
+      "role": "招聘・出演",
+      "evidence_ref": "01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv",
+      "verification_status": "additional_official_source_required",
+      "archive_urls": [
+        "https://www.facebook.com/photo.php?fbid=1236768718491027&set=pb.100064737308832.-2207520000&type=3",
+        "https://www.facebook.com/photo/?fbid=1236768715157694&set=pb.100064737308832.-2207520000"
+      ]
     }
   ]
 }
