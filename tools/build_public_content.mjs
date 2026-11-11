@@ -48,7 +48,7 @@ const transform = function transform(file,s,data){
      const links=(w.archive_urls||[]).map((url,i)=>`<a href="${attr(url)}" target="_blank" rel="noopener noreferrer">${String(i+1).padStart(2,"0")}</a>`).join(" / ");
      const archiveLabel=links ? `<span class="arrow">${links.replace(">01</a>",">ARCHIVE 01</a>")}</span>` : `<span class="arrow">${esc(w.label)}</span>`;
      return `        <div class="career-credit-row${links?" archive-row":""}"><span class="year">${esc(w.year)}</span><strong>${esc(w.title)}</strong><span>${esc(w.role)}</span>${archiveLabel}</div>`;
-   }).join("\\n");
+   }).join("\n");
    replace("CAREER_MORE_WORKS",/      <div class="career-credit-list">[\s\S]*?<\/div>(?=\s*<\/section>)/,`      <div class="career-credit-list">\n${others}\n${archival}\n      </div>`);
    return s;
  }
