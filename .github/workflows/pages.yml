@@ -98,5 +98,15 @@ jobs:
           test "$(file --mime-type --brief /tmp/profile-shoes-perspective.jpg)" = "image/jpeg"
           test "$(file --mime-type --brief /tmp/media-studio-tap-action.jpg)" = "image/jpeg"
           test "$(file --mime-type --brief /tmp/contact-pointing-portrait.png)" = "image/png"
+          # v4.3: Verify the visible commission route, generated video previews, and Profile share asset.
+          grep -Fq 'id="v3-commission-heading"' /tmp/furusho-home.html
+          grep -Fq 'href="contact/#request-types"' /tmp/furusho-home.html
+          grep -Fq 'assets/images/editorial/profile-shoes-perspective.jpg' /tmp/furusho-profile.html
+          curl -fsSL "$base/media/" -o /tmp/furusho-media-v43.html
+          test "$(grep -c 'class="media-video-card"' /tmp/furusho-media-v43.html)" -eq 6
+          test "$(grep -c 'class="media-video-frame"' /tmp/furusho-media-v43.html)" -eq 6
+          curl -fsSL "$base/media/media.css" -o /tmp/furusho-media-v43.css
+          grep -Fq '.media-video-frame img' /tmp/furusho-media-v43.css
+          echo "v4.3 commissioning route, 6 video previews and Profile OGP: OK"
           echo "Published photo files: 3 of 3 OK"
           echo "Public HOME, Projects, 6 subpages, brand CSS, approved mark and studio route: OK"
