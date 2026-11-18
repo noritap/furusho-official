@@ -72,27 +72,32 @@ Current Phase: Phase 4 / FURUSHO OFFICIAL v4 — Public Content SSOT & Editorial
 Current Goal: Build a credible editorial authority site where a first-time visitor can quickly understand who 古庄里好 is, what work can be commissioned directly, what belongs to Rhythm Speaker, review selected evidence, and reach the correct inquiry path with minimal friction.
 
 Current design system:
-- Working name: FURUSHO OFFICIAL v3 — Editorial Authority
+- Working name: FURUSHO OFFICIAL v4 — Brand-harmonized Editorial Authority
 - Primary style: STYLE-FAS-003 Minimal Suit Frame (70%)
 - Secondary style: STYLE-MAG-001 Simple Rockin Editorial (30%)
 - Visual character: refined / adult / artistic / calm authority / cultural / modern editorial
-- Palette: warm off-white, rich black / charcoal, controlled gray, one restrained warm accent
+- Palette: deep navy #07152F, warm off-white #F5F2EA, cream #F7EDCF, bright decorative turquoise #08B9B9, readable interactive turquoise #087478
 - Typography: refined serif / Mincho for major editorial headings; clean sans for body, navigation, and utility text
 - Layout: editorial asymmetry, generous whitespace, large uncaged real photography, near-zero border radius
+- Brand boundary: the owner-approved text-free dancer symbol may be shared with Nonry Service Jr.; this website remains the personal official website, not the Nonry product storefront. Never improvise a signature or replace the approved silhouette.
 - UI policy: reduce generic cards, bento grids, pills, gradients, and decorative UI that does not improve comprehension
 - Core principle: 「情報は捨てない。WebサイトっぽいUIを捨てる。」
 
 Current HOME information architecture:
 1. HERO
 2. ROUTE
-3. WORK WITH FURUSHO
-4. SELECTED WORKS
+3. SELECTED WORKS
+4. WORK WITH FURUSHO
 5. STATEMENT
-6. PROJECTS
-7. ABOUT
-8. CONTACT
+6. CURRENT WORK
+7. PROJECTS
+8. ABOUT
+9. CONTACT
 
 Current implementation baseline:
+- PR #118 (2026-11-18) publishes the owner-approved text-free tap dancer symbol, navy/turquoise/cream palette and HOME browser theme.
+- This 7-page brand-coherence pass standardizes subpage metadata and existing CSS without changing the site's identity or main navigation.
+- The source approval record is on the still-unmerged `FURUSHO_PROFILE_OS` PR #36 branch (`05_BRAND_AND_MESSAGE/nonry_service_jr/BRAND_MARK_APPROVAL_20261118.md`); its high-resolution JPEG is absent from GitHub main, so preserve the already-approved 160px embedded-WebP SVG and do not infer a print master.
 - HOME v3 Editorial Authority published
 - Global Navigation contract FURUSHO-NAV-2 retained
 - /profile, /career, /activities, /projects, /media, /contact pages published
@@ -198,6 +203,8 @@ Routing:
 - REVIEW_REQUIRED assets must not be promoted into public use without explicit confirmation.
 - Person-focused images placed in landscape contexts must use intentional focal points.
 - Focus-visible, semantic heading order, tap targets, contrast, and reduced-motion behavior must remain usable.
+- Use bright #08B9B9 as a decorative turquoise rather than small text on light surfaces. Verify WCAG AA normal-text contrast (>=4.5:1); #087478 is the accessible interactive accent on pale backgrounds.
+- Passing source and GitHub Pages smoke tests do not establish device-specific visual layout, browser favicon rendering, or cache behavior.
 - HOME must not regress into a generic card catalog.
 - Verified work evidence should carry authority; invented quotes, logos, or endorsements are prohibited.
 - Do not claim business outcome improvement without measured evidence.
