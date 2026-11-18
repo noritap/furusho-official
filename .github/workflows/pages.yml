@@ -83,4 +83,20 @@ jobs:
             sleep 8
           done
           test "$brand_ok" = "1" || { echo "Published Pages do not yet expose the brand-coherent UI"; exit 1; }
+          # Verify new editorial photo files are published (not just referenced in HTML).
+          for item in profile-shoes-perspective.jpg media-studio-tap-action.jpg contact-pointing-portrait.png; do
+            ok_image=0
+            for attempt in 1 2 3 4 5; do
+              if curl -fsSL "$base/assets/images/editorial/$item" -o "/tmp/$item" && test -s "/tmp/$item"; then
+                ok_image=1
+                break
+              fi
+              sleep 6
+            done
+            test "$ok_image" = "1" || { echo "Photo not delivered: $item"; exit 1; }
+          done
+          test "$(file --mime-type --brief /tmp/profile-shoes-perspective.jpg)" = "image/jpeg"
+          test "$(file --mime-type --brief /tmp/media-studio-tap-action.jpg)" = "image/jpeg"
+          test "$(file --mime-type --brief /tmp/contact-pointing-portrait.png)" = "image/png"
+          echo "Published photo files: 3 of 3 OK"
           echo "Public HOME, Projects, 6 subpages, brand CSS, approved mark and studio route: OK"
