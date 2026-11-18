@@ -67,12 +67,12 @@ Rhythm Speaker のレッスン、スタジオ利用、予約など運営問い�
 
 ## Development State
 
-Current Phase: Phase 4 / FURUSHO OFFICIAL v4 — Public Content SSOT & Editorial Gateway
+Current Phase: Phase 4.5 / FURUSHO OFFICIAL — Artist Editorial Performance, HOME-first visual refinement
 
 Current Goal: Build a credible editorial authority site where a first-time visitor can quickly understand who 古庄里好 is, what work can be commissioned directly, what belongs to Rhythm Speaker, review selected evidence, and reach the correct inquiry path with minimal friction.
 
 Current design system:
-- Working name: FURUSHO OFFICIAL v4 — Brand-harmonized Editorial Authority
+- Working name: FURUSHO OFFICIAL v4.5 — Artist Editorial Performance
 - Primary style: STYLE-FAS-003 Minimal Suit Frame (70%)
 - Secondary style: STYLE-MAG-001 Simple Rockin Editorial (30%)
 - Visual character: refined / adult / artistic / calm authority / cultural / modern editorial
@@ -84,17 +84,19 @@ Current design system:
 - Core principle: 「情報は捨てない。WebサイトっぽいUIを捨てる。」
 
 Current HOME information architecture:
-1. HERO
-2. ROUTE
-3. SELECTED WORKS
-4. WORK WITH FURUSHO
-5. STATEMENT
-6. CURRENT WORK
-7. PROJECTS
-8. ABOUT
-9. CONTACT
+1. HERO (stage navy, oversized Japanese + condensed English name, authorized portrait)
+2. ABOUT (bright editorial introduction with archival portrait)
+3. STATEMENT (own philosophical message over approved performance photography)
+4. ROUTE (visitor intent shortcuts)
+5. SELECTED WORKS (verified videos/credits)
+6. WORK WITH FURUSHO (personal commission, four canonical service rows)
+7. CURRENT WORK (current teaching/creation)
+8. PROJECTS (public destinations)
+9. CONTACT (direct inquiry)
 
 Current implementation baseline:
+- v4.5 artist-editorial design direction (2026-11-18): reference-site principles adapted without copying artwork/text/code; deep navy header/hero, readable turquoise CTA, monochrome original authorized photographs, strong typographic contrast, light editorial intro and philosophical performance-photo band.
+- Source contract: preserve FURUSHO-NAV-2 five-item navigation, correct personal/studio contact routing, verified work data and non-JS static content. New styling belongs to existing canonical CSS, not a new override layer. Only HOME is structurally reordered in this version; evaluate subpage art direction separately after release.
 - PR #118 (2026-11-18) publishes the owner-approved text-free tap dancer symbol, navy/turquoise/cream palette and HOME browser theme.
 - This 7-page brand-coherence pass standardizes subpage metadata and existing CSS without changing the site's identity or main navigation.
 - The source approval record is on the still-unmerged `FURUSHO_PROFILE_OS` PR #36 branch (`05_BRAND_AND_MESSAGE/nonry_service_jr/BRAND_MARK_APPROVAL_20261118.md`); its high-resolution JPEG is absent from GitHub main, so preserve the already-approved 160px embedded-WebP SVG and do not infer a print master.

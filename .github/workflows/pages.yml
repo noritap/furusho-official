@@ -107,6 +107,24 @@ jobs:
           test "$(grep -c 'class="media-video-frame"' /tmp/furusho-media-v43.html)" -eq 6
           curl -fsSL "$base/media/media.css" -o /tmp/furusho-media-v43.css
           grep -Fq '.media-video-frame img' /tmp/furusho-media-v43.css
+          # v4.5: published theatrical editorial HOME must expose approved section order and styles.
+          grep -Fq 'class="home-v3 home-v45"' /tmp/furusho-home.html
+          python3 - <<'PY'
+          from pathlib import Path
+          t=Path("/tmp/furusho-home.html").read_text()
+          ids=['class="section-shell v3-hero"','id="about"','class="v3-statement"','class="v3-section v3-route"','id="selected-works"','id="work"','id="current-work"','id="projects-preview"','id="contact"']
+          indices=[t.index(x) for x in ids]
+          assert indices==sorted(indices), f"HOME section order drift: {indices}"
+          assert "DANCE" not in t or "NORITAKA FURUSHO" in t
+          print("HOME editorial section order: OK")
+          PY
+          curl -fsSL "$base/assets/css/home-v3.css" -o /tmp/furusho-home-v45.css
+          grep -Fq 'Artist Editorial Performance / HOME canonical CSS' /tmp/furusho-home-v45.css
+          grep -Fq 'career-stage-frankfurt.jpg' /tmp/furusho-home-v45.css
+          grep -Fq '.v3-studio-note .v3-button' /tmp/furusho-home-v45.css
+          curl -fsSL "$base/assets/css/style.css" -o /tmp/furusho-style-v45.css
+          grep -Fq 'rgba(7, 21, 47, .98)' /tmp/furusho-style-v45.css
+          echo "v4.5 theatrical HOME and shared navy header: OK"
           echo "v4.3 commissioning route, 6 video previews and Profile OGP: OK"
           echo "Published photo files: 3 of 3 OK"
           echo "Public HOME, Projects, 6 subpages, brand CSS, approved mark and studio route: OK"
