@@ -45,7 +45,7 @@ Generated: `2026-11-18T09:11:00+00:00`
 | repository_image | `assets/images/editorial/teaching-class.jpg` | — | `index.html` | YES | RIGHTS_NOT_INFERRED |
 | repository_image | `assets/images/furusho-profile-main.jpg` | — | `activities/index.html`<br>`career/index.html`<br>`contact/index.html`<br>`index.html`<br>`media/index.html`<br>`projects/index.html` | YES | RIGHTS_NOT_INFERRED |
 
-## OWNER AUTHORIZED CROSS SITE
+## Owner Authorized Cross Site
 
 | Type | Asset | Source | Found in | Auto publish | Rights |
 |---|---|---|---|---:|---|
