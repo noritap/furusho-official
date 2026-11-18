@@ -1,4 +1,4 @@
-/* FURUSHO OFFICIAL v3 — Editorial Authority / HOME only */
+/* FURUSHO OFFICIAL v4.5 — Artist Editorial Performance / HOME canonical CSS */
 
 .home-v3 {
   --v3-paper: #f5f2ea;
@@ -9,8 +9,8 @@
   --v3-accent: #087478;
   --v3-dark: #07152f;
   --v3-max: 1240px;
-  background: var(--v3-paper);
-  color: var(--v3-ink);
+  background: #07152f;
+  color: #f7edcf;
 }
 
 .home-v3 .section-shell {
@@ -18,8 +18,8 @@
 }
 
 .home-v3 .site-header {
-  background: rgba(245, 242, 234, .97);
-  border-bottom-color: var(--v3-line);
+  background: rgba(7, 21, 47, .98);
+  border-bottom-color: #29445a;
 }
 
 .home-v3 .nav-cta {
@@ -43,7 +43,8 @@
 
 /* HERO */
 .home-v3 .v3-hero {
-  min-height: calc(100vh - 72px);
+  min-height: calc(100svh - 86px);
+  color: #f7edcf;
   display: grid;
   grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr);
   gap: clamp(42px, 6vw, 92px);
@@ -59,20 +60,21 @@
 .home-v3 .v3-name {
   margin: 18px 0 26px;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
-  font-size: clamp(4.2rem, 9vw, 9rem);
-  font-weight: 500;
-  letter-spacing: -.06em;
-  line-height: .84;
+  font-size: clamp(4.2rem, 9vw, 8.8rem);
+  font-weight: 700;
+  letter-spacing: -.07em;
+  line-height: .93;
 }
 
 .home-v3 .v3-name span {
   display: block;
-  margin-top: 22px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
-  font-size: clamp(.82rem, 1.1vw, 1.05rem);
-  font-weight: 700;
-  letter-spacing: .18em;
-  line-height: 1.4;
+  margin-top: 20px;
+  font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
+  font-size: clamp(1.65rem, 4.4vw, 4.75rem);
+  font-weight: 900;
+  letter-spacing: .015em;
+  line-height: 1.08;
+  text-wrap: balance;
 }
 
 .home-v3 .v3-role {
@@ -85,7 +87,7 @@
 .home-v3 .v3-hero-lead {
   max-width: 660px;
   margin-bottom: 0;
-  color: #384954;
+  color: #d4e1e0;
   font-size: 1rem;
 }
 
@@ -102,15 +104,17 @@
   align-items: center;
   justify-content: center;
   padding: 0 22px;
-  border: 1px solid var(--v3-ink);
+  border: 1px solid #f7edcf;
+  color: #f7edcf;
   font-size: .84rem;
   font-weight: 800;
   letter-spacing: .04em;
 }
 
 .home-v3 .v3-button.primary {
-  background: var(--v3-ink);
-  color: #fff;
+  background: #08b9b9;
+  color: #07152f;
+  border-color: #08b9b9;
 }
 
 .home-v3 .v3-button:hover {
@@ -123,8 +127,9 @@
   margin: 0;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border: 2px solid #08b9b9;
-  background: #d7e7e2;
+  border: 0;
+  border-bottom: 4px solid #08b9b9;
+  background: #102a44;
 }
 
 .home-v3 .v3-portrait img {
@@ -133,7 +138,7 @@
   display: block;
   object-fit: cover;
   object-position: 50% 20%;
-  filter: saturate(.9) contrast(1.03);
+  filter: grayscale(1) contrast(1.08);
 }
 
 .home-v3 .v3-portrait figcaption {
@@ -141,8 +146,8 @@
   left: 18px;
   bottom: 16px;
   padding: 7px 9px;
-  background: rgba(245, 242, 234, .94);
-  color: var(--v3-ink);
+  background: rgba(7, 21, 47, .91);
+  color: #f7edcf;
   font-size: .62rem;
   font-weight: 800;
   letter-spacing: .16em;
@@ -150,7 +155,8 @@
 
 /* ROUTE */
 .home-v3 .v3-route {
-  background: var(--v3-paper-2);
+  background: #e4efed;
+  color: #07152f;
 }
 
 .home-v3 .v3-route-head,
@@ -219,7 +225,8 @@
 
 /* WORK */
 .home-v3 .v3-work {
-  background: #fff;
+  background: #f5f2ea;
+  color: #07152f;
 }
 
 /* Performance and choreography: prominent route, separate from the four canonical service rows. */
@@ -417,8 +424,12 @@
 
 /* STATEMENT */
 .home-v3 .v3-statement {
-  padding: clamp(100px, 12vw, 180px) 0;
-  background: var(--v3-paper);
+  min-height: clamp(390px, 52vw, 660px);
+  display: flex;
+  align-items: center;
+  padding: clamp(90px, 11vw, 160px) 0;
+  background: linear-gradient(90deg, rgba(7,21,47,.95), rgba(7,21,47,.7)), url("../images/editorial/career-stage-frankfurt.jpg") 65% 40%/cover no-repeat;
+  color: #f7edcf;
 }
 
 .home-v3 .v3-statement blockquote {
@@ -432,6 +443,7 @@
 }
 
 /* PROJECTS */
+.home-v3 #projects-preview { background: #f5f2ea; color: #07152f; }
 .home-v3 .v3-project-list {
   margin-top: 44px;
   border-top: 1px solid var(--v3-line);
@@ -469,15 +481,16 @@
 }
 
 /* ABOUT */
+.home-v3 .v3-about { background: #f7edcf; color: #07152f; }
 .home-v3 .v3-about-grid {
   display: grid;
-  grid-template-columns: minmax(280px, .85fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(280px, .96fr) minmax(0, 1.04fr);
   gap: clamp(42px, 7vw, 110px);
   align-items: start;
 }
 
 .home-v3 .v3-about-copy {
-  padding-top: 32px;
+  padding-top: clamp(12px, 3vw, 42px);
 }
 
 .home-v3 .v3-about-copy p {
@@ -540,8 +553,16 @@
 }
 
 .home-v3 .footer {
-  background: var(--v3-paper);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 32px max(24px, calc((100vw - 1240px) / 2)) 42px;
+  color: #bacdd0;
+  background: #07152f;
+  border-color: #29445a;
 }
+.home-v3 .footer strong { color: #f7edcf; }
 
 @media (max-width: 980px) {
   .home-v3 .v3-hero,
@@ -659,4 +680,39 @@
     transition: none;
     transform: none !important;
   }
+}
+
+/* v4.5: a restrained monochrome stage image and stronger editorial hierarchy. */
+.home-v3 .v3-hero .v3-kicker { color: #89dad5; }
+.home-v3 .v3-hero .v3-role { color: #f7edcf; font-weight: 650; }
+.home-v3 .v3-name { overflow-wrap: anywhere; }
+.home-v3 .v3-hero .v3-button:focus-visible,
+.home-v3 .v3-route-link:focus-visible,
+.home-v3 .v3-dark-link:focus-visible,
+.home-v3 .v3-work-row a:focus-visible { outline: 3px solid #08b9b9; outline-offset: 4px; }
+.home-v3 .v3-statement .v3-label { color: #89dad5; }
+.home-v3 .v3-statement blockquote { max-width: 940px; text-wrap: balance; text-shadow: 0 2px 22px rgba(0,0,0,.25); }
+.home-v3 .v3-about .v3-about-editorial-photo { max-width: none; margin: 0; }
+.home-v3 .v3-about .v3-about-editorial-photo img { height: clamp(350px, 50vw, 630px); max-height: none; object-position: 50% 25%; filter: grayscale(1) contrast(1.03); }
+.home-v3 .v3-about .v3-about-editorial-photo figcaption { color: #52616b; }
+.home-v3 .v3-about .v3-button { border-color: #07152f; color: #07152f; }
+.home-v3 .v3-about .v3-label { color: #087478; }
+.home-v3 .v3-works .v3-label { color: #89dad5; }
+.home-v3 .v3-works .v3-section-head p { color: #d2dedf; }
+.home-v3 .v3-contact .v3-label { color: #89dad5; }
+.home-v3 .v3-contact p { color: #d1dfe0; }
+.home-v3 .v3-contact-methods a:hover strong { color: #89dad5; }
+.home-v3 .v3-feature-copy { border-bottom-color: #375463; }
+.home-v3 .v3-feature-copy span { color: #b3cbca; }
+@media (max-width: 980px) {
+  .home-v3 .v3-about-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px; }
+}
+@media (max-width: 720px) {
+  .home-v3 .v3-hero { min-height: auto; }
+  .home-v3 .v3-about-grid { display: flex; flex-direction: column; }
+  .home-v3 .v3-about-copy { order: 0; padding-top: 0; }
+  .home-v3 .v3-about-editorial-photo { order: 1; width: 100%; }
+  .home-v3 .v3-about .v3-about-editorial-photo img { height: auto; max-height: 420px; aspect-ratio: 4/3; }
+  .home-v3 .v3-statement { min-height: 400px; background-position: 55% 50%; }
+  .home-v3 .v3-name span { font-size: clamp(1.75rem, 7vw, 3rem); line-height: 1.06; }
 }
