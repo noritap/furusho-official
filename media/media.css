@@ -10,11 +10,16 @@
 .media-page-links span,.media-video-grid span{font-size:.72rem;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}
 .media-page-links strong{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.35rem,2.6vw,2.35rem);font-weight:500}
 .media-page-links em,.media-video-grid em{font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.1em}
-.media-video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#3a3a3a;border:1px solid #3a3a3a;margin-top:34px}
-.media-video-grid a{background:var(--dark);padding:28px;min-height:180px;display:flex;flex-direction:column;transition:background-color .18s ease}
-.media-video-grid a:hover{background:#1d1d1d}
-.media-video-grid strong{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.35rem;font-weight:500;margin:28px 0 16px}
-.media-video-grid em{margin-top:auto}
+.media-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.8vw,30px);margin-top:34px}
+.media-video-grid a{display:flex;flex-direction:column;min-width:0;background:#102a44;color:#f5f2ea;text-decoration:none;border:1px solid #375463;transition:border-color .18s ease}
+.media-video-grid a:hover{border-color:#08b9b9}
+.media-video-grid a:focus-visible{outline:3px solid #08b9b9;outline-offset:3px}
+.media-video-frame{display:block;aspect-ratio:16/9;overflow:hidden;background:#07152f}
+.media-video-frame img{display:block;width:100%;height:100%;object-fit:cover}
+.media-video-copy{display:flex;flex-direction:column;gap:16px;flex:1;padding:clamp(18px,2.3vw,26px)}
+.media-video-grid .media-video-meta{display:block;color:#bfd0ce}
+.media-video-grid strong{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.18rem,2vw,1.55rem);font-weight:500;line-height:1.45;margin:0}
+.media-video-grid em{margin-top:auto;padding-top:7px}
 .media-more{margin-top:28px}
 [aria-current="page"]{font-weight:800}
 @media(max-width:760px){.media-page-hero{grid-template-columns:1fr}.media-page-photo{width:min(100%,430px);margin:auto}.media-page-links a{grid-template-columns:1fr auto}.media-page-links span{grid-column:1/-1}.media-video-grid{grid-template-columns:1fr}}
