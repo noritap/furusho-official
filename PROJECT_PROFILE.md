@@ -146,6 +146,15 @@ Primary CTA → Contact
 
 Do not change the global navigation architecture without evidence of a navigation problem.
 
+## v4.3 Conversion UX Change (2026-11-18)
+
+- Goal: make the first-time visitor understand performance/choreography availability and quickly reach the correct consultation route; make six verified media links visually selectable.
+- HOME keeps the four compact canonical service rows; a separate **PERFORMANCE / CHOREOGRAPHY** editorial feature links to Contact request types and Career evidence. It does not alter the canonical service taxonomy.
+- Media builds six video-thumbnail links from the established `works` public data in `assets/data/public-content.json`. Modify `tools/build_public_content.mjs` and regenerated HTML together; `--check` is a release gate.
+- Profile Open Graph image uses the matching locally published portrait instead of the outdated studio image reference.
+- Do not treat a code-level implementation or Pages smoke test as a full smartphone/desktop visual QA or measured conversion increase.
+- Future versions should compare qualified personal-work inquiries, studio referrals, and user-visible mobile flow after publication. Do not fabricate metrics.
+
 ## Public Work Taxonomy Contract
 
 Canonical public baseline for Furusho personal commissions:
