@@ -1,13 +1,13 @@
 /* FURUSHO OFFICIAL v3 — Editorial Authority / HOME only */
 
 .home-v3 {
-  --v3-paper: #f5f2eb;
-  --v3-paper-2: #ece7dd;
-  --v3-ink: #121212;
-  --v3-muted: #6d6860;
-  --v3-line: #cfc8bb;
-  --v3-accent: #9f4a36;
-  --v3-dark: #151515;
+  --v3-paper: #f5f2ea;
+  --v3-paper-2: #e4efed;
+  --v3-ink: #07152f;
+  --v3-muted: #52616b;
+  --v3-line: #bfd0ce;
+  --v3-accent: #097b80;
+  --v3-dark: #07152f;
   --v3-max: 1240px;
   background: var(--v3-paper);
   color: var(--v3-ink);
@@ -18,7 +18,7 @@
 }
 
 .home-v3 .site-header {
-  background: rgba(245, 242, 235, .96);
+  background: rgba(245, 242, 234, .97);
   border-bottom-color: var(--v3-line);
 }
 
@@ -85,7 +85,7 @@
 .home-v3 .v3-hero-lead {
   max-width: 660px;
   margin-bottom: 0;
-  color: #45413c;
+  color: #384954;
   font-size: 1rem;
 }
 
@@ -123,8 +123,8 @@
   margin: 0;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border: 1px solid var(--v3-line);
-  background: #d8d1c5;
+  border: 2px solid #097b80;
+  background: #d7e7e2;
 }
 
 .home-v3 .v3-portrait img {
@@ -141,7 +141,7 @@
   left: 18px;
   bottom: 16px;
   padding: 7px 9px;
-  background: rgba(245, 242, 235, .9);
+  background: rgba(245, 242, 234, .94);
   color: var(--v3-ink);
   font-size: .62rem;
   font-weight: 800;
@@ -177,7 +177,7 @@
 .home-v3 .v3-section-head p {
   max-width: 620px;
   margin: 0;
-  color: #4a4640;
+  color: #394f57;
 }
 
 .home-v3 .v3-route-list {
@@ -253,7 +253,7 @@
 
 .home-v3 .v3-work-row p {
   margin: 0;
-  color: #514d46;
+  color: #44575d;
   font-size: .94rem;
 }
 
@@ -439,13 +439,13 @@
 }
 
 .home-v3 .v3-about-copy p {
-  color: #49453f;
+  color: #394f57;
   font-size: 1rem;
 }
 
 /* CONTACT */
 .home-v3 .v3-contact {
-  background: #191919;
+  background: #07152f;
   color: #fff;
 }
 
