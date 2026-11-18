@@ -53,7 +53,7 @@ const transform = function transform(file,s,data){
    return s;
  }
  if(file==="media/index.html"){
-   const rows=data.works.map(w=>`      <a href="${href(w)}" target="_blank" rel="noopener noreferrer"><span>${esc(w.kind)} / ${esc(w.role)}</span><strong>${esc(w.media_title||w.title)}</strong><em>関連映像を見る →</em></a>`).join("\n");
+   const rows=data.works.map(w=>`      <a class="media-video-card" href="${href(w)}" target="_blank" rel="noopener noreferrer"><span class="media-video-frame"><img src="${image(w)}" alt="" width="480" height="360" loading="lazy" decoding="async"></span><span class="media-video-copy"><span class="media-video-meta">${esc(w.kind)} / ${esc(w.role)}</span><strong>${esc(w.media_title||w.title)}</strong><em>関連映像を見る →</em></span></a>`).join("\n");
    replace("MEDIA_SELECTED_WORKS",/<div class="media-video-grid">[\s\S]*?<\/div>(?=<p class="media-more">)/,`    <div class="media-video-grid">\n${rows}\n    </div>`);
    s=s.replace('href="https://rhythmspeaker.stores.jp/" target="_blank" rel="noopener noreferrer"><span>03 / STUDIO','href="https://noritap.github.io/rhythmspeaker/" target="_blank" rel="noopener noreferrer"><span>03 / STUDIO');
    return s;
