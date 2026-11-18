@@ -314,6 +314,16 @@
   font-weight: 800;
 }
 
+.home-v3 .v3-studio-note .v3-button {
+  color: #07152f;
+  border-color: #07152f;
+}
+.home-v3 .v3-studio-note .v3-button:hover {
+  background: #07152f;
+  color: #f7edcf;
+}
+.home-v3 .v3-work .v3-label { color: #087478; }
+
 .home-v3 .v3-studio-note {
   margin-top: 36px;
   padding: 24px 0;
