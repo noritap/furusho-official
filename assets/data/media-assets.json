@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T19:31:00+00:00",
+  "generated_at": "2026-11-18T09:11:00+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -11,9 +11,9 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 14,
+    "total": 17,
     "by_usage_status": {
-      "EXISTING_PUBLIC_ASSET": 7,
+      "EXISTING_PUBLIC_ASSET": 10,
       "OWNER_AUTHORIZED_CROSS_SITE": 1,
       "AUTO_EXTERNAL_PREVIEW": 6
     }
@@ -48,8 +48,7 @@
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
       "found_in": [
-        "index.html",
-        "profile/index.html"
+        "index.html"
       ]
     },
     {
@@ -66,11 +65,50 @@
       ]
     },
     {
+      "id": "local:assets/images/editorial/contact-pointing-portrait.png",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/contact-pointing-portrait.png",
+      "local_path": "assets/images/editorial/contact-pointing-portrait.png",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "contact/index.html"
+      ]
+    },
+    {
+      "id": "local:assets/images/editorial/media-studio-tap-action.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/media-studio-tap-action.jpg",
+      "local_path": "assets/images/editorial/media-studio-tap-action.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
+      ]
+    },
+    {
       "id": "local:assets/images/editorial/performance-studio.jpg",
       "type": "repository_image",
       "source_url": null,
       "image_url": "assets/images/editorial/performance-studio.jpg",
       "local_path": "assets/images/editorial/performance-studio.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "profile/index.html"
+      ]
+    },
+    {
+      "id": "local:assets/images/editorial/profile-shoes-perspective.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/editorial/profile-shoes-perspective.jpg",
+      "local_path": "assets/images/editorial/profile-shoes-perspective.jpg",
       "usage_status": "EXISTING_PUBLIC_ASSET",
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
