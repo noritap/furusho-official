@@ -6,7 +6,7 @@
   overflow: hidden;
   border-top: 1px solid var(--v3-line);
   border-bottom: 1px solid var(--v3-line);
-  background: #d7d0c4;
+  background: #bfd0ce;
 }
 
 .home-v3 .v3-work-context img {
@@ -40,7 +40,7 @@
 .home-v3 .v3-work-context figcaption span {
   display: block;
   margin-bottom: 10px;
-  color: #ddd3c6;
+  color: #bfd0ce;
   font-size: .66rem;
   font-weight: 800;
   letter-spacing: .18em;

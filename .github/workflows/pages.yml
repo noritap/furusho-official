@@ -58,4 +58,29 @@ jobs:
           done
           test "$ok" = "1" || { echo "Published Pages do not yet expose v4 content"; exit 1; }
           curl -fsSL "$base/assets/css/v4-public.css" -o /tmp/furusho-v4.css
-          echo "Public HOME, Projects and v4 stylesheet: OK"
+          # Confirm that the new brand theme is actually served on every public page.
+          brand_ok=0
+          for attempt in 1 2 3 4 5 6; do
+            brand_ok=1
+            for page in profile career activities projects media contact; do
+              if ! curl -fsSL "$base/$page/" -o "/tmp/furusho-$page.html" ||
+                 ! grep -Fq '<meta name="theme-color" content="#07152F">' "/tmp/furusho-$page.html"; then
+                brand_ok=0
+                break
+              fi
+            done
+            if test "$brand_ok" = "1" &&
+               curl -fsSL "$base/assets/css/style.css" -o /tmp/furusho-style.css &&
+               grep -Fq -- '--accent: #087478;' /tmp/furusho-style.css &&
+               curl -fsSL "$base/assets/css/home-v3.css" -o /tmp/furusho-home.css &&
+               grep -Fq -- '--v3-accent: #087478;' /tmp/furusho-home.css &&
+               curl -fsSL "$base/assets/icons/furusho-mark.svg" -o /tmp/furusho-mark.svg &&
+               grep -Fq 'data:image/webp;base64,' /tmp/furusho-mark.svg &&
+               grep -Fq 'aria-label="Rhythm Speaker公式サイトを開く"' /tmp/furusho-profile.html; then
+              break
+            fi
+            brand_ok=0
+            sleep 8
+          done
+          test "$brand_ok" = "1" || { echo "Published Pages do not yet expose the brand-coherent UI"; exit 1; }
+          echo "Public HOME, Projects, 6 subpages, brand CSS, approved mark and studio route: OK"

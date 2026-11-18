@@ -4,8 +4,8 @@
 .current-project-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.12) 68%)}
 .current-project-card>span{position:relative;z-index:1;display:grid;gap:6px}
 .current-project-card b{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.5rem,2.4vw,2.35rem);font-weight:500}
-.current-project-card small{font-size:.66rem;letter-spacing:.16em;color:#c8c0b4;font-weight:800}
+.current-project-card small{font-size:.66rem;letter-spacing:.16em;color:#bfd0ce;font-weight:800}
 .current-project-card i{font-size:.7rem;font-style:normal;letter-spacing:.12em;margin-top:8px}
-.current-project-visual-type{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(4rem,10vw,8rem);letter-spacing:-.06em;color:#777;background:linear-gradient(135deg,#171717,#2d2d2d);transition:transform .3s ease,color .3s ease}
+.current-project-visual-type{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(4rem,10vw,8rem);letter-spacing:-.06em;color:#777;background:linear-gradient(135deg,#07152f,#102a44);transition:transform .3s ease,color .3s ease}
 .current-project-card:hover .current-project-visual-type{transform:scale(1.025);color:#929292}
 @media(max-width:650px){.current-project-visuals{display:flex;overflow-x:auto;gap:10px;margin-right:-14px;padding-right:14px;scroll-snap-type:x mandatory;scrollbar-width:none}.current-project-visuals::-webkit-scrollbar{display:none}.current-project-card{flex:0 0 82vw;min-height:260px;scroll-snap-align:start}}

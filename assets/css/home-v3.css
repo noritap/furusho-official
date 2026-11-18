@@ -6,7 +6,7 @@
   --v3-ink: #07152f;
   --v3-muted: #52616b;
   --v3-line: #bfd0ce;
-  --v3-accent: #097b80;
+  --v3-accent: #087478;
   --v3-dark: #07152f;
   --v3-max: 1240px;
   background: var(--v3-paper);
@@ -123,7 +123,7 @@
   margin: 0;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border: 2px solid #097b80;
+  border: 2px solid #08b9b9;
   background: #d7e7e2;
 }
 

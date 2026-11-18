@@ -16,6 +16,15 @@ Profile facts, evidence, publication status, media rights, and canonical profile
 - Profile/evidence claims trace back to `noritap/FURUSHO_PROFILE_OS`
 - UI/UX favors clear routing, contact conversion, accessibility, and fast static delivery
 
+## Adopted visual identity (2026-11-18)
+
+- This remains **古庄里好's personal official website**, not a Nonry Service Jr. shop. Preserve the public career, commission and Rhythm Speaker routes.
+- The approved header/favicon motif is a text-free dancer silhouette: `assets/icons/furusho-mark.svg`. Its 160px embedded WebP is a web preview, not an editable vector or print master.
+- Palette: navy `#07152F`, paper `#F5F2EA`, cream `#F7EDCF`, bright decorative turquoise `#08B9B9`. Readable text/link accent on light backgrounds: `#087478`.
+- The brand approval record is on the **unmerged** `noritap/FURUSHO_PROFILE_OS` PR #36 branch: `05_BRAND_AND_MESSAGE/nonry_service_jr/BRAND_MARK_APPROVAL_20261118.md`. The original 1920px JPEG is not in GitHub main.
+- Preserve the existing HTML/CSS structure; update canonical page styles instead of accumulating visual override layers.
+- After each release verify public-content generation, navigation, media registry, deployed GitHub Pages and real user routes. A successful Actions run alone does not confirm viewport-specific visual QA.
+
 ## Source of Truth
 
 - Website implementation: this repository
