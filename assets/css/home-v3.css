@@ -222,6 +222,48 @@
   background: #fff;
 }
 
+/* Performance and choreography: prominent route, separate from the four canonical service rows. */
+.home-v3 .v3-commission-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, .75fr);
+  gap: clamp(24px, 5vw, 76px);
+  align-items: center;
+  margin-top: 34px;
+  padding: clamp(26px, 4.5vw, 52px);
+  color: #f7edcf;
+  background: #07152f;
+  border-left: 4px solid #08b9b9;
+}
+.home-v3 .v3-commission-feature .v3-label { color: #83d7d5; }
+.home-v3 .v3-commission-feature h3 {
+  margin: 14px 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.9rem, 3.3vw, 3.15rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+.home-v3 .v3-commission-feature p:not(.v3-label) {
+  max-width: 560px;
+  margin: 0;
+  line-height: 1.85;
+}
+.home-v3 .v3-commission-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+.home-v3 .v3-commission-actions a {
+  display: flex; min-height: 48px; align-items: center; justify-content: center;
+  padding: 12px 16px; font-size: .84rem; font-weight: 800; text-align: center;
+  text-decoration: none; line-height: 1.5;
+}
+.home-v3 .v3-commission-primary { background: #f7edcf; color: #07152f; }
+.home-v3 .v3-commission-secondary { color: #f7edcf; border: 1px solid #8199a3; }
+.home-v3 .v3-commission-actions a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.home-v3 .v3-commission-actions a:focus-visible { outline: 3px solid #08b9b9; outline-offset: 4px; }
+@media (max-width: 760px) {
+  .home-v3 .v3-commission-feature { grid-template-columns: 1fr; gap: 24px; padding: 26px 22px; }
+}
+@media (max-width: 360px) {
+  .home-v3 .v3-commission-actions a { font-size: .78rem; padding: 12px 10px; }
+}
+
 .home-v3 .v3-work-list {
   margin-top: 46px;
   border-top: 1px solid var(--v3-line);
