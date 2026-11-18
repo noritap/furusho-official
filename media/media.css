@@ -1,11 +1,11 @@
 .media-page-hero{display:grid;grid-template-columns:1fr minmax(260px,.55fr);gap:clamp(36px,6vw,84px);align-items:center;padding:clamp(68px,8vw,108px) 0}
 .media-page-title{font-size:clamp(3.4rem,7.4vw,7.8rem);line-height:.92;letter-spacing:-.055em;margin:18px 0 26px}
-.media-page-lead{max-width:720px;font-size:clamp(1.05rem,2vw,1.35rem);color:#45423d}
-.media-page-photo{margin:0;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);background:#ddd7cb}
+.media-page-lead{max-width:720px;font-size:clamp(1.05rem,2vw,1.35rem);color:#384954}
+.media-page-photo{margin:0;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);background:#cbd7d6}
 .media-page-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;filter:saturate(.72) contrast(1.04)}
-.media-links-section{background:#e6e1d7}
-.media-page-links{display:grid;border-top:1px solid #bbb4a7;margin-top:28px}
-.media-page-links a{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:22px;align-items:center;padding:26px 0;border-bottom:1px solid #bbb4a7;transition:padding .18s ease,background-color .18s ease}
+.media-links-section{background:#e4efed}
+.media-page-links{display:grid;border-top:1px solid #bfd0ce;margin-top:28px}
+.media-page-links a{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:22px;align-items:center;padding:26px 0;border-bottom:1px solid #bfd0ce;transition:padding .18s ease,background-color .18s ease}
 .media-page-links a:hover{padding-left:12px;padding-right:12px;background:rgba(255,255,255,.32)}
 .media-page-links span,.media-video-grid span{font-size:.72rem;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}
 .media-page-links strong{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.35rem,2.6vw,2.35rem);font-weight:500}
@@ -21,6 +21,6 @@
 @media(max-width:600px){.media-page-hero{padding:50px 0 58px;gap:28px}.media-page-title{font-size:clamp(2.8rem,14vw,4rem);line-height:.95;margin-bottom:22px}.media-page-lead{font-size:1rem}.media-page-links a{padding:22px 0}.media-page-links a:hover{padding-left:0;padding-right:0}}
 
 /* Video tiles have dark surfaces even when their parent section is light. */
-.media-video-grid a{color:#f5f2eb}
-.media-video-grid span{color:#c8c4bd}
-.media-video-grid em{color:#f5f2eb}
+.media-video-grid a{color:#f5f2ea}
+.media-video-grid span{color:#bfd0ce}
+.media-video-grid em{color:#f5f2ea}
