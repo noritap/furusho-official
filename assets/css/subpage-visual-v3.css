@@ -3,11 +3,11 @@
 .visual-card{min-width:0;border:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
 .visual-card:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.07)}
 .visual-card:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
-.visual-card-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1b1b1b;display:flex;align-items:flex-end;padding:20px;color:#fff}
+.visual-card-media{position:relative;aspect-ratio:16/9;overflow:hidden;background:#07152f;display:flex;align-items:flex-end;padding:20px;color:#fff}
 .visual-card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease,filter .25s ease}
 .visual-card:hover .visual-card-media img{transform:scale(1.025)}
 .visual-card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.05) 64%);pointer-events:none}
-.visual-card-media.visual-type{align-items:center;justify-content:center;padding:0;background:linear-gradient(135deg,#151515,#353535)}
+.visual-card-media.visual-type{align-items:center;justify-content:center;padding:0;background:linear-gradient(135deg,#07152f,#102a44)}
 .visual-card-media.visual-type::after{display:none}
 .visual-type-mark{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.5rem,7vw,5.5rem);line-height:.9;letter-spacing:-.06em;text-align:center;opacity:.94}
 .visual-type-mark small{display:block;font-family:inherit;font-size:.16em;letter-spacing:.18em;margin-top:12px;opacity:.7}
@@ -15,7 +15,7 @@
 .visual-card-body{padding:22px;display:flex;flex-direction:column;flex:1;min-height:180px}
 .visual-card-kicker{font-size:.66rem;letter-spacing:.15em;color:var(--muted);font-weight:800;text-transform:uppercase}
 .visual-card h2,.visual-card h3{font-size:clamp(1.25rem,2.3vw,1.7rem);line-height:1.3;margin:18px 0 10px}
-.visual-card p{color:#4b4842;font-size:.92rem;margin-bottom:22px}
+.visual-card p{color:#44575d;font-size:.92rem;margin-bottom:22px}
 .visual-card-cta{margin-top:auto;display:inline-flex;align-items:center;min-height:44px;font-size:.76rem;letter-spacing:.1em;font-weight:800}
 .visual-card:hover .visual-card-cta{text-decoration:underline;text-underline-offset:4px}
 .dark-section .visual-card{background:var(--dark);border-color:#3a3a3a;color:#fff}
