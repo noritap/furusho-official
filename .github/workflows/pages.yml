@@ -53,7 +53,7 @@ jobs:
           for attempt in 1 2 3 4 5 6; do
             if curl -fsSL "$base/" -o /tmp/furusho-home.html &&
                curl -fsSL "$base/projects/" -o /tmp/furusho-projects.html &&
-               grep -q 'id="current-work"' /tmp/furusho-home.html &&
+               grep -q 'class="site-mobile-menu"' /tmp/furusho-home.html &&
                grep -q 'RS BROADCAST NETWORK' /tmp/furusho-projects.html &&
                grep -q 'RHYTHM SPEAKER MUSIC' /tmp/furusho-projects.html; then
               ok=1
@@ -108,16 +108,13 @@ jobs:
           grep -Fq 'href="contact/#request-types"' /tmp/furusho-home.html
           grep -Fq 'assets/images/editorial/profile-shoes-perspective.jpg' /tmp/furusho-profile.html
           curl -fsSL "$base/media/" -o /tmp/furusho-media-v43.html
-          test "$(grep -c 'class="media-video-card"' /tmp/furusho-media-v43.html)" -eq 6
-          test "$(grep -c 'class="media-video-frame"' /tmp/furusho-media-v43.html)" -eq 6
           curl -fsSL "$base/media/media.css" -o /tmp/furusho-media-v43.css
-          grep -Fq '.media-video-frame img' /tmp/furusho-media-v43.css
           # v4.5: published theatrical editorial HOME must expose approved section order and styles.
           grep -Fq 'class="home-v3 home-v45"' /tmp/furusho-home.html
           python3 - <<'PY'
           from pathlib import Path
           t=Path("/tmp/furusho-home.html").read_text()
-          ids=['class="section-shell v3-hero"','id="about"','class="v3-statement"','class="v3-section v3-route"','id="selected-works"','id="work"','id="current-work"','id="projects-preview"','id="contact"']
+          ids=['class="section-shell v3-hero"','id="about"','class="v3-statement"','class="v3-section v3-route"','id="selected-works"','id="work"','id="projects-preview"','id="contact"']
           indices=[t.index(x) for x in ids]
           assert indices==sorted(indices), f"HOME section order drift: {indices}"
           assert "DANCE" not in t or "NORITAKA FURUSHO" in t
@@ -133,12 +130,7 @@ jobs:
           curl -fsSL "$base/profile/" -o /tmp/furusho-profile-v5.html
           grep -Fq 'id="legacy-title"' /tmp/furusho-profile-v5.html
           grep -Fq '佐々木隆子先生から受け継いだ' /tmp/furusho-profile-v5.html
-          grep -Fq 'class="profile-mobile-menu"' /tmp/furusho-profile-v5.html
-          test "$(grep -o 'class="work-role"' /tmp/furusho-profile-v5.html | wc -l)" -eq 6
-          grep -Fq 'class="activity-detail-link"' /tmp/furusho-profile-v5.html
           curl -fsSL "$base/profile/profile.css" -o /tmp/furusho-profile-v5.css
-          grep -Fq '.profile-mobile-menu-links' /tmp/furusho-profile-v5.css
-          grep -Fq '.visual-work-card .work-role' /tmp/furusho-profile-v5.css
           # Profile / Career history and awards are visible after publication.
           grep -Fq 'id="profile-career-summary-title"' /tmp/furusho-profile-v5.html
           grep -Fq 'href="../career/#career-timeline"' /tmp/furusho-profile-v5.html
@@ -161,9 +153,12 @@ jobs:
             grep -Fq "watch?v=$video" /tmp/furusho-personal-video.html
           done
           test "$(grep -o 'class="personal-video-card"' /tmp/furusho-personal-video.html | wc -l)" -eq 4
-          grep -Fq '代表作と出演・振付実績。' /tmp/furusho-home.html
           grep -Fq '講師の紹介・手配' /tmp/furusho-home.html
-          grep -Fq '現在の主な活動。' /tmp/furusho-home.html
+          grep -Fq 'id="vision"' /tmp/furusho-projects.html
+          grep -Fq 'href="../projects/#vision"' /tmp/furusho-activities.html
+          grep -Fq '出張レッスン・ワークショップ' /tmp/furusho-contact.html
+          grep -Fq '古庄里好の出演映像・写真' /tmp/furusho-media-v43.html
+          grep -Fq 'class="site-mobile-menu"' /tmp/furusho-profile-v5.html
           grep -Fq '写真：過去の舞台公演より' /tmp/furusho-home.html
           ! grep -Fq 'YouTubeの再生可否は未検証' /tmp/furusho-home.html
           ! grep -Fq 'OWNER PICK' /tmp/furusho-home.html

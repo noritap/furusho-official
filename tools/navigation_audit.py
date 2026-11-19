@@ -15,29 +15,10 @@ PAGES = [
     Path("contact/index.html"),
 ]
 
-EXPECTED_LABELS = ["About", "Work", "Projects", "Career", "Contact"]
-
-EXPECTED_HREFS_HOME = {
-    "About": "#about",
-    "Work": "#work",
-    "Projects": "projects/",
-    "Career": "career/",
-    "Contact": "contact/",
-}
-
-EXPECTED_HREFS_SUBPAGE = {
-    "About": "../#about",
-    "Work": "../#work",
-    "Projects": "../projects/",
-    "Career": "../career/",
-    "Contact": "../contact/",
-}
-
-CURRENT_PAGE_LABEL = {
-    Path("projects/index.html"): "Projects",
-    Path("career/index.html"): "Career",
-    Path("contact/index.html"): "Contact",
-}
+EXPECTED_LABELS = ["プロフィール", "経歴・実績", "映像・写真", "活動", "仕事の相談"]
+EXPECTED_HREFS_HOME = dict(zip(EXPECTED_LABELS, ["profile/", "career/", "media/", "projects/", "contact/"]))
+EXPECTED_HREFS_SUBPAGE = {label: "../" + path for label, path in EXPECTED_HREFS_HOME.items()}
+CURRENT_PAGE_LABEL = {Path(path) / "index.html": label for label, path in EXPECTED_HREFS_HOME.items()}
 
 
 def extract_main_nav(text: str) -> str:
@@ -91,7 +72,7 @@ def audit(root: Path) -> list[tuple[str, list[str]]]:
                 issues.append(f"CURRENT_MISSING:{label}")
             if label != current_label and has_current:
                 issues.append(f"CURRENT_UNEXPECTED:{label}")
-            if label == "Contact" and 'class="nav-cta"' not in attrs:
+            if label == "仕事の相談" and 'class="nav-cta"' not in attrs:
                 issues.append("CONTACT_CTA_CLASS")
 
         if issues:
@@ -100,14 +81,14 @@ def audit(root: Path) -> list[tuple[str, list[str]]]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Audit Furusho Official FURUSHO-NAV-2 global navigation drift")
+    parser = argparse.ArgumentParser(description="Audit Furusho Official FURUSHO-NAV-3 global navigation drift")
     parser.add_argument("--root", type=Path, default=Path.cwd())
     parser.add_argument("--strict", action="store_true")
     args = parser.parse_args()
 
     problems = audit(args.root)
     if not problems:
-        print("NAVIGATION AUDIT: PASS (FURUSHO-NAV-2)")
+        print("NAVIGATION AUDIT: PASS (FURUSHO-NAV-3)")
         return 0
 
     print("NAVIGATION AUDIT: DRIFT DETECTED")
