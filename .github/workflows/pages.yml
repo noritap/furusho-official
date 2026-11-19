@@ -134,6 +134,19 @@ jobs:
           curl -fsSL "$base/profile/profile.css" -o /tmp/furusho-profile-v5.css
           grep -Fq '.profile-mobile-menu-links' /tmp/furusho-profile-v5.css
           grep -Fq '.visual-work-card .work-role' /tmp/furusho-profile-v5.css
+          # Profile / Career history and awards are visible after publication.
+          grep -Fq 'id="profile-career-summary-title"' /tmp/furusho-profile-v5.html
+          grep -Fq 'href="../career/#career-timeline"' /tmp/furusho-profile-v5.html
+          curl -fsSL "$base/career/" -o /tmp/furusho-career-history.html
+          grep -Fq 'id="career-timeline"' /tmp/furusho-career-history.html
+          grep -Fq 'id="career-awards"' /tmp/furusho-career-history.html
+          grep -Fq 'マイケルジャクソンダンスコンテスト' /tmp/furusho-career-history.html
+          grep -Fq '開催年未確認' /tmp/furusho-career-history.html
+          grep -Fq 'Tap Dance Card Game' /tmp/furusho-career-history.html
+          curl -fsSL "$base/career/career.css" -o /tmp/furusho-career-history.css
+          grep -Fq '.career-history-list' /tmp/furusho-career-history.css
+          grep -Fq '.career-award-row' /tmp/furusho-career-history.css
+          echo "Profile summary, Career timeline and award history: OK"
           echo "Profile story, verified roles, mobile navigation and typography: OK"
           echo "v4.5 theatrical HOME and shared navy header: OK"
           echo "v4.3 commissioning route, 6 video previews and Profile OGP: OK"
