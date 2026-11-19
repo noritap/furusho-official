@@ -9,3 +9,35 @@
 @media(max-width:900px){.career-section-head,.career-capability-grid{grid-template-columns:1fr}.career-feature-main,.career-feature-side,.career-feature-side:nth-child(even){grid-template-columns:minmax(210px,.72fr) minmax(0,1.28fr)}.career-feature-side:nth-child(even) figure{grid-column:1}.career-feature-side:nth-child(even) .career-feature-copy{grid-column:2}.career-credit-row{grid-template-columns:62px minmax(0,1fr) auto}.career-credit-row>span:not(.year):not(.arrow){grid-column:2}.career-capability-grid{gap:18px}.career-capability-grid>div:last-child{max-width:none;padding-top:0}}
 @media(max-width:600px){.career-hero{padding:54px 0 48px}.career-title{font-size:clamp(3rem,15vw,4.8rem)}.career-feature-grid{margin-top:38px}.career-feature-main,.career-feature-side,.career-feature-side:nth-child(even){grid-template-columns:1fr;gap:18px;padding:28px 0}.career-feature-side:nth-child(even) figure,.career-feature-side:nth-child(even) .career-feature-copy{grid-column:1;grid-row:auto}.career-feature-copy{grid-template-columns:76px 1fr}.career-feature-copy h3{font-size:clamp(1.65rem,8vw,2.4rem)}.career-credit-row{grid-template-columns:48px 1fr;gap:10px 12px;padding:22px 0}.career-credit-row>span:not(.year):not(.arrow),.career-credit-row .arrow{grid-column:2}.archive-row .arrow{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.career-feature-main img,.career-feature-side img{transition:none;transform:none!important}}
+
+/* Career history and awards: published profile evidence, no generated-content changes. */
+.career-jump-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.career-jump-links a{display:inline-flex;align-items:center;min-height:44px;padding:9px 15px;border:1px solid var(--career-ink);font-size:.83rem;font-weight:700}
+.career-jump-links a:hover{background:var(--career-ink);color:#f7edcf}
+.career-history{padding:clamp(76px,8vw,120px) 0;background:#e4efed;color:#07152f}
+.career-history-list{margin:38px 0 0;padding:0;list-style:none;border-top:1px solid #a5bfbd}
+.career-history-list li{display:grid;grid-template-columns:minmax(84px,.2fr) 1fr;gap:clamp(20px,4vw,56px);padding:26px 0;border-bottom:1px solid #a5bfbd;align-items:start}
+.career-history-list time,.career-history-present{color:#087478;font-weight:800;font-size:clamp(1.25rem,2.6vw,2rem);font-variant-numeric:tabular-nums}
+.career-history-type{display:block;color:#52616b;font-size:.68rem;font-weight:800;letter-spacing:.12em;margin:0 0 5px}
+.career-history-list h3{margin:0 0 7px;font-size:clamp(1.15rem,2vw,1.55rem);font-weight:750;line-height:1.4}
+.career-history-list p{margin:0;color:#394f57;line-height:1.75}
+.career-history-footnote{margin:23px 0 0;color:#52616b;font-size:.8rem}
+.career-awards{padding:clamp(76px,8vw,112px) 0;background:#f7edcf;color:#07152f}
+.career-award-list{margin-top:34px;border-top:1px solid #bfd0ce}
+.career-award-row{display:grid;grid-template-columns:minmax(110px,.23fr) minmax(0,1fr) minmax(125px,.3fr);gap:22px;align-items:center;padding:24px 0;border-bottom:1px solid #bfd0ce}
+.career-award-row span{color:#087478;font-size:.85rem;font-weight:800}
+.career-award-row strong{font-size:clamp(1rem,1.7vw,1.3rem)}
+.career-award-row b{justify-self:end;font-size:1rem}
+.career-profile-link{display:inline-flex;align-items:center;min-height:44px;margin-top:24px;font-weight:800;text-decoration:underline;text-underline-offset:6px}
+.career-jump-links a:focus-visible,.career-profile-link:focus-visible{outline:3px solid #087478;outline-offset:3px}
+@media(max-width:600px){
+ .career-jump-links{display:grid;grid-template-columns:1fr;gap:9px}
+ .career-jump-links a{justify-content:center}
+ .career-history-list li{grid-template-columns:65px minmax(0,1fr);gap:14px;padding:22px 0}
+ .career-history-type{font-size:.6rem;letter-spacing:.06em;overflow-wrap:anywhere}
+ .career-history-list h3{font-size:1.08rem;overflow-wrap:anywhere}
+ .career-award-row{grid-template-columns:1fr auto;gap:6px 10px;padding:20px 0}
+ .career-award-row span{grid-column:1/-1}
+ .career-award-row strong{min-width:0}
+ .career-award-row b{align-self:end}
+}
