@@ -77,12 +77,20 @@ const transform = function transform(file,s,data){
  }
  throw Error("Unexpected file: "+file);
 };
-const expected = ['works', 'career_archives', 'services', 'projects', 'updates'];
+const expected = ['works', 'career_archives', 'services', 'projects', 'updates', 'personal_performances'];
 for (const name of expected) {
   if (!Array.isArray(data[name])) throw new Error('Missing collection: ' + name);
   const ids = data[name].map(x => x.id);
   if (new Set(ids).size !== ids.length) throw new Error('Duplicate id: ' + name);
 }
+for(const p of data.personal_performances){
+  if(!/^[A-Za-z0-9_-]{11}$/.test(p.video)) throw new Error('Invalid personal performance YouTube ID: '+p.id);
+  if(!['owner_link_unverified','official_program_cast'].includes(p.verification_status)) throw new Error('Invalid performance credit status: '+p.id);
+  if(!/^https:\/\//.test(p.evidence_url)) throw new Error('No source for personal performance: '+p.id);
+  if(!fs.readFileSync('media/index.html','utf8').includes('watch?v='+p.video)) throw new Error('Personal performance absent from Media: '+p.id);
+}
+if(data.personal_performances.filter(p=>p.featured).length!==1) throw new Error('Exactly one signature performance required');
+if(!fs.readFileSync('index.html','utf8').includes('watch?v='+data.personal_performances.find(p=>p.featured).video)) throw new Error('Missing signature work on HOME');
 const evidenceSource = '01_FACTS_AND_EVIDENCE/12_PERFORMANCE_CREDITS_MASTER.csv';
 const allowedStatuses = new Set(['profile_confirmed', 'additional_official_source_required']);
 for (const w of [...data.works, ...data.career_archives]) {

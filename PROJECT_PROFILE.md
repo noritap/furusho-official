@@ -246,6 +246,14 @@ Routing:
 4. Audit `assets/css/style.css` only in small verified cleanup units after UX-critical work.
 5. Keep PROJECT_PROFILE.md, NAVIGATION_REGISTRY.md, Visual Asset Registry, and public implementation synchronized with main.
 
+## Personal performance video index (2026-11-19)
+
+- 『木箱』 is the owner's designated signature tap work. Previously provided YouTube link: `https://youtu.be/Wo4teKLf_aE`; current playback and exact video content not independently verified.
+- Four additional documented appearances: NORI / ダンス天竺 (2000 archived performance), ルパン三世のテーマ (2024), アニメ×タップ (2024), St. Thomas live session (2025). Cast evidence comes from Rhythm Speaker's public program pages.
+- The public index `assets/data/public-content.json.personal_performances` stores original URLs, titles, roles, and verification status. A consistency gate in `tools/build_public_content.mjs --check` checks Media coverage and HOME signature.
+- Keep related movie/CM/MV clips separate; film trailers are not proof that the performer is visible in those clips. Approved archival image near『木箱』is explicitly labeled as not from its video. Avoid unconfirmed appearance claims.
+- Current video playback and frame-by-frame performer confirmation require separate verification.
+
 ## v4 Published Data Contract
 
 - `assets/data/public-content.json` is the PUBLIC website content SSOT for selected works, compact personal work categories, public destinations, and currently featured initiatives.

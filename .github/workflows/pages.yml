@@ -148,6 +148,15 @@ jobs:
           grep -Fq '.career-award-row' /tmp/furusho-career-history.css
           echo "Profile summary, Career timeline and award history: OK"
           echo "Profile story, verified roles, mobile navigation and typography: OK"
+          grep -Fq 'class="v3-signature-spotlight"' /tmp/furusho-home.html
+          grep -Fq 'watch?v=Wo4teKLf_aE' /tmp/furusho-home.html
+          curl -fsSL "$base/media/" -o /tmp/furusho-personal-video.html
+          grep -Fq 'id="personal-performances"' /tmp/furusho-personal-video.html
+          for video in Wo4teKLf_aE KEWI2a0vH5Y JkfSEzqAFE4 haGdzrx-Kwg _EhX71Wufsc; do
+            grep -Fq "watch?v=$video" /tmp/furusho-personal-video.html
+          done
+          test "$(grep -o 'class="personal-video-card"' /tmp/furusho-personal-video.html | wc -l)" -eq 4
+          echo "Kibako signature work and 4 documented personal performances: OK"
           echo "v4.5 theatrical HOME and shared navy header: OK"
           echo "v4.3 commissioning route, 6 video previews and Profile OGP: OK"
           echo "Published photo files: 3 of 3 OK"
