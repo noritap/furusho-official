@@ -11,10 +11,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 16,
+    "total": 21,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 10,
-      "AUTO_EXTERNAL_PREVIEW": 6
+      "AUTO_EXTERNAL_PREVIEW": 11
     }
   },
   "assets": [
@@ -62,6 +62,7 @@
       "auto_publish": true,
       "found_in": [
         "career/index.html",
+        "index.html",
         "media/index.html"
       ]
     },
@@ -197,6 +198,32 @@
       ]
     },
     {
+      "id": "youtube:JkfSEzqAFE4",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=JkfSEzqAFE4",
+      "image_url": "https://img.youtube.com/vi/JkfSEzqAFE4/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
+      ]
+    },
+    {
+      "id": "youtube:KEWI2a0vH5Y",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=KEWI2a0vH5Y",
+      "image_url": "https://img.youtube.com/vi/KEWI2a0vH5Y/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
+      ]
+    },
+    {
       "id": "youtube:KNPQqgpgqPQ",
       "type": "youtube_thumbnail",
       "source_url": "https://www.youtube.com/watch?v=KNPQqgpgqPQ",
@@ -240,6 +267,46 @@
         "career/index.html",
         "media/index.html",
         "profile/index.html"
+      ]
+    },
+    {
+      "id": "youtube:Wo4teKLf_aE",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=Wo4teKLf_aE",
+      "image_url": "https://img.youtube.com/vi/Wo4teKLf_aE/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "index.html",
+        "media/index.html"
+      ]
+    },
+    {
+      "id": "youtube:_EhX71Wufsc",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=_EhX71Wufsc",
+      "image_url": "https://img.youtube.com/vi/_EhX71Wufsc/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
+      ]
+    },
+    {
+      "id": "youtube:haGdzrx-Kwg",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=haGdzrx-Kwg",
+      "image_url": "https://img.youtube.com/vi/haGdzrx-Kwg/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
       ]
     },
     {
