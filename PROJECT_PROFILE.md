@@ -120,6 +120,16 @@ Current implementation baseline:
 - Projects v3 page-local CSS extracted into `projects/projects.css`
 - retired `visual-preview-v21.css` compatibility layer and import fully removed from canonical shared CSS
 
+## Profile Refinement (2026-11-19)
+
+- Profile page is the human-story and evidence hub; do not turn it into a duplicate of the studio website or a generic projects catalog.
+- Adds the publication-safe account of the inherited teaching mission from Sasaki Takako, based on `FURUSHO_PROFILE_OS/01_FACTS_AND_EVIDENCE/16_PERSONAL_PROFILE_AND_ORIGIN_STORY.md`.
+- Adds personally attributable performance/choreography roles to six existing work links, using verified role credits, without unverified dates or endorsements.
+- A Profile-only native HTML `details` mobile menu exposes Home / Profile / Career / Media / Activities / Projects / Contact while preserving FURUSHO-NAV-2 global navigation. Consider a shared navigation rollout in a later scoped release.
+- Labels the four timeless work domains as activity areas rather than a time-stamped activity feed, and avoids duplicate studio/card-game links in Follow.
+- Improves contrast on small labels. Actual 320-1440px screenshot and hands-on interaction QA remain a separate verification step.
+- Preserve current approved photos and the direct work consultation/official studio boundaries.
+
 ## Page Role Contract
 
 - HOME: first-visit orientation, authority, direct-work routing, selected evidence, project overview, Contact entry

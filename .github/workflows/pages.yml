@@ -124,6 +124,17 @@ jobs:
           grep -Fq '.v3-studio-note .v3-button' /tmp/furusho-home-v45.css
           curl -fsSL "$base/assets/css/style.css" -o /tmp/furusho-style-v45.css
           grep -Fq 'rgba(7, 21, 47, .98)' /tmp/furusho-style-v45.css
+          # Profile: verified role credits, inherited philosophy, and mobile navigation.
+          curl -fsSL "$base/profile/" -o /tmp/furusho-profile-v5.html
+          grep -Fq 'id="legacy-title"' /tmp/furusho-profile-v5.html
+          grep -Fq '佐々木隆子先生から受け継いだ' /tmp/furusho-profile-v5.html
+          grep -Fq 'class="profile-mobile-menu"' /tmp/furusho-profile-v5.html
+          test "$(grep -o 'class="work-role"' /tmp/furusho-profile-v5.html | wc -l)" -eq 6
+          grep -Fq 'class="activity-detail-link"' /tmp/furusho-profile-v5.html
+          curl -fsSL "$base/profile/profile.css" -o /tmp/furusho-profile-v5.css
+          grep -Fq '.profile-mobile-menu-links' /tmp/furusho-profile-v5.css
+          grep -Fq '.visual-work-card .work-role' /tmp/furusho-profile-v5.css
+          echo "Profile story, verified roles, mobile navigation and typography: OK"
           echo "v4.5 theatrical HOME and shared navy header: OK"
           echo "v4.3 commissioning route, 6 video previews and Profile OGP: OK"
           echo "Published photo files: 3 of 3 OK"
