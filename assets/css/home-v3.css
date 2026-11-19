@@ -148,7 +148,6 @@
   display: block;
   object-fit: cover;
   object-position: 50% 20%;
-  filter: grayscale(1) contrast(1.08);
 }
 
 .home-v3 .v3-portrait figcaption {
