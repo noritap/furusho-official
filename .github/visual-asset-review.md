@@ -6,10 +6,10 @@ Generated: `2026-11-19T05:39:16+00:00`
 
 ## Summary
 
-- Total assets: **16**
+- Total assets: **21**
 - Review required: **0**
 - Missing local file: **0**
-- Auto external preview: **6**
+- Auto external preview: **11**
 - Existing public asset: **10**
 
 ## Decision rule
@@ -25,9 +25,14 @@ Generated: `2026-11-19T05:39:16+00:00`
 |---|---|---|---|---:|---|
 | youtube_thumbnail | [preview](https://img.youtube.com/vi/15566qQHhlw/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=15566qQHhlw) | `career/index.html`<br>`media/index.html`<br>`profile/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
 | youtube_thumbnail | [preview](https://img.youtube.com/vi/3HW_v_vA63w/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=3HW_v_vA63w) | `career/index.html`<br>`index.html`<br>`media/index.html`<br>`profile/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
+| youtube_thumbnail | [preview](https://img.youtube.com/vi/JkfSEzqAFE4/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=JkfSEzqAFE4) | `media/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
+| youtube_thumbnail | [preview](https://img.youtube.com/vi/KEWI2a0vH5Y/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=KEWI2a0vH5Y) | `media/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
 | youtube_thumbnail | [preview](https://img.youtube.com/vi/KNPQqgpgqPQ/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=KNPQqgpgqPQ) | `career/index.html`<br>`index.html`<br>`media/index.html`<br>`profile/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
 | youtube_thumbnail | [preview](https://img.youtube.com/vi/NXozUa1IzRM/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=NXozUa1IzRM) | `career/index.html`<br>`media/index.html`<br>`profile/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
 | youtube_thumbnail | [preview](https://img.youtube.com/vi/RCHe13BrkUo/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=RCHe13BrkUo) | `career/index.html`<br>`media/index.html`<br>`profile/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
+| youtube_thumbnail | [preview](https://img.youtube.com/vi/Wo4teKLf_aE/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=Wo4teKLf_aE) | `index.html`<br>`media/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
+| youtube_thumbnail | [preview](https://img.youtube.com/vi/_EhX71Wufsc/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=_EhX71Wufsc) | `media/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
+| youtube_thumbnail | [preview](https://img.youtube.com/vi/haGdzrx-Kwg/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=haGdzrx-Kwg) | `media/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
 | youtube_thumbnail | [preview](https://img.youtube.com/vi/op0b7AyaQn0/hqdefault.jpg) | [source](https://www.youtube.com/watch?v=op0b7AyaQn0) | `career/index.html`<br>`index.html`<br>`media/index.html`<br>`profile/index.html` | YES | PLATFORM_PREVIEW_REFERENCE |
 
 ## Existing public asset
@@ -36,7 +41,7 @@ Generated: `2026-11-19T05:39:16+00:00`
 |---|---|---|---|---:|---|
 | repository_image | `assets/icons/furusho-mark.svg` | — | `activities/index.html`<br>`career/index.html`<br>`contact/index.html`<br>`index.html`<br>`media/index.html`<br>`profile/index.html`<br>`projects/index.html` | YES | RIGHTS_NOT_INFERRED |
 | repository_image | `assets/images/editorial/about-portrait.jpg` | — | `index.html`<br>`media/index.html` | YES | RIGHTS_NOT_INFERRED |
-| repository_image | `assets/images/editorial/career-stage-frankfurt.jpg` | — | `career/index.html`<br>`media/index.html` | YES | RIGHTS_NOT_INFERRED |
+| repository_image | `assets/images/editorial/career-stage-frankfurt.jpg` | — | `career/index.html`<br>`index.html`<br>`media/index.html` | YES | RIGHTS_NOT_INFERRED |
 | repository_image | `assets/images/editorial/contact-pointing-portrait.png` | — | `contact/index.html` | YES | RIGHTS_NOT_INFERRED |
 | repository_image | `assets/images/editorial/media-studio-tap-action.jpg` | — | `media/index.html` | YES | RIGHTS_NOT_INFERRED |
 | repository_image | `assets/images/editorial/performance-studio.jpg` | — | `media/index.html`<br>`profile/index.html` | YES | RIGHTS_NOT_INFERRED |
