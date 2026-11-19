@@ -213,5 +213,48 @@
         "https://www.facebook.com/photo/?fbid=1236768715157694&set=pb.100064737308832.-2207520000"
       ]
     }
+  ],
+  "personal_performances": [
+    {
+      "id": "kibako",
+      "title": "木箱",
+      "video": "Wo4teKLf_aE",
+      "role": "古庄里好オリジナル作品",
+      "featured": true,
+      "verification_status": "owner_link_unverified",
+      "evidence_url": "https://youtu.be/Wo4teKLf_aE"
+    },
+    {
+      "id": "dance-tenjiku",
+      "title": "ダンス天竺｜NORIタップパフォーマンス（2000年）",
+      "video": "KEWI2a0vH5Y",
+      "role": "過去の出演・実演アーカイブ",
+      "verification_status": "official_program_cast",
+      "evidence_url": "https://rhythmspeaker.stores.jp/news/695482b56c8af67887289113"
+    },
+    {
+      "id": "lupin",
+      "title": "ルパン三世のテーマ｜アニソンタップ",
+      "video": "JkfSEzqAFE4",
+      "role": "振付・出演（SHO-KOと共演）",
+      "verification_status": "official_program_cast",
+      "evidence_url": "https://rhythmspeaker.stores.jp/news/674b02a1e3519033f8c0c850"
+    },
+    {
+      "id": "anime-original",
+      "title": "アニメ×タップダンス｜オリジナル振付",
+      "video": "haGdzrx-Kwg",
+      "role": "振付・出演（SHO-KOと共演）",
+      "verification_status": "official_program_cast",
+      "evidence_url": "https://rhythmspeaker.stores.jp/news/674b02a1e3519033f8c0c850"
+    },
+    {
+      "id": "st-thomas",
+      "title": "St. Thomas｜生バンドとタップセッション",
+      "video": "_EhX71Wufsc",
+      "role": "出演（ミヤゴリーズ Bar × NORI）",
+      "verification_status": "official_program_cast",
+      "evidence_url": "https://rhythmspeaker.stores.jp/news/692a2c51427a8872a67457e3"
+    }
   ]
 }
