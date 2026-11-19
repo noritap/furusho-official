@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T05:35:40+00:00",
+  "generated_at": "2026-11-19T05:39:16+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -47,7 +47,8 @@
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
       "found_in": [
-        "index.html"
+        "index.html",
+        "media/index.html"
       ]
     },
     {
