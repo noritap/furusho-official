@@ -76,23 +76,23 @@
     {
       "id": "lesson",
       "title": "タップダンスレッスン・ワークショップ",
-      "summary": "個人・団体向けのレッスン、体験、外部ワークショップのご相談。",
+      "summary": "学校・企業・イベントなどでの体験レッスンやワークショップの企画・指導。",
       "related": "teaching"
     },
     {
       "id": "instructor",
-      "title": "インストラクター関連の依頼",
-      "summary": "指導内容や講師・インストラクターに関するご相談。"
+      "title": "講師の紹介・手配",
+      "summary": "イベントや教室に適した講師の紹介・調整、指導プログラムのご相談。"
     },
     {
       "id": "consulting",
       "title": "スタジオ運営コンサルティング",
-      "summary": "スタジオ運営の課題整理や、続けられる仕組みづくりのご相談。"
+      "summary": "レッスン設計や集客、予約導線など、教室・スタジオ運営の改善に関するご相談。"
     },
     {
       "id": "music",
-      "title": "音楽制作",
-      "summary": "楽曲・音源制作に関するご相談。"
+      "title": "音楽・音源制作",
+      "summary": "舞台・映像・レッスンなどに使う楽曲や音源の制作に関するご相談。"
     }
   ],
   "projects": [
@@ -177,16 +177,16 @@
     {
       "id": "education",
       "category": "EDUCATION",
-      "title": "レッスンと学びの場づくり",
-      "summary": "池袋「リズムスピーカー」を拠点に、指導と継続して学べる環境づくりに取り組んでいます。",
+      "title": "池袋でのタップダンス指導",
+      "summary": "Rhythm Speakerを拠点に、初心者から経験者までタップダンスのレッスンを行っています。",
       "url": "https://noritap.github.io/rhythmspeaker/",
       "link_label": "教室について見る"
     },
     {
       "id": "creation",
       "category": "CREATION",
-      "title": "タップの面白さを、ゲームでも。",
-      "summary": "タップダンスカードゲームを通じ、ステップや文化に触れる機会を広げています。",
+      "title": "タップダンスカードゲーム",
+      "summary": "ステップやタップダンス文化を、遊びながら学べるカードゲームを制作しています。",
       "url": "https://noritap.github.io/tapdance-cardgame/",
       "link_label": "制作プロジェクトを見る"
     }
