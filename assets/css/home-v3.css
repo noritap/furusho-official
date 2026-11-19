@@ -735,3 +735,15 @@
   .home-v3 .v3-statement { min-height: 400px; background-position: 55% 50%; }
   .home-v3 .v3-name span { font-size: clamp(1.75rem, 7vw, 3rem); line-height: 1.06; }
 }
+
+/* Signature dance work: intentionally ahead of film/CM related credits. */
+.home-v3 .v3-signature-spotlight{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,5vw,65px);align-items:center;margin:34px 0 60px;padding-bottom:48px;border-bottom:1px solid #375463}
+.home-v3 .v3-signature-photo{display:block;aspect-ratio:16/10;overflow:hidden;background:#102a44}
+.home-v3 .v3-signature-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.home-v3 .v3-signature-copy{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.home-v3 .v3-signature-copy h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.3rem,5vw,4.8rem);font-weight:500;color:#f7edcf;line-height:1.12;margin:0}
+.home-v3 .v3-signature-copy p:not(.v3-label){color:#d2dedf;line-height:1.85;margin:0}
+.home-v3 .v3-signature-copy a{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;border-bottom:2px solid #08b9b9;color:#f7edcf;font-weight:800}
+.home-v3 .v3-signature-copy small{color:#bfd0ce;line-height:1.7}
+.home-v3 .v3-signature-copy a:focus-visible,.home-v3 .v3-signature-photo:focus-visible{outline:3px solid #89dad5;outline-offset:3px}
+@media(max-width:760px){.home-v3 .v3-signature-spotlight{grid-template-columns:1fr;gap:26px;margin-bottom:38px}.home-v3 .v3-signature-copy h3{font-size:clamp(2.2rem,9vw,3.5rem)}}
