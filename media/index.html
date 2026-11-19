@@ -44,37 +44,59 @@
         <h2 id="photo-gallery-title">写真で見る、古庄里好。</h2>
         <div class="media-gallery-grid">
           <figure class="media-gallery-feature">
-            <a href="../assets/images/editorial/career-stage-frankfurt.jpg" aria-label="舞台の写真を大きく見る">
+            <a data-series="舞台・実演" href="../assets/images/editorial/career-stage-frankfurt.jpg" aria-label="舞台の写真を大きく見る">
               <img src="../assets/images/editorial/career-stage-frankfurt.jpg" alt="赤い衣装で舞台上のステップを踏む古庄里好" width="1365" height="2048" loading="lazy" decoding="async">
             </a>
             <figcaption>舞台</figcaption>
           </figure>
           <figure>
-            <a href="../assets/images/editorial/performance-studio.jpg" aria-label="スタジオでの実演の写真を大きく見る">
+            <a data-series="舞台・実演" href="../assets/images/editorial/performance-studio.jpg" aria-label="スタジオでの実演の写真を大きく見る">
               <img src="../assets/images/editorial/performance-studio.jpg" alt="スタジオで片脚を高く上げて踊る古庄里好" width="1536" height="2048" loading="lazy" decoding="async">
             </a>
             <figcaption>スタジオでの実演</figcaption>
           </figure>
           <figure>
-            <a href="../assets/images/editorial/studio-body-practice.jpg" aria-label="身体の使い方を探るの写真を大きく見る">
+            <a data-series="練習・指導" href="../assets/images/editorial/studio-body-practice.jpg" aria-label="身体の使い方を探るの写真を大きく見る">
               <img src="../assets/images/editorial/studio-body-practice.jpg" alt="スタジオの床で身体の柔軟性を確認する古庄里好" width="1536" height="2048" loading="lazy" decoding="async">
             </a>
             <figcaption>身体の使い方を探る</figcaption>
           </figure>
           <figure>
-            <a href="../assets/images/editorial/profile-shoes-perspective.jpg" aria-label="タップシューズとの写真を大きく見る">
+            <a data-series="ポートレート" href="../assets/images/editorial/profile-shoes-perspective.jpg" aria-label="タップシューズとの写真を大きく見る">
               <img src="../assets/images/editorial/profile-shoes-perspective.jpg" alt="帽子とスーツ姿でタップシューズを手にする古庄里好" width="1536" height="2048" loading="lazy" decoding="async">
             </a>
             <figcaption>タップシューズと</figcaption>
           </figure>
           <figure>
-            <a href="../assets/images/editorial/teaching-class.jpg" aria-label="指導風景の写真を大きく見る">
+            <a data-series="練習・指導" href="../assets/images/editorial/teaching-class.jpg" aria-label="指導風景の写真を大きく見る">
               <img src="../assets/images/editorial/teaching-class.jpg" alt="スタジオで受講者にタップダンスを教えるレッスン風景" width="960" height="960" loading="lazy" decoding="async">
             </a>
             <figcaption>指導風景</figcaption>
           </figure>
         </div>
       </div>
+      <template id="related-gallery-photos">
+        <a data-series="舞台・実演" href="../assets/images/editorial/media-studio-tap-action.jpg" data-caption="スタジオでのタップ">
+          <img src="../assets/images/editorial/media-studio-tap-action.jpg" alt="スタジオでタップのステップを踏む古庄里好">
+        </a>
+        <a data-series="ポートレート" href="../assets/images/editorial/about-portrait.jpg" data-caption="帽子とタップシューズ">
+          <img src="../assets/images/editorial/about-portrait.jpg" alt="黒い帽子とスーツ姿でタップシューズを持つ古庄里好">
+        </a>
+      </template>
+      <dialog class="photo-viewer" aria-labelledby="photo-viewer-title">
+        <header>
+          <h2 id="photo-viewer-title">写真ギャラリー</h2>
+          <button type="button" class="photo-viewer-close" autofocus>閉じる</button>
+        </header>
+        <figure>
+          <img alt="">
+          <figcaption aria-live="polite"></figcaption>
+        </figure>
+        <div class="photo-viewer-controls">
+          <button type="button" data-direction="-1">← 前の写真</button>
+          <button type="button" data-direction="1">次の写真 →</button>
+        </div>
+      </dialog>
     </section>
     <section class="section media-links-section"><div class="section-shell"><p class="section-label">OFFICIAL CHANNELS</p><div class="media-page-links">
       <a href="https://www.youtube.com/channel/UCsCznku0uyE4718G5wfj_2Q" target="_blank" rel="noopener noreferrer"><span>01 / WATCH</span><strong>Rhythm Speaker YouTube</strong><em>YOUTUBE →</em></a>
@@ -95,5 +117,6 @@
     <section class="section contact-section"><div class="section-shell contact-inner"><p class="section-label">CONTACT</p><h2>映像を見て、そのまま相談へ。</h2><p>出演・振付・講師・取材・提携など、目的に合わせたご相談を受け付けています。</p><a class="button primary light" href="../contact/">依頼内容を確認する →</a></div></section>
   </main>
   <footer class="footer section-shell"><div><strong>古庄里好</strong><span>Noritaka Furusho Official Website</span></div><p>© Noritaka Furusho</p></footer>
+  <script src="photo-viewer.js" defer></script>
 </body>
 </html>

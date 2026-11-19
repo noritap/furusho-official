@@ -91,3 +91,47 @@
     grid-row: auto;
   }
 }
+
+.photo-viewer {
+  width: min(860px, calc(100% - 24px));
+  max-height: calc(100% - 24px);
+  padding: clamp(12px, 3vw, 28px);
+  color: #f5f2ea;
+  background: #07152f;
+  border: 1px solid #375463;
+}
+
+.photo-viewer::backdrop { background: rgba(2, 9, 23, .9); }
+
+.photo-viewer header,
+.photo-viewer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.photo-viewer h2 { margin: 0; font-size: clamp(1rem, 3vw, 1.5rem); }
+.photo-viewer figure { margin: 12px 0; }
+.photo-viewer img {
+  display: block;
+  width: 100%;
+  height: min(65vh, 650px);
+  height: min(65dvh, 650px);
+  object-fit: contain;
+  touch-action: pan-y pinch-zoom;
+}
+
+.photo-viewer figcaption { text-align: center; padding-top: 8px; }
+
+.photo-viewer button {
+  min-height: 44px;
+  padding: 6px 12px;
+  font: inherit;
+  color: inherit;
+  background: #102a44;
+  border: 1px solid #89dad5;
+  cursor: pointer;
+}
+
+.photo-viewer button:focus-visible { outline: 3px solid #89dad5; outline-offset: 3px; }
