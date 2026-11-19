@@ -135,3 +135,31 @@
 }
 
 .photo-viewer button:focus-visible { outline: 3px solid #89dad5; outline-offset: 3px; }
+
+/* Personal dance archive is separate from career credit videos. */
+.personal-performances{background:#f7edcf;color:#07152f;scroll-margin-top:88px}
+.personal-performances .section-label{color:#087478}
+.personal-performances h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.2rem,5vw,4.8rem);font-weight:500;line-height:1.18;margin:12px 0 16px}
+.personal-performances-lead{max-width:810px;color:#394f57;line-height:1.85}
+.personal-performance-hero{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(22px,5vw,62px);align-items:center;margin:40px 0 36px}
+.personal-performance-image{display:block;aspect-ratio:16/10;overflow:hidden;background:#102a44}
+.personal-performance-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.personal-performance-copy{display:flex;flex-direction:column;align-items:flex-start;gap:13px}
+.personal-performance-copy h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.6rem,7vw,6rem);font-weight:500;margin:0;line-height:1.12}
+.personal-performance-copy p{color:#394f57;line-height:1.8;margin:0}
+.personal-performance-copy .personal-performance-role{color:#087478;font-weight:800}
+.personal-performance-cta{display:inline-flex;align-items:center;min-height:48px;margin:8px 0;padding:10px 18px;background:#07152f;color:#f7edcf;font-weight:800}
+.personal-performance-copy small{color:#52616b;line-height:1.7}
+.personal-performance-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.personal-video-card{display:grid;grid-template-columns:minmax(0,.45fr) minmax(0,.55fr);gap:16px;padding:22px 0;border-top:1px solid #bfd0ce;color:#07152f;text-decoration:none;min-width:0}
+.personal-video-frame{display:block;aspect-ratio:16/10;overflow:hidden;background:#07152f}
+.personal-video-frame img{display:block;width:100%;height:100%;object-fit:cover}
+.personal-video-copy{display:flex;flex-direction:column;gap:8px;min-width:0}
+.personal-video-copy small{color:#087478;font-size:.65rem;font-weight:800}
+.personal-video-copy strong{font-size:clamp(1rem,1.6vw,1.3rem);line-height:1.45;overflow-wrap:anywhere}
+.personal-video-copy>span{font-size:.83rem;color:#394f57}
+.personal-video-copy em{font-style:normal;font-size:.82rem;font-weight:800;color:#087478;margin-top:auto}
+.personal-performance-evidence{margin:28px 0 0;padding-top:18px;border-top:1px solid #bfd0ce;font-size:.78rem;line-height:1.75;color:#52616b}
+.personal-performances a:focus-visible{outline:3px solid #087478;outline-offset:4px}
+@media(max-width:960px){.personal-performance-hero{grid-template-columns:1fr;gap:22px}.personal-performance-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.personal-video-card{grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:12px}.personal-performances h2{font-size:clamp(2rem,9vw,3.1rem)}}
