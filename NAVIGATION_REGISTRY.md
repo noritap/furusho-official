@@ -40,4 +40,3 @@ Global Navigationを変更する場合:
 - `tools/navigation_audit.py --strict` = Required Navigationの欠落・順序・URL Driftを検出しFAIL
 - `.github/workflows/navigation-sync.yml` = PR上で生成結果との差分を検査
 - `.github/workflows/navigation-audit.yml` = PR / mainでstrict auditを実行
-

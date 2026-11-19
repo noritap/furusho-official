@@ -81,7 +81,7 @@ jobs:
                grep -Fq -- '--v3-accent: #087478;' /tmp/furusho-home.css &&
                curl -fsSL "$base/assets/icons/furusho-mark.svg" -o /tmp/furusho-mark.svg &&
                grep -Fq 'data:image/webp;base64,' /tmp/furusho-mark.svg &&
-               grep -Fq 'href="https://noritap.github.io/rhythmspeaker/"' /tmp/furusho-profile.html; then
+               grep -Fq 'href="https://noritap.github.io/rhythmspeaker/"' /tmp/furusho-contact.html; then
               break
             fi
             brand_ok=0
