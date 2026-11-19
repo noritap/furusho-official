@@ -1,5 +1,5 @@
 /* FURUSHO OFFICIAL v4 — restrained editorial CURRENT WORK, no generic cards. */
-.home-v3 .v4-current{background:#e4efed}
+.home-v3 .v4-current{background:var(--v3-paper-2);color:var(--v3-ink)}
 .home-v3 .v4-current-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,5vw,76px);margin-top:50px}
 .home-v3 .v4-current-item{border-top:1px solid #a4bfbc;padding:28px 0 16px;min-width:0}
 .home-v3 .v4-current-item h3{margin:16px 0 18px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.9rem,3.6vw,3.2rem);font-weight:500;line-height:1.18}
