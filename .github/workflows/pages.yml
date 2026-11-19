@@ -35,6 +35,11 @@ jobs:
         with:
           path: "."
 
+      # GitHub Actions artifact listing can briefly lag behind a successful upload.
+      # Avoid the upload-then-immediate-deploy "Found 0 artifact(s)" race.
+      - name: Allow Pages artifact to be indexed
+        run: sleep 15
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
