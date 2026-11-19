@@ -23,17 +23,9 @@ const transform = function transform(file,s,data){
  if(file==="index.html"){
    const work=data.services.map((v,i)=>`          <article class="v3-work-row"><span class="index">${String(i+1).padStart(2,"0")}</span><h3>${esc(v.title)}</h3><p>${esc(v.summary)}</p><a href="mailto:furushonoritaka@gmail.com?subject=${encodeURIComponent(v.title+"のご相談｜古庄里好")}" aria-label="${attr(v.title)}についてメールで相談する">メールで相談 →</a></article>`).join("\n");
    replace("HOME_SERVICES",/        <div class="v3-work-list">[\s\S]*?<\/div>(?=\s*<div class="v3-studio-note">)/,`        <div class="v3-work-list">\n${work}\n        </div>`);
-   const f=(w,cls)=>`          <a class="${cls}" href="${href(w)}" target="_blank" rel="noopener noreferrer"><figure><img src="${image(w)}" alt="${attr(w.title)}の関連映像サムネイル" width="480" height="360" loading="lazy" decoding="async"></figure><div class="v3-feature-copy"><span>${esc(w.kind)}</span><div><h3>${esc(w.title)}</h3><p>${esc(w.detail?w.detail+" / ":"")}${esc(w.year)} / ${esc(w.role)}</p></div></div></a>`;
-   replace("HOME_FEATURED_WORKS",/        <div class="v3-feature-grid">[\s\S]*?<\/div>(?=\s*<a class="v3-dark-link")/,`        <div class="v3-feature-grid">\n${f(featured[0],"v3-feature-main")}\n          <div class="v3-feature-side-stack">\n${featured.slice(1).map(w=>f(w,"v3-feature-side")).join("\n")}\n          </div>\n        </div>`);
    const p=data.projects.filter(x=>x.featured);
    const projectRows=p.map((v,i)=>`          <a class="v3-project-row" href="${attr(v.home_url||v.url)}"${(v.home_url||v.url).startsWith("http")?' target="_blank" rel="noopener noreferrer"':""}><span class="index">${String(i+1).padStart(2,"0")}</span><strong>${esc(v.title)}</strong><p>${esc(v.summary)}</p><span class="arrow">${esc(v.label)} →</span></a>`).join("\n");
    replace("HOME_PROJECTS",/        <div class="v3-project-list">[\s\S]*?<\/div>(?=\s*<\/div>\s*<\/section>)/,`        <div class="v3-project-list">\n${projectRows}\n        </div>`);
-   const updateRows=data.updates.map(x=>`          <article class="v4-current-item"><p class="v3-label">${esc(x.category)}</p><h3>${esc(x.title)}</h3><p>${esc(x.summary)}</p><a href="${attr(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.link_label)} →</a></article>`).join("\n");
-   const current=`    <section class="v3-section v4-current" id="current-work" aria-labelledby="current-work-heading"><div class="section-shell"><div class="v3-section-head"><div><p class="v3-label">CURRENT WORK</p><h2 id="current-work-heading">現在の主な活動。</h2></div><p>教室での指導と、タップダンスを身近にする教材制作を続けています。</p></div><div class="v4-current-grid">\n${updateRows}\n</div><p class="v4-current-detail"><a class="v3-dark-link" href="activities/">活動について詳しく見る →</a></p></div></section>`;
-   if(!s.includes("<!-- BEGIN GENERATED:HOME_CURRENT_WORK -->")) s=s.replace('    <section class="v3-section" id="projects-preview">','<!-- BEGIN GENERATED:HOME_CURRENT_WORK -->\n    <section class="v4-current"></section>\n<!-- END GENERATED:HOME_CURRENT_WORK -->\n\n    <section class="v3-section" id="projects-preview">');
-   replace("HOME_CURRENT_WORK",/    <section class="v4-current"[\s\S]*?<\/section>/,current);
-   // On the initial implementation no CURRENT section exists; insert before Projects.
-   // The replace above handles subsequent runs with markers. 
    s=s.replace('href="https://rhythmspeaker.stores.jp/" target="_blank" rel="noopener noreferrer">Rhythm Speaker →','href="https://noritap.github.io/rhythmspeaker/" target="_blank" rel="noopener noreferrer">Rhythm Speaker公式サイト →');
    if(!s.includes('assets/css/v4-public.css'))s=s.replace('<link rel="stylesheet" href="assets/css/editorial-photo-library.css">','<link rel="stylesheet" href="assets/css/editorial-photo-library.css">\n  <link rel="stylesheet" href="assets/css/v4-public.css">');
    s=s.replace("Performance / Choreography</h2>","主な出演・振付作品。</h2>");
@@ -52,12 +44,6 @@ const transform = function transform(file,s,data){
    replace("CAREER_MORE_WORKS",/      <div class="career-credit-list">[\s\S]*?<\/div>(?=\s*<\/section>)/,`      <div class="career-credit-list">\n${others}\n${archival}\n      </div>`);
    return s;
  }
- if(file==="media/index.html"){
-   const rows=data.works.map(w=>`      <a class="media-video-card" href="${href(w)}" target="_blank" rel="noopener noreferrer"><span class="media-video-frame"><img src="${image(w)}" alt="" width="480" height="360" loading="lazy" decoding="async"></span><span class="media-video-copy"><span class="media-video-meta">${esc(w.kind)} / ${esc(w.role)}</span><strong>${esc(w.media_title||w.title)}</strong><em>関連映像を見る →</em></span></a>`).join("\n");
-   replace("MEDIA_SELECTED_WORKS",/<div class="media-video-grid">[\s\S]*?<\/div>(?=<p class="media-more">)/,`    <div class="media-video-grid">\n${rows}\n    </div>`);
-   s=s.replace('href="https://rhythmspeaker.stores.jp/" target="_blank" rel="noopener noreferrer"><span>03 / STUDIO','href="https://noritap.github.io/rhythmspeaker/" target="_blank" rel="noopener noreferrer"><span>03 / STUDIO');
-   return s;
- }
  if(file==="projects/index.html"){
    const groups=[
      {id:"learn",eyebrow:"LEARN / PLAY",title:"学ぶ・楽しむ。",description:"レッスンやゲームで、タップダンスに触れる。"},
@@ -67,8 +53,10 @@ const transform = function transform(file,s,data){
    ];
    let index=0;
    const str=groups.map((g,gi)=>{
-     const links=data.projects.filter(x=>x.group===g.id).map(p=>{index++;let local=!p.url.startsWith("http");return `          <a class="project-row" href="${attr(p.url)}"${local?"":' target="_blank" rel="noopener noreferrer"'}><span class="index">${String(index).padStart(2,"0")}</span><strong>${esc(p.title)}</strong><p>${esc(p.summary)}</p><span class="route">${esc(p.label)} →</span></a>`}).join("\n");
-     return `    <section class="projects-section${gi%2===0?" alt":""}"><div class="section-shell"><div class="projects-section-head"><div><p class="projects-label">${esc(g.eyebrow)}</p><h2>${esc(g.title)}</h2></div><p>${esc(g.description)}</p></div><div class="project-list">\n${links}\n        </div></div></section>`;
+     const links=data.projects.filter(x=>x.group===g.id).map(p=>{
+       if (p.group === "vision") return `          <article class="project-row"><span class="index">${String(++index).padStart(2,"0")}</span><strong>${esc(p.title)}</strong><p>${esc(p.summary)}</p></article>`;
+       index++;let local=!p.url.startsWith("http");return `          <a class="project-row" href="${attr(p.url)}"${local?"":' target="_blank" rel="noopener noreferrer"'}><span class="index">${String(index).padStart(2,"0")}</span><strong>${esc(p.title)}</strong><p>${esc(p.summary)}</p><span class="route">${esc(p.label)} →</span></a>`}).join("\n");
+     return `    <section id="${g.id}" class="projects-section${gi%2===0?" alt":""}"><div class="section-shell"><div class="projects-section-head"><div><p class="projects-label">${esc(g.eyebrow)}</p><h2>${esc(g.title)}</h2></div><p>${esc(g.description)}</p></div><div class="project-list">\n${links}\n        </div></div></section>`;
    }).join("\n\n");
    replace("PROJECT_DIRECTORY",/    <section class="projects-section alt">[\s\S]*?(?=    <section class="projects-why">)/,str+"\n\n");
    s=s.replace("やっていること、<br>ぜんぶ。","活動・プロジェクト。");
@@ -103,7 +91,7 @@ for (const p of data.projects) {
   if (!['learn', 'watch', 'vision', 'tools'].includes(p.group)) throw new Error('Invalid project group: '+p.id);
   if (!/^(https:\/\/|(\.\.\/))/.test(p.url)) throw new Error('Invalid project destination: '+p.id);
 }
-const files = ['index.html', 'career/index.html', 'media/index.html', 'projects/index.html'];
+const files = ['index.html', 'career/index.html', 'projects/index.html'];
 const check = process.argv.includes('--check');
 const write = process.argv.includes('--write');
 if (check === write) throw new Error('Use either --check or --write');

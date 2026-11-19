@@ -57,6 +57,7 @@ section[id] { scroll-margin-top: 92px; }
 .brand { display: flex; flex-direction: column; line-height: 1.1; flex: 0 0 auto; }
 .brand-ja { font-weight: 800; letter-spacing: .08em; }
 .brand-en { font-size: .7rem; letter-spacing: .12em; color: #c7d5d5; margin-top: 4px; }
+.site-mobile-menu { display: none; }
 .nav { display: flex; gap: 20px; align-items: center; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
 .nav a { min-height: 44px; display: inline-flex; align-items: center; transition: opacity .18s ease, background-color .18s ease, color .18s ease; }
 .nav a:hover { opacity: .58; }
@@ -193,8 +194,21 @@ h1 span { display: block; font-size: .19em; letter-spacing: .08em; margin-top: 1
   .section-shell { width: min(calc(100% - 28px), var(--max)); }
   .site-header { padding: 10px 14px; gap: 12px; }
   .brand-en { font-size: .6rem; }
-  .nav a:not(.nav-cta) { display: none; }
-  .nav { gap: 0; }
+  .site-header > .nav { display: none; }
+  .site-mobile-menu { display: block; position: relative; color: #F5F2EA; }
+  .site-mobile-menu summary { cursor: pointer; padding: 10px 12px; min-height: 44px; }
+  .site-mobile-menu nav {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: min(240px, calc(100vw - 28px));
+    display: grid;
+    padding: 8px;
+    background: #07152F;
+    border: 1px solid #8896ac;
+  }
+  .site-mobile-menu nav a { padding: 12px; color: #F5F2EA; }
+  .site-mobile-menu nav a[aria-current="page"] { text-decoration: underline; }
   .nav-cta { min-height: 42px; padding: 0 12px; }
   .hero { padding: 42px 0 38px; gap: 26px; }
   h1 { margin-bottom: 22px; }

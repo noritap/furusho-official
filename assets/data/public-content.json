@@ -147,10 +147,10 @@
     {
       "id": "tap-planet",
       "title": "TAP DANCE PLANET",
-      "summary": "教育・メディア・コミュニティを通じ、タップダンス文化を次世代につなぐ構想。",
+      "summary": "教室で学ぶ、Showで発表する、映像で記録する、カードゲームから文化に触れる。これらをつなぎ、タップダンスを次世代へ届ける構想です。",
       "group": "vision",
-      "url": "../activities/",
-      "home_url": "activities/",
+      "url": "../projects/#vision",
+      "home_url": "projects/#vision",
       "label": "構想と活動を見る",
       "status": "concept"
     },

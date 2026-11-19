@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T05:39:16+00:00",
+  "generated_at": "2026-11-19T16:45:32+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -102,8 +102,7 @@
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
       "found_in": [
-        "media/index.html",
-        "profile/index.html"
+        "media/index.html"
       ]
     },
     {
@@ -130,7 +129,6 @@
       "rights_status": "RIGHTS_NOT_INFERRED",
       "auto_publish": true,
       "found_in": [
-        "activities/index.html",
         "media/index.html"
       ]
     },
@@ -176,9 +174,7 @@
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
       "found_in": [
-        "career/index.html",
-        "media/index.html",
-        "profile/index.html"
+        "career/index.html"
       ]
     },
     {
@@ -191,10 +187,7 @@
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
       "found_in": [
-        "career/index.html",
-        "index.html",
-        "media/index.html",
-        "profile/index.html"
+        "career/index.html"
       ]
     },
     {
@@ -233,10 +226,7 @@
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
       "found_in": [
-        "career/index.html",
-        "index.html",
-        "media/index.html",
-        "profile/index.html"
+        "career/index.html"
       ]
     },
     {
@@ -249,9 +239,7 @@
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
       "found_in": [
-        "career/index.html",
-        "media/index.html",
-        "profile/index.html"
+        "career/index.html"
       ]
     },
     {
@@ -264,9 +252,7 @@
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
       "found_in": [
-        "career/index.html",
-        "media/index.html",
-        "profile/index.html"
+        "career/index.html"
       ]
     },
     {
@@ -319,10 +305,7 @@
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
       "found_in": [
-        "career/index.html",
-        "index.html",
-        "media/index.html",
-        "profile/index.html"
+        "career/index.html"
       ]
     }
   ]

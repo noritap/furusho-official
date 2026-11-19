@@ -67,7 +67,7 @@ Rhythm Speaker のレッスン、スタジオ利用、予約など運営問い�
 
 ## Development State
 
-Current Phase: Phase 4.5 / FURUSHO OFFICIAL — Artist Editorial Performance, HOME-first visual refinement
+Current Phase: v4.6 / editorial consolidation and inquiry routing
 
 Current Goal: Build a credible editorial authority site where a first-time visitor can quickly understand who 古庄里好 is, what work can be commissioned directly, what belongs to Rhythm Speaker, review selected evidence, and reach the correct inquiry path with minimal friction.
 
@@ -90,9 +90,8 @@ Current HOME information architecture:
 4. ROUTE (visitor intent shortcuts)
 5. SELECTED WORKS (verified videos/credits)
 6. WORK WITH FURUSHO (personal commission, four canonical service rows)
-7. CURRENT WORK (current teaching/creation)
-8. PROJECTS (public destinations)
-9. CONTACT (direct inquiry)
+7. PROJECTS (public destinations)
+8. CONTACT (direct inquiry)
 
 Current implementation baseline:
 - v4.5 artist-editorial design direction (2026-11-18): reference-site principles adapted without copying artwork/text/code; deep navy header/hero, readable turquoise CTA, monochrome original authorized photographs, strong typographic contrast, light editorial intro and philosophical performance-photo band.
@@ -101,7 +100,7 @@ Current implementation baseline:
 - This 7-page brand-coherence pass standardizes subpage metadata and existing CSS without changing the site's identity or main navigation.
 - The source approval record is on the still-unmerged `FURUSHO_PROFILE_OS` PR #36 branch (`05_BRAND_AND_MESSAGE/nonry_service_jr/BRAND_MARK_APPROVAL_20261118.md`); its high-resolution JPEG is absent from GitHub main, so preserve the already-approved 160px embedded-WebP SVG and do not infer a print master.
 - HOME v3 Editorial Authority published
-- Global Navigation contract FURUSHO-NAV-2 retained
+- Global Navigation contract FURUSHO-NAV-3
 - /profile, /career, /activities, /projects, /media, /contact pages published
 - Profile v3 editorial index refinement published
 - Career v3 editorial hierarchy and featured stories published
@@ -135,28 +134,14 @@ Current implementation baseline:
 - HOME: first-visit orientation, authority, direct-work routing, selected evidence, project overview, Contact entry
 - Profile: identity, background, approach, facts, and personal context
 - Career: verified professional evidence and selected career stories
-- Activities: what 古庄里好 is actively moving now and why those activities exist
-- Projects: public destination / service directory organized by user intent
-- Media: official channels and selected video evidence
-- Contact: correct inquiry route, with formal work directed primarily to Email and LINE available where appropriate
-
-Activities and Projects must not become duplicate directories. Activities explains role/context; Projects helps the visitor reach destinations.
+- Projects: 活動の背景、TAP DANCE PLANETの構想、目的別の公開リンク
+- Media: 本人の実演映像・写真・公式SNS
+- Contact: 個人への仕事依頼の種類、メールとLINEの窓口、教室の通常予約への案内
+- Activities: 旧URLからProjectsへの案内
 
 ## Navigation Contract
 
-NAV_VERSION: FURUSHO-NAV-2
-
-Global navigation:
-1. About — /furusho-official/#about
-2. Work — /furusho-official/#work
-3. Projects — /furusho-official/projects/
-4. Career — /furusho-official/career/
-5. Contact — /furusho-official/contact/
-
-Brand / Home → /furusho-official/
-Primary CTA → Contact
-
-Do not change the global navigation architecture without evidence of a navigation problem.
+共通メニューの現行仕様は [NAVIGATION_REGISTRY.md](NAVIGATION_REGISTRY.md) を参照。
 
 ## v4.3 Conversion UX Change (2026-11-18)
 
