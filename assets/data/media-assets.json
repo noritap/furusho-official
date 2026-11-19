@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T16:45:32+00:00",
+  "generated_at": "2026-11-19T16:47:00+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -11,10 +11,10 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 21,
+    "total": 24,
     "by_usage_status": {
       "EXISTING_PUBLIC_ASSET": 10,
-      "AUTO_EXTERNAL_PREVIEW": 11
+      "AUTO_EXTERNAL_PREVIEW": 14
     }
   },
   "assets": [
@@ -165,6 +165,19 @@
       ]
     },
     {
+      "id": "youtube:_EhX71Wufsc",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=_EhX71Wufsc",
+      "image_url": "https://img.youtube.com/vi/_EhX71Wufsc/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
+      ]
+    },
+    {
       "id": "youtube:15566qQHhlw",
       "type": "youtube_thumbnail",
       "source_url": "https://www.youtube.com/watch?v=15566qQHhlw",
@@ -188,6 +201,45 @@
       "auto_publish": true,
       "found_in": [
         "career/index.html"
+      ]
+    },
+    {
+      "id": "youtube:67otiSLlmqU",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=67otiSLlmqU",
+      "image_url": "https://img.youtube.com/vi/67otiSLlmqU/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
+      ]
+    },
+    {
+      "id": "youtube:haGdzrx-Kwg",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=haGdzrx-Kwg",
+      "image_url": "https://img.youtube.com/vi/haGdzrx-Kwg/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
+      ]
+    },
+    {
+      "id": "youtube:Il3XXxcQZUw",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=Il3XXxcQZUw",
+      "image_url": "https://img.youtube.com/vi/Il3XXxcQZUw/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "media/index.html"
       ]
     },
     {
@@ -243,6 +295,19 @@
       ]
     },
     {
+      "id": "youtube:op0b7AyaQn0",
+      "type": "youtube_thumbnail",
+      "source_url": "https://www.youtube.com/watch?v=op0b7AyaQn0",
+      "image_url": "https://img.youtube.com/vi/op0b7AyaQn0/hqdefault.jpg",
+      "local_path": null,
+      "usage_status": "AUTO_EXTERNAL_PREVIEW",
+      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
+      "auto_publish": true,
+      "found_in": [
+        "career/index.html"
+      ]
+    },
+    {
       "id": "youtube:RCHe13BrkUo",
       "type": "youtube_thumbnail",
       "source_url": "https://www.youtube.com/watch?v=RCHe13BrkUo",
@@ -270,42 +335,16 @@
       ]
     },
     {
-      "id": "youtube:_EhX71Wufsc",
+      "id": "youtube:X_E_aD6OTGs",
       "type": "youtube_thumbnail",
-      "source_url": "https://www.youtube.com/watch?v=_EhX71Wufsc",
-      "image_url": "https://img.youtube.com/vi/_EhX71Wufsc/hqdefault.jpg",
+      "source_url": "https://www.youtube.com/watch?v=X_E_aD6OTGs",
+      "image_url": "https://img.youtube.com/vi/X_E_aD6OTGs/hqdefault.jpg",
       "local_path": null,
       "usage_status": "AUTO_EXTERNAL_PREVIEW",
       "rights_status": "PLATFORM_PREVIEW_REFERENCE",
       "auto_publish": true,
       "found_in": [
         "media/index.html"
-      ]
-    },
-    {
-      "id": "youtube:haGdzrx-Kwg",
-      "type": "youtube_thumbnail",
-      "source_url": "https://www.youtube.com/watch?v=haGdzrx-Kwg",
-      "image_url": "https://img.youtube.com/vi/haGdzrx-Kwg/hqdefault.jpg",
-      "local_path": null,
-      "usage_status": "AUTO_EXTERNAL_PREVIEW",
-      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
-      "auto_publish": true,
-      "found_in": [
-        "media/index.html"
-      ]
-    },
-    {
-      "id": "youtube:op0b7AyaQn0",
-      "type": "youtube_thumbnail",
-      "source_url": "https://www.youtube.com/watch?v=op0b7AyaQn0",
-      "image_url": "https://img.youtube.com/vi/op0b7AyaQn0/hqdefault.jpg",
-      "local_path": null,
-      "usage_status": "AUTO_EXTERNAL_PREVIEW",
-      "rights_status": "PLATFORM_PREVIEW_REFERENCE",
-      "auto_publish": true,
-      "found_in": [
-        "career/index.html"
       ]
     }
   ]
