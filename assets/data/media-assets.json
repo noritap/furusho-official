@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T16:47:00+00:00",
+  "generated_at": "2026-11-28T11:56:28+00:00",
   "generator": "tools/collect_visual_assets.py",
   "policy": {
     "external_images_downloaded": false,
@@ -11,9 +11,9 @@
     "repository_images": "RIGHTS_NOT_INFERRED"
   },
   "summary": {
-    "total": 24,
+    "total": 25,
     "by_usage_status": {
-      "EXISTING_PUBLIC_ASSET": 10,
+      "EXISTING_PUBLIC_ASSET": 11,
       "AUTO_EXTERNAL_PREVIEW": 14
     }
   },
@@ -144,6 +144,19 @@
       "found_in": [
         "index.html",
         "media/index.html"
+      ]
+    },
+    {
+      "id": "local:assets/images/furusho-profile-768w.jpg",
+      "type": "repository_image",
+      "source_url": null,
+      "image_url": "assets/images/furusho-profile-768w.jpg",
+      "local_path": "assets/images/furusho-profile-768w.jpg",
+      "usage_status": "EXISTING_PUBLIC_ASSET",
+      "rights_status": "RIGHTS_NOT_INFERRED",
+      "auto_publish": true,
+      "found_in": [
+        "index.html"
       ]
     },
     {
